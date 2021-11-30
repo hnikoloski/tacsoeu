@@ -6,7 +6,7 @@
 npm run watch
 ```
 
-###Production
+### Production
 
 ```
 npm run production
