@@ -42,6 +42,7 @@
         padding-left: 47.006707rem;
         color: $lblue;
         margin-bottom: 40.030912rem;
+        font-size: 33.844829rem;
         &::before {
           content: "";
           position: absolute;
@@ -81,6 +82,30 @@
     li {
       &:not(:last-of-type) {
         margin-right: 48.886975rem;
+      }
+    }
+  }
+  .swiper-pagination {
+    position: absolute;
+    left: 370.412851rem;
+    bottom: 165.463608rem;
+    z-index: 9;
+    &-bullet {
+      display: block;
+      width: 30.084292rem;
+      height: 30.084292rem;
+      @include borderRadius(50%);
+      background: #fff;
+      opacity: 0.2;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.5;
+      }
+      &:not(:last-of-type) {
+        margin-right: 31.964561rem;
+      }
+      &-active {
+        opacity: 1;
       }
     }
   }

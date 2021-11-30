@@ -32,8 +32,14 @@ $lblue: #37a5ff;
 .align-items-center {
   align-items: center;
 }
+.align-items-start {
+  align-items: flex-start;
+}
 .align-content-center {
   align-content: center;
+}
+.flex-direction-col {
+  flex-direction: column;
 }
 .list-inline {
   li {

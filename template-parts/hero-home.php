@@ -34,7 +34,7 @@
         wp_reset_postdata();
         ?>
     </div>
-    <div class="swiper-pagination"></div>
+    <div class="swiper-pagination d-flex flex-wrap justify-content-start align-items-center align-content-center"></div>
     <div class="follow-us-wrapper d-flex align-items-center align-content-center">
         <p>Follow Us On:</p>
         <ul class="socials list-inline">

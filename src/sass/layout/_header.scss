@@ -113,6 +113,7 @@
       }
 
       button {
+        cursor: pointer;
         &.search-btn {
           position: absolute;
           @include ver-center();
@@ -123,6 +124,7 @@
           border: none;
           background: transparent;
           color: #fff;
+          font-size: 45.126439rem;
         }
         &.search-close {
           position: absolute;
