@@ -665,6 +665,10 @@ a:not([href]) {
   background: #253d92;
   color: #fff;
 }
+.site-footer .logo-wrapper {
+  width: 133.499048rem;
+  height: 78.971268rem;
+}
 
 .hero-home {
   position: relative;
