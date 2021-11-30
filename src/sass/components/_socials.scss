@@ -1,0 +1,54 @@
+.socials {
+  li {
+    a {
+      i {
+        position: relative;
+        width: 60.168585rem;
+        height: 60.168585rem;
+        display: block;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+        }
+        &.fb-icon {
+          &:before {
+            background: url("../../assets/icons/fb-icon.svg");
+            @include bg-props(contain, center, no-repeat);
+          }
+        }
+        &.twitter-icon {
+          &:before {
+            background: url("../../assets/icons/twitter-icon.svg");
+            @include bg-props(contain, center, no-repeat);
+          }
+        }
+        &.yt-icon {
+          &:before {
+            background: url("../../assets/icons/yt-icon.svg");
+            @include bg-props(contain, center, no-repeat);
+          }
+        }
+        &.linkedin-icon {
+          &:before {
+            background: url("../../assets/icons/linkedin-icon.svg");
+            @include bg-props(contain, center, no-repeat);
+          }
+        }
+      }
+      &:hover {
+        i {
+          transform: scale(1.2);
+        }
+      }
+      &:active {
+        i {
+          transform: scale(0.7);
+        }
+      }
+    }
+  }
+}

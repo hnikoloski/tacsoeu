@@ -1,0 +1,87 @@
+.hero-home {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  &::before {
+    content: "";
+    position: absolute;
+    right: -94.013414rem;
+    @include ver-center();
+    width: 1611.389913rem;
+    height: 1682.840108rem;
+    background: url("../../assets/img/circle-deco.svg");
+    @include bg-props(contain, center, no-repeat);
+    z-index: 9;
+    pointer-events: none;
+  }
+  .single-slide {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    height: 100%;
+    min-height: 1334.990476rem;
+    padding-left: 364.772046rem;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(94, 119, 255, 0.68);
+      pointer-events: none;
+      mix-blend-mode: multiply;
+    }
+    .content {
+      position: relative;
+      max-width: 1580rem;
+      max-height: 752.107311rem;
+      .date {
+        line-height: 1.5;
+        position: relative;
+        padding-left: 47.006707rem;
+        color: $lblue;
+        margin-bottom: 40.030912rem;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          @include ver-center();
+          background: url("../../assets/icons/calendar.svg");
+          @include bg-props(contain, center, no-repeat);
+          width: 28.204024rem;
+          height: 28.204024rem;
+        }
+      }
+      h2 {
+        color: #fff;
+        font-weight: $bold;
+        line-height: 1.04;
+        font-size: 139.139852rem;
+        margin-bottom: 37.605366rem;
+      }
+      h4 {
+        color: #fff;
+        margin-bottom: 63.929121rem;
+        font-size: 56.408048rem;
+      }
+    }
+  }
+  .follow-us-wrapper {
+    position: absolute;
+    right: 338.44829rem;
+    bottom: 174.86495rem;
+    z-index: 9;
+    p {
+      color: #fff;
+      font-size: 33.844829rem;
+      font-weight: $semiBold;
+      margin-right: 56.408048rem;
+    }
+    li {
+      &:not(:last-of-type) {
+        margin-right: 48.886975rem;
+      }
+    }
+  }
+}

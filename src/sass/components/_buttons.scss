@@ -1,0 +1,27 @@
+.btn {
+  @include borderRadius(94.013414rem);
+  padding: 37.605366rem;
+  font-size: 33.844829rem;
+  font-weight: $semiBold;
+  &-lblue {
+    color: #fff;
+    background: $lblue;
+  }
+  &-arrow {
+    padding: 37.605366rem 165rem 37.605366rem 65.80939rem;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 73.330463rem;
+      @include ver-center();
+      background: url("../../assets/icons/arrow-right.svg");
+      @include bg-props(contain, center, no-repeat);
+      width: 41.365902rem;
+      height: 20.04366rem;
+    }
+    &:hover {
+      padding-right: 180rem;
+    }
+  }
+}
