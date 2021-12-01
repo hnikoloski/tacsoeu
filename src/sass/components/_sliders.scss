@@ -20,7 +20,7 @@
     background-position: center !important;
     height: 100%;
     min-height: 1334.990476rem;
-    padding-left: 364.772046rem;
+    padding-left: $sidePadding;
     &::before {
       content: "";
       position: absolute;

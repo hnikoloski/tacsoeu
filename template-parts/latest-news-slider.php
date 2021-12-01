@@ -25,9 +25,23 @@
                     // do something
             ?>
                     <div class="single-slide swiper-slide d-flex flex-direction-row flex-wrap justify-content-start align-items-center" style="background:url(<?= get_the_post_thumbnail_url(); ?>);">
-                        <div class="cat-wrapper">
-                            <div class="single-cat">Macedonia</div>
-                            <div class="additional-cats">+3</div>
+                        <div class="country-tag-wrapper">
+                            <div class="country-tag">
+                                <?php $featured_testimonial = get_field('country_tag', $post_object->ID); ?>
+                                <?php $posts = get_field('country_tag'); ?>
+                                <?php if ($posts) : ?>
+                                    <?php foreach ($posts as $post) : // variable must be called $post (IMPORTANT) 
+                                    ?>
+                                        <?php setup_postdata($post); ?>
+                                        <a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a>
+                                    <?php endforeach; ?>
+                                    <?php wp_reset_postdata(); ?>
+                                <?php endif; ?>
+                            </div>
+
+                            <!-- <h2><?= the_field('country_tag'); ?></h2> -->
+
+                            <div class="additional-tags">+3</div>
                         </div>
                         <p class="date"><?= get_the_date(); ?></p>
                         <h3><?php the_title(); ?></h3>

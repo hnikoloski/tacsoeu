@@ -1,0 +1,29 @@
+.heading {
+  font-size: 90.252877rem;
+  color: #000;
+  font-weight: $bold;
+  &.separator {
+    position: relative;
+    &::before {
+      content: "";
+      left: 0;
+      position: absolute;
+      width: 110.935828rem;
+      height: 52.647512rem;
+      background-color: $lblue;
+    }
+    &-top {
+      padding-top: 150.421462rem;
+      &::before {
+        top: 0;
+      }
+    }
+    &-before {
+      padding-left: 178.625486rem;
+      &::before {
+        @include ver-center();
+        left: 0;
+      }
+    }
+  }
+}

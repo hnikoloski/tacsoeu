@@ -1,8 +1,141 @@
 .site-footer {
   background: $dblue;
   color: #fff;
-  .logo-wrapper {
-    width: 133.499048rem;
-    height: 78.971268rem;
+
+  .site-info {
+    padding: 156.062267rem $sidePadding 0 $sidePadding;
+    .logo-wrapper {
+      width: 133.499048rem;
+      height: 78.971268rem;
+      margin-right: 69.569926rem;
+    }
+    .logo-txt {
+      font-size: 30.084292rem;
+      font-weight: $bold;
+      line-height: 1;
+    }
+    .about-txt {
+      font-size: 26.323756rem;
+      margin-top: 33.844829rem;
+      margin-bottom: 65.80939rem;
+      max-width: 686.297921rem;
+    }
+    .follow-us-wrapper {
+      p {
+        margin-bottom: 45.126439rem;
+      }
+      li {
+        &:not(:last-of-type) {
+          margin-right: 52.647512rem;
+        }
+      }
+    }
+    .footer-links-col {
+      .col-title {
+        color: $lblue;
+        text-transform: uppercase;
+        font-weight: $bold;
+        font-size: 30.084292rem;
+        line-height: 1.25;
+        margin-bottom: 69.569926rem;
+        &:nth-of-type(2) {
+          margin-bottom: 41.365902rem;
+        }
+      }
+      ul {
+        &:not(:last-of-type) {
+          margin-bottom: 67.689658rem;
+        }
+        &.space {
+          &-s {
+            li {
+              &:not(:last-of-type) {
+                margin-bottom: 33.844829rem;
+              }
+            }
+          }
+          &-lg {
+            li {
+              &:not(:last-of-type) {
+                margin-bottom: 80.851536rem;
+              }
+              a {
+                font-weight: $bold;
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+        li {
+          &:not(:last-of-type) {
+            margin-bottom: 52.647512rem;
+          }
+          a {
+            font-size: 30.084292rem;
+            line-height: 1.25;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .footer-quick-links-wrapper {
+      margin-top: 109.05556rem;
+      padding-top: 47.006707rem;
+      padding-bottom: 56.408048rem;
+      border-top: 1.02892px solid rgba(55, 165, 255, 0.2);
+      flex: 0 0 auto;
+      width: 100%;
+      .footer-copy {
+        width: 70%;
+        display: flex;
+        justify-content: flex-start;
+        p {
+          flex: 0 0 auto;
+          max-width: 765rem;
+          font-size: 22.563219rem;
+          line-height: 1.25;
+          &:not(:last-of-type) {
+            margin-right: 94.013414rem;
+          }
+        }
+      }
+      ul {
+        li {
+          &:not(:last-of-type) {
+            margin-right: 67.689658rem;
+          }
+          a {
+            color: #fff;
+            font-size: 30.084292rem;
+            line-height: 1.25;
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom-bar {
+    padding: 71.450195rem $sidePadding;
+    background: #fff;
+    .eu-logo-wrapper {
+      width: 861.162871rem;
+      height: 78.971268rem;
+      img {
+        @include fullSizeImg(contain);
+      }
+    }
+    ul {
+      li {
+        &:not(:last-of-type) {
+          margin-right: 112.816097rem;
+        }
+        a {
+          display: block;
+          height: 78.971268rem;
+          img {
+            @include fullSizeImg(contain);
+          }
+        }
+      }
+    }
   }
 }

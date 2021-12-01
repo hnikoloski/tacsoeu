@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.9.2",
-    "swiper": "^7.3.1"
+    "swiper": "^7.3.1",
+    "waypoints": "^4.0.1"
   }
 }
