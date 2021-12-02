@@ -19,6 +19,9 @@
       li {
         line-height: 165.463608rem; // 88px = height of navbar
         position: relative;
+        &:not(:last-of-type) {
+          margin-right: 131.618779rem;
+        }
         a {
           color: #fff;
           font-weight: $bold;

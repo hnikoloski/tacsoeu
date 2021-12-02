@@ -1,4 +1,4 @@
-import Swiper, { Pagination } from "swiper";
+import Swiper, { Pagination, Navigation } from "swiper";
 
 jQuery(document).ready(function ($) {
   let heroSwiper = new Swiper(".hero-home ", {
@@ -11,12 +11,23 @@ jQuery(document).ready(function ($) {
     },
   });
   let latestNewsSwiper = new Swiper(".latest-news-slider ", {
-    modules: [Pagination],
+    modules: [Navigation],
     slidesPerView: 3,
     loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".latest-news-slider .swiper-button-next",
+      prevEl: ".latest-news-slider .swiper-button-prev",
     },
+  });
+  let latestVideosSwiper = new Swiper(".latest-videos-slider ", {
+    slidesPerView: 3,
+    loop: true,
+    spaceBetween: 0,
+  });
+  let latestPhotosSwiper = new Swiper(".latest-photos-slider ", {
+    slidesPerView: 2.5,
+    loop: true,
+    spaceBetween: 0,
   });
 });

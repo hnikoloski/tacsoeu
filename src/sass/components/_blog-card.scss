@@ -1,0 +1,76 @@
+.blog-card {
+  position: relative;
+  &:hover {
+    .img-wrapper {
+      box-shadow: 0 5.640805rem 11.28161rem rgba(0, 0, 0, 0.36);
+    }
+  }
+  .img-wrapper {
+    width: 100%;
+    height: 524.594849rem;
+    margin-bottom: 37.605366rem;
+    img {
+      @include fullSizeImg(cover);
+    }
+  }
+  .country-tags {
+    position: absolute;
+    top: 75.210731rem;
+    left: 54.52778rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    .main-country {
+      color: $lblue;
+      @include borderRadius(167.343877rem);
+      background: #fff;
+      border: 1px solid $lblue;
+      font-size: 37.605366rem;
+      padding: 22.563219rem 56.408048rem;
+      line-height: 1;
+      // &:hover {
+      //   background: $lblue;
+      //   color: #fff;
+      // }
+    }
+    span {
+      margin-left: 11.28161rem;
+      font-size: 37.605366rem;
+      background: $lblue;
+      @include borderRadius(50%);
+      color: #fff;
+      display: block;
+      width: 84.612072rem;
+      height: 84.612072rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .date {
+    line-height: 1.5;
+    position: relative;
+    padding-left: 33.844829rem;
+    color: $lblue;
+    margin-bottom: 22.563219rem;
+    font-size: 26.323756rem;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      @include ver-center();
+      background: url("../../assets/icons/calendar.svg");
+      @include bg-props(contain, center, no-repeat);
+      width: 22.563219rem;
+      height: 22.563219rem;
+    }
+  }
+  h3 {
+    font-size: 45.126439rem;
+    line-height: 1.1;
+    color: #0d1037;
+    font-weight: $bold;
+  }
+}

@@ -1,0 +1,42 @@
+.photos-card {
+  .img-wrapper {
+    width: 100%;
+    height: 725.783555rem;
+    margin-bottom: 37.605366rem;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: #5471ff;
+      mix-blend-mode: multiply;
+    }
+  }
+  .date {
+    line-height: 1.5;
+    position: relative;
+    padding-left: 33.844829rem;
+    color: $lblue;
+    margin-bottom: 22.563219rem;
+    font-size: 26.323756rem;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      @include ver-center();
+      background: url("../../assets/icons/calendar.svg");
+      @include bg-props(contain, center, no-repeat);
+      width: 22.563219rem;
+      height: 22.563219rem;
+    }
+  }
+  h3 {
+    font-size: 56.408048rem;
+    font-weight: $bold;
+    color: #0d1037;
+    margin-bottom: 78.971268rem;
+  }
+}

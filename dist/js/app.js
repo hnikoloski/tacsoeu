@@ -157,13 +157,24 @@ jQuery(document).ready(function ($) {
     }
   });
   var latestNewsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__.default(".latest-news-slider ", {
-    modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination],
+    modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation],
     slidesPerView: 3,
     loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".latest-news-slider .swiper-button-next",
+      prevEl: ".latest-news-slider .swiper-button-prev"
     }
+  });
+  var latestVideosSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__.default(".latest-videos-slider ", {
+    slidesPerView: 3,
+    loop: true,
+    spaceBetween: 0
+  });
+  var latestPhotosSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__.default(".latest-photos-slider ", {
+    slidesPerView: 2.5,
+    loop: true,
+    spaceBetween: 0
   });
 });
 

@@ -3,7 +3,7 @@ if (!defined('_S_VERSION')) {
     // Replace the version number of the theme on each release.
     define('_S_VERSION', '1.0.0');
 }
-
+require_once get_template_directory() . '/inc/Walker.php';
 
 /**
  * starter functions and definitions
@@ -58,6 +58,7 @@ if (!function_exists('starter_setup')) :
         register_nav_menus(
             array(
                 'menu-1' => esc_html__('Primary', 'starter'),
+                'menu-2' => esc_html__('QuickLinks', 'starter'),
             )
         );
 

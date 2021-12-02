@@ -3,15 +3,15 @@
         <h2 class="heading separator separator-before">
             Latest Photos
         </h2>
-        <p>Find out the latest on EU-related activities and events in the Western Balkans.</p>
-        <a href="#" class="btn d-block btn-arrow btn-lblue w-fit-content">VIEW MORE</a>
+        <a href="#" class="btn d-block btn-fancy-arrow btn-lblue w-fit-content">VIEW MORE <i></i></a>
     </div>
-    <div class="swiper latest-news-slider">
+    <div class="swiper latest-photos-slider">
         <div class="swiper-wrapper">
             <?php
             // WP_Query arguments
             $args = array(
                 'post_status'            => array('publish'),
+                'post_type'              => array('photo'),
                 'posts_per_page'         => '10',
             );
 
@@ -24,13 +24,13 @@
                     $query->the_post();
                     // do something
             ?>
-                    <div class="single-slide swiper-slide d-flex flex-direction-row flex-wrap justify-content-start align-items-center" style="background:url(<?= get_the_post_thumbnail_url(); ?>);">
-                        <div class="cat-wrapper">
-                            <div class="single-cat">Macedonia</div>
-                            <div class="additional-cats">+3</div>
+                    <div class="single-slide d-block photos-card swiper-slide">
+                        <div class="img-wrapper">
+                            <img src="<?= get_field('tacso_gallery')[0]['url']; ?>" alt="<?= the_title(); ?>" class="full-size-img full-size-img-cover">
                         </div>
                         <p class="date"><?= get_the_date(); ?></p>
                         <h3><?php the_title(); ?></h3>
+                        <a href="<?= the_permalink(); ?>" class="btn d-block btn-arrow btn-lblue w-fit-content">VIEW MORE</a>
                     </div>
             <?php
                 }

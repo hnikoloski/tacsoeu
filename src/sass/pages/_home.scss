@@ -1,0 +1,63 @@
+#regions {
+  .top-bar {
+    background: $lblue;
+    padding: 31.964561rem $sidePadding;
+    color: #fff;
+    h5 {
+      color: inherit;
+      font-size: 45.126439rem;
+    }
+    ul {
+      li {
+        &:not(:last-of-type) {
+          margin-right: 37.605366rem;
+        }
+        a {
+          background: rgba(255, 255, 255, 0.1);
+          color: #fff;
+          font-size: 37.605366rem;
+          padding: 22.563219rem 56.408048rem;
+          @include borderRadius(167.343877rem);
+          &:hover {
+            background: rgba(255, 255, 255, 0.3);
+          }
+        }
+      }
+    }
+  }
+  .quick-links-wrapper {
+    background: $darkerBlue;
+    padding: 120.33717rem $sidePadding;
+    ul {
+      width: 100%;
+      li {
+        flex: 0 0 auto;
+        width: 500rem;
+        color: #fff;
+        padding-right: 52.647512rem;
+        &:not(:last-of-type) {
+          border-right: 1px solid rgba(50, 67, 129, 1);
+        }
+        h4 {
+          color: inherit;
+          font-size: 41.365902rem;
+          font-weight: $bold;
+          margin-bottom: 16.922414rem;
+          line-height: 1.1;
+          text-transform: capitalize;
+        }
+        p {
+          color: inherit;
+          font-size: 33.844829rem;
+          line-height: 1.25;
+          margin-bottom: 41.365902rem;
+          text-transform: capitalize;
+        }
+        a {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}

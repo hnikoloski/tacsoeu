@@ -1,0 +1,45 @@
+.video-card {
+  width: 970.218431rem;
+  &:hover {
+    .img-wrapper {
+      &::before {
+        opacity: 0.8;
+      }
+      &::after {
+        width: 200rem;
+        height: 200rem;
+      }
+    }
+  }
+  .img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 601.685849rem;
+    margin-bottom: 40.613795rem;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: #1c1f56;
+      opacity: 0.7;
+      mix-blend-mode: multiply;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      @include abs-center();
+      width: 184.266291rem;
+      height: 184.266291rem;
+      background: url("../../assets/icons/play-button.svg");
+      @include bg-props(contain, center, no-repeat);
+      transition: 0.3s;
+    }
+  }
+  h3 {
+    font-size: 45.126439rem;
+    color: #000;
+  }
+}
