@@ -75,19 +75,16 @@ jQuery(document).ready(function ($) {
 
   if ($("body").hasClass("home")) {
     setTimeout(function () {
-      $("#preloader").fadeOut("slow", function () {
-        $("body").removeClass("overflow-hidden");
-      });
+      $("#preloader").slideUp(600);
+      $("body").removeClass("overflow-hidden");
       setAnimateWithWaypoints();
-    }, 1500);
-    $("body").removeClass("overflow-hidden");
+    }, 800);
   } else {
     setTimeout(function () {
-      $("#preloader").fadeOut(300, function () {
-        $("body").removeClass("overflow-hidden");
-      });
+      $("#preloader").slideUp(600);
+      $("body").removeClass("overflow-hidden");
       setAnimateWithWaypoints();
-    }, 1000);
+    }, 300);
   }
 
   $(".text-animation").each(function (k, v) {

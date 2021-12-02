@@ -49,20 +49,18 @@ jQuery(document).ready(function ($) {
   }
   if ($("body").hasClass("home")) {
     setTimeout(function () {
-      $("#preloader").fadeOut("slow", () => {
-        $("body").removeClass("overflow-hidden");
-      });
-      setAnimateWithWaypoints();
-    }, 1500);
-    $("body").removeClass("overflow-hidden");
-  } else {
-    setTimeout(function () {
-      $("#preloader").fadeOut(300, () => {
-        $("body").removeClass("overflow-hidden");
-      });
+      $("#preloader").slideUp(600);
+      $("body").removeClass("overflow-hidden");
 
       setAnimateWithWaypoints();
-    }, 1000);
+    }, 800);
+  } else {
+    setTimeout(function () {
+      $("#preloader").slideUp(600);
+      $("body").removeClass("overflow-hidden");
+
+      setAnimateWithWaypoints();
+    }, 300);
   }
   $(".text-animation").each(function (k, v) {
     let elem = $(this);

@@ -23,5 +23,15 @@
     &:hover {
       padding-right: 180rem;
     }
+    &-minimal {
+      color: $lblue;
+      padding-left: 0;
+      font-size: 30.084292rem;
+      text-transform: uppercase;
+      &::before {
+        background: url("../../assets/icons/arrow-right-lblue.svg");
+        @include bg-props(contain, center, no-repeat);
+      }
+    }
   }
 }

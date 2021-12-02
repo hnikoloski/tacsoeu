@@ -27,9 +27,12 @@ $custom_logo_id = get_theme_mod('custom_logo');
 $logoUrl = wp_get_attachment_image_src($custom_logo_id, 'full');
 ?>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('overflow-hidden'); ?>>
     <?php wp_body_open(); ?>
-
+    <div id="preloader">
+        <div class="clock"></div>
+        <h2>Loading</h2>
+    </div>
     <div id="page" class="site">
         <header id="masthead" class="site-header">
             <div class="top-bar d-flex flex-wrap justify-content-space-between align-items-center align-content-center">

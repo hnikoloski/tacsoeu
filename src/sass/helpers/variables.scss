@@ -7,6 +7,7 @@ $calibri: "Calibri";
 
 // Colors
 $dblue: #253d92;
+$darkerBlue: #212e5a;
 $lblue: #37a5ff;
 
 // Spaces
@@ -95,6 +96,9 @@ $sidePadding: 351.610168rem;
   li {
     display: inline-block;
   }
+}
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .full-size-img {
