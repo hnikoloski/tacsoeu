@@ -4,7 +4,8 @@ if (!defined('_S_VERSION')) {
     define('_S_VERSION', '1.0.0');
 }
 require_once get_template_directory() . '/inc/Walker.php';
-
+require_once get_template_directory() . '/inc/breadcrumbs.php';
+add_post_type_support('page', 'excerpt');
 /**
  * starter functions and definitions
  *

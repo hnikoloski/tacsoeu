@@ -1,0 +1,27 @@
+#cu_breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  li {
+    color: #fff;
+
+    &:not(:last-of-type) {
+      margin-right: 37.605366rem;
+    }
+    &:not(&.separator) {
+      font-size: 33.844829rem;
+      a {
+        color: inherit;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    &.separator {
+      font-size: 22.563219rem;
+    }
+  }
+}

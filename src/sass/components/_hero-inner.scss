@@ -1,0 +1,34 @@
+.hero-inner {
+  background: $darkerBlue;
+  position: relative;
+  overflow: hidden;
+  padding: 67.689658rem $sidePadding 203.068974rem $sidePadding;
+  color: #fff;
+  isolation: isolate;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -169.224145rem;
+    top: 0;
+    background: url("../../assets/img/circle-deco-small.svg");
+    @include bg-props(contain, center, no-repeat);
+    width: 1128.160966rem;
+    height: 100%;
+    z-index: -1;
+  }
+  .cu_breadcrumbs {
+    margin-bottom: 129.738511rem;
+    padding-bottom: 63.929121rem;
+    border-bottom: 1px solid rgba(55, 165, 255, 0.2);
+  }
+  h2 {
+    color: inherit;
+    text-transform: uppercase;
+    margin-bottom: 26.323756rem;
+  }
+  p {
+    text-transform: uppercase;
+    font-size: 45.126439rem;
+    line-height: 1.4;
+  }
+}

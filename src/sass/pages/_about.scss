@@ -1,0 +1,93 @@
+.about-page {
+  &-basic {
+    .the-content {
+      color: #000;
+      strong,
+      b {
+        font-weight: $bold;
+      }
+      h2 {
+        font-size: 90.252877rem;
+        margin-bottom: 112.816097rem;
+      }
+      p {
+        line-height: 1.25;
+        font-size: 41.365902rem;
+        &:not(:last-of-type) {
+          margin-bottom: 65.80939rem;
+        }
+      }
+      .wp-block-image {
+        width: 100%;
+        margin-top: 188.026828rem;
+        img {
+          @include fullSizeImg(cover);
+        }
+      }
+    }
+    .the-activities {
+      margin-top: 159.822804rem;
+      h2 {
+        margin-bottom: 41.365902rem;
+      }
+      p {
+        font-size: 41.365902rem;
+        line-height: 1.25;
+        &:not(:last-of-type) {
+          margin-bottom: 65.80939rem;
+        }
+      }
+      h3 {
+        line-height: 1.25;
+        margin-top: 122.217438rem;
+        margin-bottom: 150.421462rem;
+        font-size: 67.689658rem;
+        font-weight: $bold;
+      }
+      .single-activity {
+        flex: 0 0 auto;
+        width: calc(33% - 142.900389rem);
+        border-right: 1px solid #eef2ff;
+        padding-right: 103.414755rem;
+        margin-right: 142.900389rem;
+        margin-bottom: 131.618779rem;
+        h5 {
+          color: $lblue;
+          margin-bottom: 75.210731rem;
+          font-size: 45.126439rem;
+          font-weight: $bold;
+        }
+        p {
+          color: $dblue;
+          font-size: 33.844829rem;
+          line-height: 1.25;
+          text-transform: capitalize;
+        }
+      }
+    }
+    .target-groups {
+      margin-top: 159.822804rem;
+      .content,
+      .img-wrapper {
+        flex: 0 0 auto;
+        width: 50%;
+      }
+      .content {
+        padding-right: 178.625486rem;
+        h2 {
+          margin-bottom: 75.210731rem;
+        }
+        p {
+          font-size: 41.365902rem;
+          line-height: 1.25;
+          &:not(:last-of-type) {
+            margin-bottom: 65.80939rem;
+          }
+        }
+      }
+      .img-wrapper {
+        height: 100%;
+      }
+    }
+  }
+}

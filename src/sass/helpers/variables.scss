@@ -116,3 +116,13 @@ $sidePadding: 351.610168rem;
     object-fit: cover;
   }
 }
+.page-padding {
+  &-x {
+    padding-left: $sidePadding;
+    padding-right: $sidePadding;
+  }
+  &-y {
+    padding-top: 188.026828rem;
+    padding-bottom: 188.026828rem;
+  }
+}
