@@ -100,7 +100,12 @@ $sidePadding: 351.610168rem;
 .overflow-hidden {
   overflow: hidden;
 }
-
+.ml-0 {
+  margin-left: 0 !important;
+}
+.p-0 {
+  padding: 0 !important;
+}
 .full-size-img {
   width: 100%;
   height: 100%;

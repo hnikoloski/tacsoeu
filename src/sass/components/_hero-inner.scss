@@ -31,4 +31,58 @@
     font-size: 45.126439rem;
     line-height: 1.4;
   }
+  .person-tabber-header {
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+      flex-wrap: wrap;
+      position: relative;
+      padding-bottom: 31.964561rem;
+      border-bottom: 1px solid rgba(55, 165, 255, 0.2);
+      margin-bottom: 112.816097rem;
+      li {
+        color: #fff;
+        position: relative;
+        &:not(:last-of-type) {
+          padding-right: 157.942535rem;
+          margin-right: 157.942535rem;
+          &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            @include ver-center();
+            width: 5.640805rem;
+            height: 37.605366rem;
+            background: #fff;
+            opacity: 0.2;
+          }
+        }
+        a {
+          color: inherit;
+          font-size: 60.168585rem;
+          opacity: 0.3;
+          &::after {
+            height: 9.401341rem;
+            bottom: -46.964561rem;
+          }
+          &:hover,
+          &.active {
+            font-weight: $bold;
+            opacity: 1;
+            &::after {
+              transform: scaleX(1);
+              -webkit-transform: scaleX(1);
+              -moz-transform: scaleX(1);
+              transform-origin: left;
+              -webkit-transform-origin: left;
+              -moz-transform-origin: left;
+            }
+          }
+        }
+      }
+    }
+  }
 }

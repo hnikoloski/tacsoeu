@@ -5,7 +5,10 @@ if (!defined('_S_VERSION')) {
 }
 require_once get_template_directory() . '/inc/Walker.php';
 require_once get_template_directory() . '/inc/breadcrumbs.php';
+require_once get_template_directory() . '/inc/acf-to-rest.php';
 add_post_type_support('page', 'excerpt');
+
+
 /**
  * starter functions and definitions
  *

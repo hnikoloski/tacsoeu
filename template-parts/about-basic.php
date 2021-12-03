@@ -1,4 +1,4 @@
-<div class="about-page-basic page-padding page-padding-x page-padding-y">
+<div class="about-page about-page-basic page-padding page-padding-x page-padding-y">
     <div class="the-content">
         <?php the_content(); ?>
     </div>

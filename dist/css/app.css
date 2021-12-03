@@ -267,6 +267,14 @@ a:focus {
   overflow: hidden;
 }
 
+.ml-0 {
+  margin-left: 0 !important;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
 .full-size-img {
   width: 100%;
   height: 100%;
@@ -1693,6 +1701,60 @@ a:not([href]) {
   font-size: 45.126439rem;
   line-height: 1.4;
 }
+.hero-inner .person-tabber-header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  padding-bottom: 31.964561rem;
+  border-bottom: 1px solid rgba(55, 165, 255, 0.2);
+  margin-bottom: 112.816097rem;
+}
+.hero-inner .person-tabber-header ul li {
+  color: #fff;
+  position: relative;
+}
+.hero-inner .person-tabber-header ul li:not(:last-of-type) {
+  padding-right: 157.942535rem;
+  margin-right: 157.942535rem;
+}
+.hero-inner .person-tabber-header ul li:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+  width: 5.640805rem;
+  height: 37.605366rem;
+  background: #fff;
+  opacity: 0.2;
+}
+.hero-inner .person-tabber-header ul li a {
+  color: inherit;
+  font-size: 60.168585rem;
+  opacity: 0.3;
+}
+.hero-inner .person-tabber-header ul li a::after {
+  height: 9.401341rem;
+  bottom: -46.964561rem;
+}
+.hero-inner .person-tabber-header ul li a:hover, .hero-inner .person-tabber-header ul li a.active {
+  font-weight: 700;
+  opacity: 1;
+}
+.hero-inner .person-tabber-header ul li a:hover::after, .hero-inner .person-tabber-header ul li a.active::after {
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  transform-origin: left;
+  -webkit-transform-origin: left;
+  -moz-transform-origin: left;
+}
 
 #regions .top-bar {
   background: #37a5ff;
@@ -1754,6 +1816,23 @@ a:not([href]) {
   padding-bottom: 0;
 }
 
+.about-page {
+  position: relative;
+}
+.about-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../../assets/img/circle-deco-minimal.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1485.411939rem;
+  height: 2293.927298rem;
+  z-index: -1;
+  pointer-events: none;
+}
 .about-page-basic .the-content {
   color: #000;
 }
@@ -1847,4 +1926,153 @@ a:not([href]) {
 }
 .about-page-basic .target-groups .img-wrapper {
   height: 100%;
+}
+.about-page-who-we-are {
+  margin-top: -376.053655rem;
+}
+.about-page-who-we-are .person-tabber-content .tab {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+.about-page-who-we-are .person-tabber-content .tab#countryCoordinator {
+  display: none;
+}
+.about-page-who-we-are .person-tabber-content .single-person {
+  position: relative;
+  flex: 0 0 579.122629rem;
+  max-width: 579.122629rem;
+}
+.about-page-who-we-are .person-tabber-content .single-person:not(:nth-of-type(4n)) {
+  margin-right: 170rem;
+}
+.about-page-who-we-are .person-tabber-content .single-person .img-wrapper {
+  width: 579.122629rem;
+  height: 579.122629rem;
+  position: relative;
+  margin-bottom: 84.612072rem;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.about-page-who-we-are .person-tabber-content .single-person .img-wrapper img {
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.about-page-who-we-are .person-tabber-content .single-person .img-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: -178.625486rem;
+  left: -178.625486rem;
+  background: url("../../assets/img/img-frame-lblue.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 706.980872rem;
+  height: 560.319946rem;
+  pointer-events: none;
+  z-index: 1;
+}
+.about-page-who-we-are .person-tabber-content .single-person a {
+  position: absolute;
+  top: 376.053655rem;
+  right: 18.802683rem;
+  width: 163.58334rem;
+  height: 163.58334rem;
+  z-index: 9;
+}
+.about-page-who-we-are .person-tabber-content .single-person a i {
+  width: 100%;
+  height: 100%;
+}
+.about-page-who-we-are .person-tabber-content .single-person a:hover i {
+  background: #253d92;
+}
+.about-page-who-we-are .person-tabber-content .single-person h3 {
+  color: #000;
+  font-size: 56.408048rem;
+  font-weight: 700;
+  line-height: 0.89;
+  margin-bottom: 9.401341rem;
+}
+.about-page-who-we-are .person-tabber-content .single-person p {
+  color: #a0a0a0;
+  font-size: 37.605366rem;
+  line-height: 1.4;
+}
+.about-page-who-we-are .person-tabber-content .person-modal {
+  display: none;
+  background: rgba(5, 24, 94, 0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1024;
+  align-items: center;
+  justify-content: center;
+}
+.about-page-who-we-are .person-tabber-content .person-modal.active {
+  display: flex;
+}
+.about-page-who-we-are .person-tabber-content .person-modal .modal-content {
+  width: 2401.102589rem;
+  height: 1372.595842rem;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 235.033535rem 216.230852rem;
+  position: relative;
+}
+.about-page-who-we-are .person-tabber-content .person-modal .modal-content .close-modal {
+  background: #37a5ff;
+  width: 118.456901rem;
+  height: 118.456901rem;
+  position: absolute;
+  top: 94.013414rem;
+  right: 94.013414rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  font-size: 37.605366rem;
+}
+.about-page-who-we-are .person-tabber-content .person-modal .modal-content .close-modal:hover {
+  background: #253d92;
+}
+.about-page-who-we-are .person-tabber-content .person-modal .modal-content .bio-wrapper {
+  max-height: 889.366895rem;
+  overflow-y: auto;
+  padding-right: 129.738511rem;
+}
+.about-page-who-we-are .person-tabber-content .person-modal .modal-content .bio-wrapper::-webkit-scrollbar {
+  width: 12rem;
+}
+.about-page-who-we-are .person-tabber-content .person-modal .modal-content .bio-wrapper::-webkit-scrollbar-track {
+  box-shadow: none;
+  border-radius: 18.802683rem;
+}
+.about-page-who-we-are .person-tabber-content .person-modal .modal-content .bio-wrapper::-webkit-scrollbar-thumb {
+  background: #253d92;
+  border-radius: 10px;
+}
+.about-page-who-we-are .person-tabber-content .person-modal .modal-content .bio-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #253d92;
+}
+.about-page-who-we-are .person-tabber-content .person-modal .modal-content .bio-wrapper p {
+  font-size: 37.605366rem;
+  line-height: 1.4;
+  color: #212e5a;
+}
+.about-page-who-we-are .person-tabber-content .person-modal .modal-content .bio-wrapper p:not(:last-of-type) {
+  margin-bottom: 65.80939rem;
 }
