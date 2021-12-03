@@ -18,6 +18,9 @@ if (get_field('about_use_template') == 'basic') {
 if (get_field('about_use_template') == 'whoWeAre') {
     require('template-parts/about-who-we-are.php');
 }
+if (get_field('about_use_template') == 'consortium') {
+    require('template-parts/about-consortium.php');
+}
 ?>
 
 <?php
