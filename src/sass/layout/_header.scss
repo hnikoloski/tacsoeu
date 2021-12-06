@@ -142,6 +142,7 @@
           font-size: 45.126439rem;
         }
         &.search-close {
+          font-size: 22.563219rem;
           position: absolute;
           top: 50%;
           right: 28.204024rem;
@@ -160,6 +161,7 @@
           border: none;
           background: $lblue;
           color: #fff;
+          padding: 0;
         }
       }
       &.active {

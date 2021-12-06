@@ -13,14 +13,18 @@ get_header();
 
 require('template-parts/hero-inner.php');
 if (get_field('about_use_template') == 'basic') {
-    require('template-parts/about-basic.php');
+    require('template-parts/about/about-basic.php');
 }
 if (get_field('about_use_template') == 'whoWeAre') {
-    require('template-parts/about-who-we-are.php');
+    require('template-parts/about/about-who-we-are.php');
 }
 if (get_field('about_use_template') == 'consortium') {
-    require('template-parts/about-consortium.php');
+    require('template-parts/about/about-consortium.php');
 }
+if (get_field('about_use_template') == 'europeanUnion') {
+    require('template-parts/about/about-eu-union.php');
+}
+
 ?>
 
 <?php

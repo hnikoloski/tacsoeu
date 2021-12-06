@@ -31,7 +31,6 @@ jQuery(document).ready(function ($) {
           // handle success
           let person = response.data;
           const basicInfo = `
-          
           <div class="img-wrapper">
               <img src="${person._embedded["wp:featuredmedia"][0].source_url}" alt="${person.title.rendered}" class="full-size-img full-size-img-cover">
           </div>
@@ -43,11 +42,9 @@ jQuery(document).ready(function ($) {
           $(".modal-content .single-person").html(basicInfo);
         })
         .catch(function (error) {
-          // handle error
           console.log(error);
         })
         .then(function () {
-          // always executed
           $(".person-modal").addClass("active");
         });
     }

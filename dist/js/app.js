@@ -2297,15 +2297,13 @@ jQuery(document).ready(function ($) {
       axios.get("/wp-json/wp/v2/people/" + personId + "?_embed").then(function (response) {
         // handle success
         var person = response.data;
-        var basicInfo = "\n          \n          <div class=\"img-wrapper\">\n              <img src=\"".concat(person._embedded["wp:featuredmedia"][0].source_url, "\" alt=\"").concat(person.title.rendered, "\" class=\"full-size-img full-size-img-cover\">\n          </div>\n          <h3>").concat(person.title.rendered, "</h3>\n          <p>").concat(person.ACF.person_position, "</p>\n    ");
+        var basicInfo = "\n          <div class=\"img-wrapper\">\n              <img src=\"".concat(person._embedded["wp:featuredmedia"][0].source_url, "\" alt=\"").concat(person.title.rendered, "\" class=\"full-size-img full-size-img-cover\">\n          </div>\n          <h3>").concat(person.title.rendered, "</h3>\n          <p>").concat(person.ACF.person_position, "</p>\n    ");
         var personBio = person.ACF.person_bio;
         $(".bio-wrapper").html(personBio);
         $(".modal-content .single-person").html(basicInfo);
       })["catch"](function (error) {
-        // handle error
         console.log(error);
       }).then(function () {
-        // always executed
         $(".person-modal").addClass("active");
       });
     };

@@ -27,8 +27,7 @@
     margin-bottom: 26.323756rem;
   }
   p {
-    text-transform: uppercase;
-    font-size: 45.126439rem;
+    font-size: 41.365902rem;
     line-height: 1.4;
   }
   .person-tabber-header {
@@ -40,7 +39,7 @@
       align-content: center;
       flex-wrap: wrap;
       position: relative;
-      padding-bottom: 31.964561rem;
+      // padding-bottom: 31.964561rem;
       border-bottom: 1px solid rgba(55, 165, 255, 0.2);
       margin-bottom: 112.816097rem;
       li {
@@ -64,9 +63,11 @@
           color: inherit;
           font-size: 60.168585rem;
           opacity: 0.3;
+          line-height: 152rem;
+          display: block;
           &::after {
             height: 9.401341rem;
-            bottom: -46.964561rem;
+            bottom: -6rem;
           }
           &:hover,
           &.active {
