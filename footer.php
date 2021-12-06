@@ -120,7 +120,7 @@
                             <?php if (($link)) {
                                 $linkVal = 'href="' . $link . '" target="_blank" rel="noopener noreferrer"';
                             } else {
-                                $linkVal = 'href="' . 'javascript:void(0);' . '"' . 'rel="noopener noreferrer"';;
+                                $linkVal = 'href="' . 'nolink' . '"' . 'rel="noopener noreferrer"';;
                             }; ?>
                             <a aria-label="Partners Link" <?= $linkVal; ?>>
                                 <img src="<?= esc_url($image['url']); ?>" alt="<?= esc_attr($image['alt']); ?>">

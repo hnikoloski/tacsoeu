@@ -2158,11 +2158,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.min.css");
 /* harmony import */ var _scripts_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/animations */ "./src/scripts/animations.js");
 /* harmony import */ var _scripts_animations__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scripts_animations__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _scripts_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scripts/header */ "./src/scripts/header.js");
-/* harmony import */ var _scripts_header__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scripts_header__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _scripts_sliders__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scripts/sliders */ "./src/scripts/sliders.js");
-/* harmony import */ var _scripts_people__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/people */ "./src/scripts/people.js");
-/* harmony import */ var _scripts_people__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scripts_people__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _scripts_global__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scripts/global */ "./src/scripts/global.js");
+/* harmony import */ var _scripts_global__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scripts_global__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _scripts_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scripts/header */ "./src/scripts/header.js");
+/* harmony import */ var _scripts_header__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scripts_header__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _scripts_sliders__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/sliders */ "./src/scripts/sliders.js");
+/* harmony import */ var _scripts_people__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scripts/people */ "./src/scripts/people.js");
+/* harmony import */ var _scripts_people__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_scripts_people__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -2255,6 +2258,20 @@ jQuery(document).ready(function ($) {
         elem.append("<span style='transition-delay: " + delay + "s'>" + el + "</span>");
       }
     });
+  });
+});
+
+/***/ }),
+
+/***/ "./src/scripts/global.js":
+/*!*******************************!*\
+  !*** ./src/scripts/global.js ***!
+  \*******************************/
+/***/ (() => {
+
+jQuery(document).ready(function ($) {
+  $("a[href='nolink']").on("click", function (e) {
+    e.preventDefault();
   });
 });
 

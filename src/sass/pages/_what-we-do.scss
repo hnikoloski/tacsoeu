@@ -1,0 +1,122 @@
+.what-we-do-page {
+  color: #000;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 35%;
+    transform: translate(0%, -50%);
+    -moz-transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, -50%);
+    right: 0;
+    background: url("../../assets/img/circle-deco-minimal.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1485.411939rem;
+    height: 2293.927298rem;
+    z-index: -1;
+    pointer-events: none;
+  }
+  h2 {
+    font-size: 90.252877rem;
+    font-weight: $bold;
+    margin-bottom: 112.816097rem;
+    line-height: 1.05;
+  }
+  h3 {
+    font-weight: $bold;
+    font-size: 67.689658rem;
+    line-height: 1.25;
+  }
+  p {
+    font-size: 41.365902rem;
+    &:not(:last-of-type) {
+      margin-bottom: 65.80939rem;
+    }
+    strong,
+    b {
+      font-weight: $bold;
+      span {
+        font-weight: inherit;
+      }
+    }
+  }
+  .grid-grp {
+    h2 {
+      margin-bottom: 112.816097rem;
+      font-size: 67.689658rem;
+    }
+  }
+  .wp-block-columns.border-top {
+    h3 {
+      padding-top: 60.168585rem;
+      border-top: 15.042146rem solid $lblue;
+      font-size: 45.126439rem;
+      font-weight: $bold;
+      margin-bottom: 65.80939rem;
+      max-width: 829.19831rem;
+      &:last-of-type {
+        margin-bottom: 131.618779rem;
+      }
+    }
+  }
+  .border-right-light {
+    margin-top: 103.414755rem;
+    margin-bottom: 282.040242rem;
+    .wp-block-column {
+      &:not(:last-of-type) {
+        padding-right: 225.632193rem;
+        margin-right: 223.751925rem;
+        border-right: 1px solid #eef2ff;
+      }
+      .num-marker {
+        color: $lblue;
+      }
+    }
+  }
+  .wp-block-spacer {
+    height: 188.026828rem !important;
+    &.half {
+      height: 94.013414rem !important;
+    }
+  }
+  .wp-block-image {
+    max-width: 1466.609256rem;
+    img {
+      @include fullSizeImg(contain);
+    }
+  }
+  .fancy-list {
+    li {
+      position: relative;
+      font-size: 41.365902rem;
+      padding-left: 84.612072rem;
+      &:not(:last-of-type) {
+        margin-bottom: 56.408048rem;
+      }
+      b,
+      strong {
+        font-weight: $bold;
+        span {
+          font-weight: inherit;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        @include ver-center();
+        width: 28.204024rem;
+        height: 28.204024rem;
+        background: $lblue;
+      }
+    }
+  }
+  .space-left {
+    padding-left: 188.026828rem;
+  }
+  .space-right {
+    padding-right: 188.026828rem;
+  }
+}

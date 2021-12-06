@@ -1,6 +1,6 @@
 <section id="regions">
     <div class="top-bar d-flex flex-direction-row flex-wrap justify-content-space-between align-items-center animated fadeInUp">
-        <h5>Regions</h5>
+        <h5>iPA BENEFICIARIES</h5>
         <ul class="d-flex flex-direction-row flex-wrap justify-content-space-between align-items-center">
             <?php
             // WP_Query arguments

@@ -1,0 +1,15 @@
+.archive-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  .blog-card {
+    flex: 0 0 auto;
+    width: calc(25% - 56.408048rem);
+    margin-bottom: 112.816097rem;
+    &:not(:nth-of-type(4n)) {
+      margin-right: 56.408048rem;
+    }
+  }
+}
