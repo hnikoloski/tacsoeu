@@ -3,8 +3,8 @@
         <?php the_content(); ?>
     </div>
 
-    <div class="target-groups eu-union d-flex flex-direction-row flex-wrap justify-content-space-between align-items-center ">
-        <div class="content animated fadeInLeft">
+    <div class="target-groups eu-union d-flex flex-direction-row flex-wrap justify-content-space-between align-items-center" data-delay="200">
+        <div class="content animated fadeInUp">
             <h2 class="heading separator separator-top"><?php the_field('eu_union_title'); ?></h2>
             <?php the_field('eu_secondary_content'); ?>
         </div>

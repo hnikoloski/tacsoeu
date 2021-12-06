@@ -158,6 +158,33 @@
     width: calc(100% - 611.08719rem - 131.618779rem);
     margin-left: auto;
     margin-right: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 792.473213rem;
+      height: 100%;
+      opacity: 0.72;
+      z-index: 9;
+      background: rgb(54, 75, 152);
+      background: -moz-linear-gradient(
+        180deg,
+        rgba(54, 75, 152, 1) 72.5%,
+        rgba(255, 255, 255, 0) 72.5%
+      );
+      background: -webkit-linear-gradient(
+        180deg,
+        rgba(54, 75, 152, 1) 72.5%,
+        rgba(255, 255, 255, 0) 72.5%
+      );
+      background: linear-gradient(
+        180deg,
+        rgba(54, 75, 152, 1) 72.5%,
+        rgba(255, 255, 255, 0) 72.5%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#364b98",endColorstr="#ffffff",GradientType=1);
+    }
     .swiper-btns-wrapper {
       position: absolute;
       right: $sidePadding;

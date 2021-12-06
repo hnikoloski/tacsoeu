@@ -20,6 +20,7 @@ jQuery(document).ready(function ($) {
       prevEl: ".latest-news-slider .swiper-button-prev",
     },
   });
+
   let latestVideosSwiper = new Swiper(".latest-videos-slider ", {
     slidesPerView: 3,
     loop: true,

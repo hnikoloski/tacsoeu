@@ -275,6 +275,10 @@ a:focus {
   padding: 0 !important;
 }
 
+.pr-0 {
+  padding-right: 0 !important;
+}
+
 .full-size-img {
   width: 100%;
   height: 100%;
@@ -1104,6 +1108,19 @@ a:not([href]) {
   width: calc(100% - 611.08719rem - 131.618779rem);
   margin-left: auto;
   margin-right: 0;
+}
+#latest-news .swiper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 792.473213rem;
+  height: 100%;
+  opacity: 0.72;
+  z-index: 9;
+  background: #364b98;
+  background: linear-gradient(180deg, #364b98 72.5%, rgba(255, 255, 255, 0) 72.5%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#364b98",endColorstr="#ffffff",GradientType=1);
 }
 #latest-news .swiper .swiper-btns-wrapper {
   position: absolute;

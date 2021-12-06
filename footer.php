@@ -15,22 +15,22 @@
                 <ul class="socials list-inline">
                     <?php if (get_field('facebook_url', 'option')) : ?>
                         <li>
-                            <a href="<?php the_field('facebook_url', 'option'); ?>" target="_blank" rel="noopener noreferrer"><i class="fb-icon"></i></a>
+                            <a href="<?php the_field('facebook_url', 'option'); ?>" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fb-icon"></i></a>
                         </li>
                     <?php endif; ?>
                     <?php if (get_field('twitter_url', 'option')) : ?>
                         <li>
-                            <a href="<?php the_field('twitter_url', 'option'); ?>" target="_blank" rel="noopener noreferrer"><i class="twitter-icon"></i></a>
+                            <a href="<?php the_field('twitter_url', 'option'); ?>" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="twitter-icon"></i></a>
                         </li>
                     <?php endif; ?>
                     <?php if (get_field('youtube_url', 'option')) : ?>
                         <li>
-                            <a href="<?php the_field('youtube_url', 'option'); ?>" target="_blank" rel="noopener noreferrer"><i class="yt-icon"></i></a>
+                            <a href="<?php the_field('youtube_url', 'option'); ?>" aria-label="Youtube" target="_blank" rel="noopener noreferrer"><i class="yt-icon"></i></a>
                         </li>
                     <?php endif; ?>
                     <?php if (get_field('linkedin_url', 'option')) : ?>
                         <li>
-                            <a href="<?php the_field('linkedin_url', 'option'); ?>" target="_blank" rel="noopener noreferrer"><i class="linkedin-icon"></i></a>
+                            <a href="<?php the_field('linkedin_url', 'option'); ?>" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="linkedin-icon"></i></a>
                         </li>
                     <?php endif; ?>
 
@@ -48,7 +48,7 @@
             </ul>
         </div>
         <div class="footer-links-col">
-            <h4 class="col-title">What we Do</h4>
+            <h3 class="col-title">What we Do</h3>
             <ul class="space-s">
                 <li><a href="#!" class="fancy-hover fancy-hover-lblue">Project Description</a></li>
                 <li><a href="#!" class="fancy-hover fancy-hover-lblue">Who We Are</a></li>
@@ -58,7 +58,7 @@
             </ul>
         </div>
         <div class="footer-links-col">
-            <h4 class="col-title">IPA BENEFICIARIES</h4>
+            <h3 class="col-title">IPA BENEFICIARIES</h3>
             <ul class="space-s">
                 <li><a href="#!" class="fancy-hover fancy-hover-lblue">Project Description</a></li>
                 <li><a href="#!" class="fancy-hover fancy-hover-lblue">Who We Are</a></li>
@@ -68,20 +68,20 @@
             </ul>
         </div>
         <div class="footer-links-col">
-            <h4 class="col-title"> LIBRARY</h4>
+            <h3 class="col-title"> LIBRARY</h3>
             <ul class="space-s">
                 <li><a href="#!" class="fancy-hover fancy-hover-lblue">Project Description</a></li>
                 <li><a href="#!" class="fancy-hover fancy-hover-lblue">Who We Are</a></li>
                 <li><a href="#!" class="fancy-hover fancy-hover-lblue">Consortium</a></li>
             </ul>
-            <h4 class="col-title">MEDIA</h4>
+            <h3 class="col-title">MEDIA</h3>
             <ul class="space-s">
                 <li><a href="#!" class="fancy-hover fancy-hover-lblue">European Union</a></li>
                 <li><a href="#!" class="fancy-hover fancy-hover-lblue">Contacts</a></li>
             </ul>
         </div>
         <div class="footer-links-col">
-            <h4 class="col-title">SURVEYS</h4>
+            <h3 class="col-title">SURVEYS</h3>
             <ul class="space-lg">
                 <li><a href="#!" class="fancy-hover fancy-hover-lblue">Project Description</a></li>
                 <li><a href="#!" class="fancy-hover fancy-hover-lblue">Who We Are</a></li>
@@ -118,11 +118,11 @@
                         ?>
                         <li>
                             <?php if (($link)) {
-                                $linkVal = 'href="' . $link . '" target="_blank"';
+                                $linkVal = 'href="' . $link . '" target="_blank" rel="noopener noreferrer"';
                             } else {
-                                $linkVal = 'href="' . 'javascript:void(0);' . '"';;
+                                $linkVal = 'href="' . 'javascript:void(0);' . '"' . 'rel="noopener noreferrer"';;
                             }; ?>
-                            <a <?= $linkVal; ?>>
+                            <a aria-label="Partners Link" <?= $linkVal; ?>>
                                 <img src="<?= esc_url($image['url']); ?>" alt="<?= esc_attr($image['alt']); ?>">
                             </a>
                         </li>

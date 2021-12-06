@@ -40,22 +40,22 @@
         <ul class="socials list-inline">
             <?php if (get_field('facebook_url', 'option')) : ?>
                 <li>
-                    <a href="<?php the_field('facebook_url', 'option'); ?>" target="_blank" rel="noopener noreferrer"><i class="fb-icon"></i></a>
+                    <a href="<?php the_field('facebook_url', 'option'); ?>" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fb-icon"></i></a>
                 </li>
             <?php endif; ?>
             <?php if (get_field('twitter_url', 'option')) : ?>
                 <li>
-                    <a href="<?php the_field('twitter_url', 'option'); ?>" target="_blank" rel="noopener noreferrer"><i class="twitter-icon"></i></a>
+                    <a href="<?php the_field('twitter_url', 'option'); ?>" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="twitter-icon"></i></a>
                 </li>
             <?php endif; ?>
             <?php if (get_field('youtube_url', 'option')) : ?>
                 <li>
-                    <a href="<?php the_field('youtube_url', 'option'); ?>" target="_blank" rel="noopener noreferrer"><i class="yt-icon"></i></a>
+                    <a href="<?php the_field('youtube_url', 'option'); ?>" aria-label="Youtube" target="_blank" rel="noopener noreferrer"><i class="yt-icon"></i></a>
                 </li>
             <?php endif; ?>
             <?php if (get_field('linkedin_url', 'option')) : ?>
                 <li>
-                    <a href="<?php the_field('linkedin_url', 'option'); ?>" target="_blank" rel="noopener noreferrer"><i class="linkedin-icon"></i></a>
+                    <a href="<?php the_field('linkedin_url', 'option'); ?>" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="linkedin-icon"></i></a>
                 </li>
             <?php endif; ?>
 

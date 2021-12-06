@@ -1,5 +1,5 @@
 <section id="latest-videos">
-    <div class="info-container">
+    <div class="info-container pr-0">
         <h2 class="heading separator separator-before">
             Latest Videos
         </h2>
