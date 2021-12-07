@@ -1,6 +1,13 @@
 #masthead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
   .top-bar {
+    background: #fff;
     padding: 45.126439rem $sidePadding;
+    transition: 0s;
     .logo {
       &-banner {
         width: 599.80558rem;
@@ -199,5 +206,26 @@
         margin-left: auto;
       }
     }
+  }
+}
+#to-top {
+  display: none;
+  position: fixed;
+  bottom: 37.605366rem;
+  right: 37.605366rem;
+  background: #fff;
+  width: 65.80939rem;
+  height: 65.80939rem;
+  line-height: 65.80939rem;
+  transition: 0s;
+  z-index: 999;
+  font-size: 37.605366rem;
+  text-align: center;
+  border: 1px solid $lblue;
+  color: $lblue;
+  @include borderRadius(50%);
+  &:hover {
+    background: $lblue;
+    color: #fff;
   }
 }

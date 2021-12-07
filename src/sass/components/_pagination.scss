@@ -1,0 +1,38 @@
+.pagination {
+  flex: 0 0 100%;
+  width: 100%;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    li {
+      &:not(:last-of-type) {
+        margin-right: 56.408048rem;
+      }
+      span,
+      a {
+        font-size: 33.844829rem;
+        width: 109.05556rem;
+        height: 109.05556rem;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        font-weight: $medium;
+        @include borderRadius(50%);
+        color: #000;
+        font-family: "Roboto", sans-serif;
+        &.current,
+        &:hover {
+          &:not(.dots) {
+            background: $lblue;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

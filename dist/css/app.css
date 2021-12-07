@@ -279,6 +279,13 @@ a:focus {
   padding-right: 0 !important;
 }
 
+.pos-r {
+  position: relative;
+}
+.pos-a {
+  position: absolute;
+}
+
 .full-size-img {
   width: 100%;
   height: 100%;
@@ -313,6 +320,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -477,6 +485,28 @@ a:not([href]) {
     transform: rotate(360deg);
   }
 }
+@-webkit-keyframes LeftRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-30rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes LeftRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-30rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 @-webkit-keyframes UpDown {
   0% {
     transform: translateY(0);
@@ -638,8 +668,17 @@ a:not([href]) {
     transform: rotate(1turn);
   }
 }
+#masthead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
 #masthead .top-bar {
+  background: #fff;
   padding: 45.126439rem 351.610168rem;
+  transition: 0s;
 }
 #masthead .top-bar .logo-banner {
   width: 599.80558rem;
@@ -825,6 +864,30 @@ a:not([href]) {
 }
 #masthead .nav-bar.search-open form {
   margin-left: auto;
+}
+
+#to-top {
+  display: none;
+  position: fixed;
+  bottom: 37.605366rem;
+  right: 37.605366rem;
+  background: #fff;
+  width: 65.80939rem;
+  height: 65.80939rem;
+  line-height: 65.80939rem;
+  transition: 0s;
+  z-index: 999;
+  font-size: 37.605366rem;
+  text-align: center;
+  border: 1px solid #37a5ff;
+  color: #37a5ff;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+#to-top:hover {
+  background: #37a5ff;
+  color: #fff;
 }
 
 .site-footer {
@@ -1774,6 +1837,126 @@ a:not([href]) {
   -webkit-transform-origin: left;
   -moz-transform-origin: left;
 }
+.hero-inner-post .back-btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+  right: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 33.844829rem;
+  padding-bottom: 63.929121rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.hero-inner-post .back-btn i {
+  margin-right: 43.24617rem;
+  font-size: 48.886975rem;
+}
+.hero-inner-post .back-btn:hover i {
+  -webkit-animation: LeftRight 1.6s ease-in-out infinite;
+  animation: LeftRight 1.6s ease-in-out infinite;
+}
+.hero-inner-post h2 {
+  line-height: 1.05;
+  margin-bottom: 65.80939rem;
+}
+.hero-inner-post .date {
+  line-height: 1.5;
+  position: relative;
+  padding-left: 33.844829rem;
+  color: #37a5ff;
+  font-size: 30.084292rem;
+}
+.hero-inner-post .date::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+  background: url("../../assets/icons/calendar.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 22.563219rem;
+  height: 22.563219rem;
+}
+
+.pagination {
+  flex: 0 0 100%;
+  width: 100%;
+}
+.pagination ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.pagination ul li:not(:last-of-type) {
+  margin-right: 56.408048rem;
+}
+.pagination ul li span,
+.pagination ul li a {
+  font-size: 33.844829rem;
+  width: 109.05556rem;
+  height: 109.05556rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-weight: 500;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+}
+.pagination ul li span.current:not(.dots), .pagination ul li span:hover:not(.dots),
+.pagination ul li a.current:not(.dots),
+.pagination ul li a:hover:not(.dots) {
+  background: #37a5ff;
+  color: #fff;
+}
+
+.share-wrapper {
+  margin-top: 131.618779rem;
+}
+.share-wrapper p {
+  color: #202d5d;
+  font-size: 32.603852rem;
+  margin-right: 56.408048rem;
+  text-transform: uppercase;
+}
+.share-wrapper ul li:not(:last-of-type) {
+  margin-right: 48.886975rem;
+}
+.share-wrapper ul li a {
+  width: 77.090999rem;
+  height: 77.090999rem;
+  border: 1px solid #202d5d;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  color: #202d5d;
+  font-size: 26.323756rem;
+  transition: 0.2s;
+}
+.share-wrapper ul li a:hover {
+  background: #202d5d;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 5.640805rem 11.28161rem rgba(0, 0, 0, 0.16);
+}
+.share-wrapper ul li a:active {
+  transform: scale(0.7);
+}
 
 #regions .top-bar {
   background: #37a5ff;
@@ -2300,4 +2483,124 @@ a:not([href]) {
 }
 .archive-grid .blog-card:not(:nth-of-type(4n)) {
   margin-right: 56.408048rem;
+}
+.archive-grid .pagination {
+  margin-top: 150.421462rem;
+}
+
+.single-post {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: space-between;
+}
+.single-post article {
+  width: 2094.61886rem;
+}
+.single-post article .featured-image {
+  width: 100%;
+  height: 1316.187794rem;
+  margin-bottom: 125.977975rem;
+}
+.single-post article .the-content p {
+  font-size: 37.605366rem;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+}
+.single-post article .the-content p b,
+.single-post article .the-content p strong {
+  font-weight: 700;
+}
+.single-post article .the-content p b span,
+.single-post article .the-content p strong span {
+  font-weight: inherit;
+}
+.single-post article .the-content p a {
+  font-weight: 700;
+  color: #37a5ff;
+}
+.single-post article .the-content p a span {
+  font-weight: inherit;
+  color: inherit;
+}
+.single-post article .the-content p:not(:last-of-type) {
+  margin-bottom: 65.80939rem;
+}
+.single-post article .the-content h1 {
+  font-size: 60.168585rem;
+}
+.single-post article .the-content h2 {
+  font-size: 56.408048rem;
+}
+.single-post article .the-content h3 {
+  font-size: 52.647512rem;
+}
+.single-post article .the-content h4 {
+  font-size: 48.886975rem;
+}
+.single-post article .the-content h5 {
+  font-size: 45.126439rem;
+}
+.single-post article .the-content h6 {
+  font-size: 41.365902rem;
+}
+.single-post article .the-content h1 span,
+.single-post article .the-content h2 span,
+.single-post article .the-content h3 span,
+.single-post article .the-content h4 span,
+.single-post article .the-content h5 span,
+.single-post article .the-content h6 span {
+  font-weight: inherit;
+  color: inherit;
+}
+.single-post article .the-content h1 b,
+.single-post article .the-content h1 strong,
+.single-post article .the-content h2 b,
+.single-post article .the-content h2 strong,
+.single-post article .the-content h3 b,
+.single-post article .the-content h3 strong,
+.single-post article .the-content h4 b,
+.single-post article .the-content h4 strong,
+.single-post article .the-content h5 b,
+.single-post article .the-content h5 strong,
+.single-post article .the-content h6 b,
+.single-post article .the-content h6 strong {
+  font-weight: 700;
+  color: inherit;
+  font-size: inherit;
+}
+.single-post article .the-content h1 b span,
+.single-post article .the-content h1 strong span,
+.single-post article .the-content h2 b span,
+.single-post article .the-content h2 strong span,
+.single-post article .the-content h3 b span,
+.single-post article .the-content h3 strong span,
+.single-post article .the-content h4 b span,
+.single-post article .the-content h4 strong span,
+.single-post article .the-content h5 b span,
+.single-post article .the-content h5 strong span,
+.single-post article .the-content h6 b span,
+.single-post article .the-content h6 strong span {
+  font-weight: inherit;
+  color: inherit;
+}
+.single-post aside {
+  width: 678.776848rem;
+  flex: 0 0 auto;
+}
+.single-post aside .sidebar-content .title {
+  font-size: 67.689658rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 92.133146rem;
+  color: #0d1037;
+  line-height: 0.5;
+}
+.single-post aside .sidebar-content .blog-card:not(:last-of-type) {
+  margin-bottom: 47.006707rem;
+}
+.single-post .share-wrapper {
+  flex: 0 0 100%;
 }

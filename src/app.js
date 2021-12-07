@@ -4,3 +4,4 @@ import "./scripts/global";
 import "./scripts/header";
 import "./scripts/sliders";
 import "./scripts/people";
+import "./scripts/share";

@@ -2165,6 +2165,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scripts_sliders__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/sliders */ "./src/scripts/sliders.js");
 /* harmony import */ var _scripts_people__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scripts/people */ "./src/scripts/people.js");
 /* harmony import */ var _scripts_people__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_scripts_people__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _scripts_share__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./scripts/share */ "./src/scripts/share.js");
+/* harmony import */ var _scripts_share__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_scripts_share__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -2284,6 +2287,19 @@ jQuery(document).ready(function ($) {
 /***/ (() => {
 
 jQuery(document).ready(function ($) {
+  $(window).scroll(function () {
+    var sticky = $("#masthead .top-bar"),
+        scroll = $(window).scrollTop();
+
+    if (scroll >= 100) {
+      sticky.slideUp();
+      $("#to-top").slideDown();
+    } else {
+      sticky.slideDown();
+      $("#to-top").slideUp();
+    }
+  });
+  $("#page").css("padding-top", $("#masthead").outerHeight());
   $("#masthead .nav-bar form .search-btn").on("click", function (e) {
     if ($(this).hasClass("disabled")) {
       e.preventDefault();
@@ -2308,6 +2324,8 @@ jQuery(document).ready(function ($) {
   \*******************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
+var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
 jQuery(document).ready(function ($) {
   if ($(".person-tabber-header").length) {
     var getPersonDetails = function getPersonDetails(personId) {
@@ -2324,8 +2342,6 @@ jQuery(document).ready(function ($) {
         $(".person-modal").addClass("active");
       });
     };
-
-    var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 
     $(".person-tabber-header li a").on("click", function (e) {
       e.preventDefault();
@@ -2348,6 +2364,33 @@ jQuery(document).ready(function ($) {
       $(".person-modal").removeClass("active");
     });
   }
+});
+
+/***/ }),
+
+/***/ "./src/scripts/share.js":
+/*!******************************!*\
+  !*** ./src/scripts/share.js ***!
+  \******************************/
+/***/ (() => {
+
+jQuery(document).ready(function ($) {
+  $(".share-btn").on("click", function (e) {
+    e.preventDefault();
+    var sizeAttributes = "width=600,height=400";
+
+    if ($(window).width() < 768) {
+      sizeAttributes = "width=300,height=300";
+    }
+
+    if ($(this).hasClass("twitter")) {
+      window.open("https://twitter.com/intent/tweet?text=".concat(encodeURIComponent($(this).attr("data-title")) + escape("\n"), "&url=").concat(location.href), "_blank", sizeAttributes);
+    } else if ($(this).hasClass("facebook")) {
+      window.open("https://facebook.com/sharer.php?display=popup&u=".concat(location.href), "_blank", sizeAttributes);
+    } else if ($(this).hasClass("linkedin")) {
+      window.open("https://www.linkedin.com/sharing/share-offsite/?url=".concat(location.href), "_blank", sizeAttributes);
+    }
+  });
 });
 
 /***/ }),

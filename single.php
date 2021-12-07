@@ -11,31 +11,37 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main">
+<?php
+require('template-parts/hero-inner-post.php');
+?>
+<main id="primary" class="site-main page-padding-x page-padding-y single-post single-post-<?= get_post_type(); ?>">
+	<article>
+		<div class="featured-image">
+			<img src="<?= get_the_post_thumbnail_url(); ?>" alt="<?= the_title(); ?>" class="full-size-img full-size-img-cover">
+		</div>
+		<div class="the-content">
+			<?php the_content(); ?>
+		</div>
+	</article>
+	<aside>
+		<div class="sidebar-content">
+			<h3 class="title">Related <?= get_post_type(); ?>s</h3>
 
-	<?php
-	while (have_posts()) :
-		the_post();
+			<?php
+			require('template-parts/related-posts.php');
+			?>
 
-		get_template_part('template-parts/content', get_post_type());
-
-		the_post_navigation(
-			array(
-				'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'starter') . '</span> <span class="nav-title">%title</span>',
-				'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'starter') . '</span> <span class="nav-title">%title</span>',
-			)
-		);
-
-		// If comments are open or we have at least one comment, load up the comment template.
-		if (comments_open() || get_comments_number()) :
-			comments_template();
-		endif;
-
-	endwhile; // End of the loop.
-	?>
-
+		</div>
+	</aside>
+	<div class="share-wrapper d-flex flex-direction-row flex-wrap justify-content-start align-items-center">
+		<p>Share:</p>
+		<ul class="d-flex flex-direction-row flex-wrap justify-content-start align-items-center">
+			<li><a href="#!" class="facebook share-btn d-flex align-items-center justify-content-center"><i class="fab fa-facebook-f"></i></a></li>
+			<li><a href="#!" class="twitter share-btn d-flex align-items-center justify-content-center"><i class="fab fa-twitter"></i></a></li>
+			<li><a href="#!" class="linkedin share-btn d-flex align-items-center justify-content-center"><i class="fab fa-linkedin-in"></i></a></li>
+		</ul>
+	</div>
 </main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

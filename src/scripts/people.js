@@ -1,6 +1,6 @@
+const axios = require("axios");
 jQuery(document).ready(function ($) {
   if ($(".person-tabber-header").length) {
-    const axios = require("axios");
     $(".person-tabber-header li a").on("click", function (e) {
       e.preventDefault();
       $(".person-tabber-header li a").removeClass("active");

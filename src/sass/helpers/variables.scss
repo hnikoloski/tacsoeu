@@ -109,6 +109,14 @@ $sidePadding: 351.610168rem;
 .pr-0 {
   padding-right: 0 !important;
 }
+.pos {
+  &-r {
+    position: relative;
+  }
+  &-a {
+    position: absolute;
+  }
+}
 .full-size-img {
   width: 100%;
   height: 100%;
