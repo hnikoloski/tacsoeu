@@ -1,4 +1,5 @@
 jQuery(document).ready(function ($) {
+  $("#page").css("padding-top", $("#masthead").outerHeight());
   $(window).scroll(function () {
     var sticky = $("#masthead .top-bar"),
       scroll = $(window).scrollTop();
@@ -11,8 +12,6 @@ jQuery(document).ready(function ($) {
       $("#to-top").slideUp();
     }
   });
-
-  $("#page").css("padding-top", $("#masthead").outerHeight());
 
   $("#masthead .nav-bar form .search-btn").on("click", function (e) {
     if ($(this).hasClass("disabled")) {

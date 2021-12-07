@@ -57,6 +57,7 @@ $logoUrl = wp_get_attachment_image_src($custom_logo_id, 'full');
                 ?>
                 <form action="/" method="get">
                     <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="Search Here..." />
+                    <input type="hidden" name="post_type" value="post" />
                     <button class="disabled search-btn" aria-label="Search button"><i class="far fa-search"></i></button>
                     <button class="search-close" aria-label="Close Search"><i class="fas fa-times"></i></button>
                 </form>

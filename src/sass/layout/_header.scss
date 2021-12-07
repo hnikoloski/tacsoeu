@@ -24,7 +24,7 @@
     background: $dblue;
     ul {
       li {
-        line-height: 165.463608rem; // 88px = height of navbar
+        line-height: 165.463608rem;
         position: relative;
         &:not(:last-of-type) {
           margin-right: 131.618779rem;
@@ -174,7 +174,7 @@
       &.active {
         width: 30%;
         input {
-          border: 1px solid $lblue;
+          border: 1.880268rem solid $lblue;
           transform: scaleX(1);
           -webkit-transform: scaleX(1);
           -moz-transform: scaleX(1);
@@ -208,6 +208,11 @@
     }
   }
 }
+body.logged-in.admin-bar {
+  #masthead {
+    top: 32px;
+  }
+}
 #to-top {
   display: none;
   position: fixed;
@@ -221,8 +226,9 @@
   z-index: 999;
   font-size: 37.605366rem;
   text-align: center;
-  border: 1px solid $lblue;
+  border: 1.880268rem solid $lblue;
   color: $lblue;
+  padding: 0;
   @include borderRadius(50%);
   &:hover {
     background: $lblue;

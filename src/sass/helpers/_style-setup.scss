@@ -22,6 +22,12 @@ body {
   * {
     transition: 0.6s;
   }
+  .fancybox__track {
+    transition: 0s;
+    * {
+      transition: 0s;
+    }
+  }
   &.page {
     margin: 0;
   }

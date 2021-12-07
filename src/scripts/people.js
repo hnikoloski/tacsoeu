@@ -14,15 +14,18 @@ jQuery(document).ready(function ($) {
 
       $(this).on("keyup", function (e) {
         if (e.key == "Enter" || e.key == "Escape")
-          $(".person-modal").removeClass("active");
+          $(".modal-person").removeClass("active");
       });
       let presonId = $(this).attr("href");
       getPersonDetails(presonId);
     });
-    $(".person-modal .close-modal").on("click", function (e) {
-      e.preventDefault();
-      $(".person-modal").removeClass("active");
-    });
+    $(".modal-person .close-modal, .modal:not(.modal-content").on(
+      "click",
+      function (e) {
+        e.preventDefault();
+        $(".modal-person").removeClass("active");
+      }
+    );
 
     function getPersonDetails(personId) {
       axios
@@ -45,7 +48,7 @@ jQuery(document).ready(function ($) {
           console.log(error);
         })
         .then(function () {
-          $(".person-modal").addClass("active");
+          $(".modal-person").addClass("active");
         });
     }
   }

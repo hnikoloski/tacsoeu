@@ -10,15 +10,11 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<a href="<?= the_permalink(); ?>" class="blog-card d-block single-slide swiper-slide d-flex flex-direction-col flex-wrap justify-content-start align-items-start">
+	<div class="img-wrapper">
+		<img src="<?= get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+	</div>
 
-	<?php starter_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php starter_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+	<p class="date"><?= get_the_date(); ?></p>
+	<h3><?= the_title(); ?></h3>
+</a>

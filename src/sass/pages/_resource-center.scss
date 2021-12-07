@@ -1,0 +1,37 @@
+.resource-center-page {
+  .the-content {
+    color: #000;
+    margin-bottom: 122.217438rem;
+    h2 {
+      font-size: 67.689658rem;
+      font-weight: $bold;
+      margin-bottom: 65.80939rem;
+    }
+    p {
+      font-size: 41.365902rem;
+      &:not(:last-of-type) {
+        margin-bottom: 65.80939rem;
+      }
+    }
+  }
+  .single-country {
+    padding: 31.964561rem 0;
+    &:first-of-type {
+      border-top: 1px solid rgba(55, 165, 255, 0.2);
+    }
+    border-bottom: 1px solid rgba(55, 165, 255, 0.2);
+    flex: 0 0 100%;
+    .img-wrapper {
+      width: 125.977975rem;
+      height: 86.492341rem;
+      img {
+        @include fullSizeImg(cover);
+      }
+    }
+    h4 {
+      font-size: 45.126439rem;
+      font-weight: $bold;
+      margin-left: 54.52778rem;
+    }
+  }
+}

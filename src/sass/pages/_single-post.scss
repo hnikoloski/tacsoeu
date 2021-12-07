@@ -77,6 +77,10 @@
         }
       }
     }
+    iframe {
+      width: 100%;
+      height: 1156.89658rem;
+    }
   }
   aside {
     width: 678.776848rem;
@@ -99,5 +103,25 @@
   }
   .share-wrapper {
     flex: 0 0 100%;
+  }
+  &-photo {
+    article {
+      padding: 56.408048rem 0;
+      width: 100%;
+      .single-slide {
+        max-width: 80%;
+        width: auto;
+        height: 1287.98377rem;
+        img {
+          @include fullSizeImg(cover);
+        }
+      }
+      .swiper-btns-wrapper {
+        position: absolute;
+        right: 188.026828rem;
+        @include ver-center();
+        z-index: 99;
+      }
+    }
   }
 }

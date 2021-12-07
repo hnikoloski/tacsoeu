@@ -77,7 +77,7 @@
 
         </div>
 
-        <div class="person-modal">
+        <div class="modal modal-person">
             <div class="modal-content">
                 <a href="#!" class="close-modal"><i class="fal fa-times"></i></a>
                 <div class="single-person">

@@ -31,4 +31,16 @@ jQuery(document).ready(function ($) {
     loop: true,
     spaceBetween: 0,
   });
+
+  let singlePhotoSlider = new Swiper(".single-photo-slider ", {
+    modules: [Navigation],
+    slidesPerView: "auto",
+    centeredSlides: true,
+    loop: true,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".single-photo-slider .swiper-button-next",
+      prevEl: ".single-photo-slider .swiper-button-prev",
+    },
+  });
 });

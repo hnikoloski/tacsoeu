@@ -16,15 +16,15 @@ get_header();
     <?php if (have_posts()) : ?>
 
         <header class="page-header">
-            <h1 class="page-title">
+            <h1 class="page-title search-title">
                 <?php
                 /* translators: %s: search query. */
                 printf(esc_html__('Search Results for: %s', 'starter'), '<span>' . get_search_query() . '</span>');
                 ?>
             </h1>
         </header><!-- .page-header -->
-
-    <?php
+        <div class="archive-grid page-padding-x page-padding-y">
+        <?php
         /* Start the Loop */
         while (have_posts()) :
             the_post();
@@ -45,8 +45,8 @@ get_header();
         get_template_part('template-parts/content', 'none');
 
     endif;
-    ?>
-
+        ?>
+        </div>
 </main><!-- #main -->
 
 <?php

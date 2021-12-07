@@ -163,7 +163,7 @@ function starter_scripts()
     wp_enqueue_style('fa-style');
 
 
-    wp_register_script('app', get_template_directory_uri() . '/dist/js/app.js', ['jquery'], 1, true);
+    wp_register_script('app', get_template_directory_uri() . '/dist/js/app.js#asyncload', ['jquery'], 1, true);
     wp_enqueue_script('app');
 }
 add_action('wp_enqueue_scripts', 'starter_scripts');
@@ -194,7 +194,17 @@ require get_template_directory() . '/inc/customizer.php';
 if (defined('JETPACK__VERSION')) {
     require get_template_directory() . '/inc/jetpack.php';
 }
-
+// Async load
+function ikreativ_async_scripts($url)
+{
+    if (strpos($url, '#asyncload') === false)
+        return $url;
+    else if (is_admin())
+        return str_replace('#asyncload', '', $url);
+    else
+        return str_replace('#asyncload', '', $url) . "' defer='";
+}
+add_filter('clean_url', 'ikreativ_async_scripts', 11, 1);
 
 if (function_exists('acf_add_options_page')) {
 
