@@ -10,12 +10,11 @@
 
 get_header();
 ?>
-
-<main id="primary" class="site-main site-archive page-padding page-padding-x page-padding-y">
-
+<?php
+require('template-parts/hero-inner.php');
+?>
+<main id="primary" class="site-main site-archive page-padding page-padding-x page-padding-y archive-grid">
     <?php if (have_posts()) : ?>
-
-
 
     <?php
         /* Start the Loop */
@@ -32,6 +31,8 @@ get_header();
         endwhile;
     else :
         get_template_part('template-parts/content', 'none');
+
+
     endif;
     ?>
 </main><!-- #main -->

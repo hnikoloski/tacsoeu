@@ -129,6 +129,13 @@
         width: 22.563219rem;
         height: 22.563219rem;
       }
+      &.no-icon {
+        padding-left: 178.625486rem;
+        font-size: 45.126439rem;
+        &::before {
+          display: none;
+        }
+      }
     }
   }
 }

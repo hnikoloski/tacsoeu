@@ -12,9 +12,11 @@
       margin-right: 56.408048rem;
     }
     &.card-type {
-      &-video {
+      &-video,
+      &-photo {
         width: 48%;
         margin-right: 2%;
+        flex: 0 0 auto;
         &:hover {
           .img-wrapper {
             &::before {
@@ -52,9 +54,35 @@
           }
         }
       }
+      &-photo {
+        .img-wrapper {
+          &:before,
+          &::after {
+            display: none;
+          }
+        }
+      }
     }
   }
   .pagination {
     margin-top: 150.421462rem;
+  }
+}
+.archive {
+  .cat-filter {
+    margin-top: 63.929121rem;
+    padding: 0 $sidePadding;
+    ul {
+      li {
+        &:not(:last-of-type) {
+          margin-right: 103.414755rem;
+        }
+        a {
+          font-size: 45.126439rem;
+          font-weight: $bold;
+          color: #202d5d;
+        }
+      }
+    }
   }
 }

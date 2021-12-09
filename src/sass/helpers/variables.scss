@@ -38,7 +38,8 @@ $sidePadding: 351.610168rem;
     -moz-transition: transform 250ms ease-in;
     -webkit-transition: transform 250ms ease-in;
   }
-  &:hover {
+  &:hover,
+  &.active {
     &::after {
       transform: scaleX(1);
       -webkit-transform: scaleX(1);

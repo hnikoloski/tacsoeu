@@ -16,7 +16,10 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main">
+<?php
+require('template-parts/hero-inner.php');
+?>
+<div class="archive-grid page-padding-x page-padding-y">
 
     <?php
     if (have_posts()) :
@@ -36,16 +39,16 @@ get_header();
 				 */
             get_template_part('template-parts/content', get_post_type());
         endwhile;
-
-
     else :
-
         get_template_part('template-parts/content', 'none');
-
     endif;
+    the_posts_pagination(array(
+        'mid_size' => 2,
+        'type' => 'list',
+        'prev_text'    => sprintf('<i class="fas fa-chevron-left"></i> %1$s', __('', 'text-domain')),
+        'next_text'    => sprintf('%1$s <i class="fas fa-chevron-right"></i>', __('', 'text-domain')),
+    ));
     ?>
-
-</main><!-- #main -->
-
+</div><!-- #main -->
 <?php
 get_footer();

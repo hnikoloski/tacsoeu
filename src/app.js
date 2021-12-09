@@ -8,3 +8,4 @@ import "./scripts/people";
 import "./scripts/share";
 import "./scripts/videos";
 import "./scripts/fancybox";
+import "./scripts/stories";
