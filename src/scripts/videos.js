@@ -7,6 +7,7 @@ jQuery(document).ready(function ($) {
       $(this).on("keyup", function (e) {
         if (e.key == "Enter" || e.key == "Escape")
           $(".modal").removeClass("active");
+        $(".modal-backdrop").remove();
       });
     });
 
@@ -14,6 +15,7 @@ jQuery(document).ready(function ($) {
       axios
         .get("/wp-json/wp/v2/video/" + personId + "?_embed")
         .then(function (response) {
+          $("body").prepend('<div class="modal-backdrop"></div>');
           // handle success
           let videoLink = response.data.ACF.video_link;
           const videoWrapper = $(".modal-video .video-wrapper");
@@ -24,14 +26,14 @@ jQuery(document).ready(function ($) {
         })
         .then(function () {
           $(".modal-video").addClass("active");
+        })
+        .then(() => {
+          $(".modal .close-modal, .modal-backdrop").on("click", function (e) {
+            e.preventDefault();
+            $(".modal").removeClass("active");
+            $(".modal-backdrop").remove();
+          });
         });
     }
-    $(".modal .close-modal, .modal:not(.modal-content)").on(
-      "click",
-      function (e) {
-        e.preventDefault();
-        $(".modal").removeClass("active");
-      }
-    );
   }
 });

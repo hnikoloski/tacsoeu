@@ -15,22 +15,17 @@ jQuery(document).ready(function ($) {
       $(this).on("keyup", function (e) {
         if (e.key == "Enter" || e.key == "Escape")
           $(".modal-person").removeClass("active");
+        $(".modal-backdrop").remove();
       });
       let presonId = $(this).attr("href");
       getPersonDetails(presonId);
     });
-    $(".modal-person .close-modal, .modal:not(.modal-content").on(
-      "click",
-      function (e) {
-        e.preventDefault();
-        $(".modal-person").removeClass("active");
-      }
-    );
 
     function getPersonDetails(personId) {
       axios
         .get("/wp-json/wp/v2/people/" + personId + "?_embed")
         .then(function (response) {
+          $("body").prepend('<div class="modal-backdrop"></div>');
           // handle success
           let person = response.data;
           const basicInfo = `
@@ -49,6 +44,13 @@ jQuery(document).ready(function ($) {
         })
         .then(function () {
           $(".modal-person").addClass("active");
+        })
+        .then(() => {
+          $(".modal .close-modal, .modal-backdrop").on("click", function (e) {
+            e.preventDefault();
+            $(".modal").removeClass("active");
+            $(".modal-backdrop").remove();
+          });
         });
     }
   }
