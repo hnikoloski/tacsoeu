@@ -19,11 +19,23 @@
             background: url("../../assets/icons/fb-icon.svg");
             @include bg-props(contain, center, no-repeat);
           }
+          &-dark {
+            &:before {
+              background: url("../../assets/icons/fb-icon-dark.svg");
+              @include bg-props(contain, center, no-repeat);
+            }
+          }
         }
         &.twitter-icon {
           &:before {
             background: url("../../assets/icons/twitter-icon.svg");
             @include bg-props(contain, center, no-repeat);
+          }
+          &-dark {
+            &:before {
+              background: url("../../assets/icons/twitter-icon-dark.svg");
+              @include bg-props(contain, center, no-repeat);
+            }
           }
         }
         &.yt-icon {
@@ -36,6 +48,12 @@
           &:before {
             background: url("../../assets/icons/linkedin-icon.svg");
             @include bg-props(contain, center, no-repeat);
+          }
+          &-dark {
+            &:before {
+              background: url("../../assets/icons/linkedin-icon-dark.svg");
+              @include bg-props(contain, center, no-repeat);
+            }
           }
         }
       }

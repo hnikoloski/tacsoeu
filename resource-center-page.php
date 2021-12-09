@@ -22,6 +22,8 @@ require('template-parts/hero-inner.php');
             'post_status'            => array('publish'),
             'posts_per_page'         => '-1',
             'paged'                  => get_query_var('paged'),
+            'orderby' => 'title',
+            'order'   => 'ASC',
         );
 
         // The Query
@@ -31,7 +33,9 @@ require('template-parts/hero-inner.php');
         if ($query->have_posts()) {
             while ($query->have_posts()) {
                 $query->the_post();
+
         ?>
+
                 <div class="single-country d-flex flex-wrap justify-content-space-between align-items-center align-content-center">
                     <div class="d-flex flex-wrap justify-content-start align-items-center align-content-center">
                         <div class="img-wrapper">
@@ -39,7 +43,7 @@ require('template-parts/hero-inner.php');
                         </div>
                         <h4><?= the_title(); ?></h4>
                     </div>
-                    <a href="<?= the_permalink(); ?>" class="btn d-block btn-fancy-arrow btn-lblue w-fit-content">VIEW MORE <i></i></a>
+                    <a href="<?= get_post_field('post_name', get_the_ID()); ?>" class="btn d-block btn-fancy-arrow btn-lblue w-fit-content">VIEW MORE <i></i></a>
                 </div>
         <?php
             }
