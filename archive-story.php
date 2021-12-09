@@ -36,8 +36,9 @@ get_header();
                 while ($query->have_posts()) {
                     $query->the_post();
                     // do something
+
             ?>
-                    <li class="animated fadeInUp" data-delay="<?= $counter * 100; ?>"><a href="<?= the_permalink(); ?>"><?= the_title(); ?></a></li>
+                    <li class="animated fadeInUp country-filter" data-delay="<?= $counter * 100; ?>"><a href="<?= get_post_field('post_name', get_the_ID()); ?>"><?= the_title(); ?></a></li>
             <?php
                     $counter++;
                 }

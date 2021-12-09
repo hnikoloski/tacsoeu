@@ -24,6 +24,27 @@
         }
       }
     }
+    .res-filter {
+      position: absolute;
+      right: 56.408048rem;
+      @include ver-center();
+
+      a {
+        border: 1px solid $lblue;
+        padding: 9.401341rem 18.802683rem;
+        color: #fff;
+        font-size: 41.365902rem;
+        transition: 0.1s;
+        @include borderRadius(167.343877rem);
+        i {
+          margin-left: 18.802683rem;
+          transition: 0.1s;
+        }
+        &:hover {
+          border: 1px solid #fff;
+        }
+      }
+    }
   }
   .quick-links-wrapper {
     background: $darkerBlue;
