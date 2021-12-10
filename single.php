@@ -35,7 +35,9 @@ require('template-parts/hero-inner-post.php');
 		</article>
 		<aside>
 			<div class="sidebar-content">
-				<h3 class="title">Related <?= get_post_type(); ?>s</h3>
+				<h3 class="title">Related <?php $object = get_post_type_object(get_post_type())->labels;
+											echo $object->name; ?></h3>
+				</h3>
 
 				<?php
 				require('template-parts/related-posts.php');

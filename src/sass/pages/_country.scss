@@ -1,0 +1,107 @@
+body.single-country {
+  .hero-inner {
+    .date {
+      display: none;
+    }
+    .country-excerpt {
+      p {
+        strong,
+        b {
+          font-weight: $bold;
+          span {
+            font-weight: inherit;
+          }
+        }
+        &:not(:last-of-type) {
+          margin-bottom: 65.80939rem;
+        }
+      }
+    }
+  }
+  .the-content {
+    p {
+      font-size: 41.365902rem;
+      strong,
+      b {
+        font-weight: $bold;
+        span {
+          font-weight: inherit;
+        }
+      }
+      &:not(:last-of-type) {
+        margin-bottom: 65.80939rem;
+      }
+      a {
+        color: $lblue;
+        &:visited {
+          text-decoration: underline;
+          color: $lblue;
+        }
+      }
+    }
+    .wp-block-image {
+      img {
+        @include fullSizeImg(contain);
+      }
+    }
+    .wp-block-button__link {
+      background: #202d5d;
+      color: #fff;
+      padding: 54.52778rem 203.068974rem 54.52778rem 88.372609rem;
+      font-weight: $semiBold;
+      font-size: 33.844829rem;
+      position: relative;
+      &::before {
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+        content: "\f30b";
+        position: absolute;
+        @include ver-center();
+        font-size: 48.886975rem;
+        right: 65.80939rem;
+      }
+      &:hover {
+        border-color: $lblue;
+        background: $lblue;
+      }
+    }
+  }
+  #related-country-news {
+    margin-top: 332.807485rem;
+    padding-left: $sidePadding;
+    .info-container {
+      padding-right: $sidePadding;
+      margin-bottom: 84.612072rem;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: space-between;
+    }
+    .swiper {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 763.473213rem;
+        height: 100%;
+        opacity: 0.72;
+        z-index: 1;
+        background: #364b98;
+        background: linear-gradient(
+          180deg,
+          #364b98 73%,
+          rgba(255, 255, 255, 0) 73%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#364b98",endColorstr="#ffffff",GradientType=1);
+      }
+      .swiper-btns-wrapper {
+        position: absolute;
+        right: $sidePadding;
+        top: 131.618779rem;
+        z-index: 9;
+      }
+    }
+  }
+}

@@ -3,15 +3,16 @@
 
 get_header();
 ?>
-<?php
-require('template-parts/hero-inner.php');
-?>
+<div class="hero-inner">
+    <?php if (function_exists('cu_wp_custom_breadcrumbs')) cu_wp_custom_breadcrumbs(); ?>
+    <h2 class="heading separator separator-before">Videos</h2>
+</div>
 <div class="archive-grid page-padding-x page-padding-y">
 
     <?php
     // WP_Query arguments
     $args = array(
-        'post_type'              => array(get_field('display_what')),
+        'post_type'              => array('video'),
         'post_status'            => array('publish'),
         'posts_per_page'         => '20',
         'paged'                  => get_query_var('paged'),
@@ -73,7 +74,8 @@ require('template-parts/hero-inner.php');
     <?php
     // Restore original Post Data
     wp_reset_postdata();
-    if (get_field('display_what') == 'video') {
+
+    if (get_post_type() == 'video') {
     ?>
 
         <div class="modal modal-video">

@@ -26,6 +26,11 @@
       li {
         line-height: 165.463608rem;
         position: relative;
+        &.lblue {
+          a {
+            color: $lblue;
+          }
+        }
         &:not(:last-of-type) {
           margin-right: 131.618779rem;
         }

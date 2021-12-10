@@ -21,7 +21,7 @@ if ($related) foreach ($related as $post) {
                     <?php
                     };
                 endforeach;
-                if (count($posts) - 1 > 1) {  ?>
+                if (count($posts) > 1) {  ?>
                     <span class="additional-countries">
                         + <?= count($posts) - 1; ?>
                     </span>

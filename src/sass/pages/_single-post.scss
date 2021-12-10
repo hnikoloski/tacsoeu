@@ -87,12 +87,12 @@
     flex: 0 0 auto;
     .sidebar-content {
       .title {
-        font-size: 67.689658rem;
+        font-size: 60.689658rem;
         text-transform: uppercase;
         font-weight: $bold;
         margin-bottom: 92.133146rem;
         color: #0d1037;
-        line-height: 0.5;
+        line-height: 1;
       }
       .blog-card {
         &:not(:last-of-type) {
@@ -121,6 +121,28 @@
         right: 188.026828rem;
         @include ver-center();
         z-index: 99;
+      }
+    }
+  }
+}
+.cu-grp-separated {
+  padding-bottom: 86.492341rem;
+  margin-bottom: 86.492341rem;
+  &:not(:last-of-type) {
+    border-bottom: 1px solid rgba(55, 165, 255, 0.2);
+  }
+  .heading {
+    font-size: 67.689658rem;
+    font-weight: $bold;
+    margin-bottom: 11.28161rem;
+  }
+  p {
+    a {
+      padding-left: 178.625486rem;
+      font-size: 41.365902rem;
+      color: #000;
+      &:hover {
+        color: $lblue;
       }
     }
   }

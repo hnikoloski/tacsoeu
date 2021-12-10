@@ -18,7 +18,8 @@
           font-size: 37.605366rem;
           padding: 22.563219rem 56.408048rem;
           @include borderRadius(167.343877rem);
-          &:hover {
+          &:hover,
+          &.active {
             background: rgba(255, 255, 255, 0.3);
           }
         }

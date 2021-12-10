@@ -43,4 +43,17 @@ jQuery(document).ready(function ($) {
       prevEl: ".single-photo-slider .swiper-button-prev",
     },
   });
+  let relatedCountrySwiper = new Swiper(
+    "#related-country-news .latest-news-slider ",
+    {
+      modules: [Navigation],
+      slidesPerView: 4,
+      loop: true,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: "#related-country-news .latest-news-slider .swiper-button-next",
+        prevEl: "#related-country-news .latest-news-slider .swiper-button-prev",
+      },
+    }
+  );
 });

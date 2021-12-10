@@ -111,7 +111,7 @@
             flex: 0 0 50%;
             width: 50%;
             display: flex;
-            justify-content: flex-start;
+            // justify-content: flex-start;
             align-content: center;
             align-items: center;
             flex-direction: row;
@@ -120,9 +120,21 @@
               font-weight: $bold;
               font-size: 41.365902rem;
             }
+            .socials {
+              li {
+                &:not(:last-of-type) {
+                  margin-right: 56.408048rem;
+                }
+              }
+            }
           }
         }
       }
     }
+  }
+}
+.page-template-resource-center_country {
+  .resource-center-page {
+    padding-bottom: 274.519168rem;
   }
 }

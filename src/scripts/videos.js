@@ -4,10 +4,12 @@ jQuery(document).ready(function ($) {
     $(".card-type-video").on("click", function (e) {
       e.preventDefault();
       getVideoDetails($(this).attr("data-post-id"));
+      $("body").addClass("overflow-hidden");
       $(this).on("keyup", function (e) {
         if (e.key == "Enter" || e.key == "Escape")
           $(".modal").removeClass("active");
         $(".modal-backdrop").remove();
+        $("body").removeClass("overflow-hidden");
       });
     });
 
@@ -32,6 +34,7 @@ jQuery(document).ready(function ($) {
             e.preventDefault();
             $(".modal").removeClass("active");
             $(".modal-backdrop").remove();
+            $("body").removeClass("overflow-hidden");
           });
         });
     }

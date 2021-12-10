@@ -9,4 +9,9 @@
     <?php else : ?>
         <p class="date no-icon"><?= count(get_field('tacso_gallery')); ?> photos</p>
     <?php endif; ?>
+    <?php if (get_post_type() == 'country') : ?>
+        <div class="country-excerpt">
+            <?= the_field('country_excerpt'); ?>
+        </div>
+    <?php endif; ?>
 </div>
