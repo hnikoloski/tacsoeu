@@ -2536,14 +2536,14 @@ jQuery(document).ready(function ($) {
       prevEl: ".single-photo-slider .swiper-button-prev"
     }
   });
-  var relatedCountrySwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__.default("#related-country-news .latest-news-slider ", {
+  var relatedCountrySwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__.default("#related-country-news .slider ", {
     modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation],
     slidesPerView: 4,
     loop: true,
     spaceBetween: 30,
     navigation: {
-      nextEl: "#related-country-news .latest-news-slider .swiper-button-next",
-      prevEl: "#related-country-news .latest-news-slider .swiper-button-prev"
+      nextEl: "#related-country-news .slider .swiper-button-next",
+      prevEl: "#related-country-news .slider .swiper-button-prev"
     }
   });
 });

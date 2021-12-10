@@ -1,17 +1,25 @@
 <section id="related-country-news">
     <div class="info-container ">
         <h2 class="heading separator separator-before animated fadeInLeft" data-delay="200">
-            COUNTRY News
+            <?= the_title(); ?> News
         </h2>
         <a href=" <?= get_post_type_archive_link('post'); ?>" class="btn d-block btn-fancy-arrow btn-lblue w-fit-content">VIEW MORE <i></i></a>
     </div>
-    <div class="swiper latest-news-slider">
+    <div class="swiper slider">
         <div class="swiper-wrapper">
             <?php
             // WP_Query arguments
             $args = array(
                 'post_status'            => array('publish'),
                 'posts_per_page'         => '10',
+
+                'meta_query' => array(
+                    array(
+                        'key' => 'country_tag',
+                        'value' => '"' . get_the_ID() . '"',
+                        'compare' => 'LIKE'
+                    ),
+                ),
             );
 
             // The Query

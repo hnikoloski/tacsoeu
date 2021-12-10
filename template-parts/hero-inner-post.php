@@ -1,7 +1,7 @@
 <div class="hero-inner hero-inner-post">
     <div class="pos-r">
         <?php if (function_exists('cu_wp_custom_breadcrumbs')) cu_wp_custom_breadcrumbs(); ?>
-        <a href="<?= wp_get_referer(); ?>" class="back-btn"><i class="far fa-long-arrow-alt-left"></i>Back</a>
+        <a href="<?= wp_get_referer(); ?>" class="back-btn" aria-label="Back Button"><i class="far fa-long-arrow-alt-left"></i>Back</a>
     </div>
     <h2 class="heading separator separator-before"><?php the_title(); ?></h2>
     <?php if (get_post_type() != 'photo') : ?>

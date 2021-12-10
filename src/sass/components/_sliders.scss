@@ -21,6 +21,9 @@
     height: 100%;
     min-height: 1334.990476rem;
     padding-left: $sidePadding;
+    @include for-tablet {
+      min-height: 5155.943528rem;
+    }
     &::before {
       content: "";
       position: absolute;

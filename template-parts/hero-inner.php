@@ -1,6 +1,10 @@
 <div class="hero-inner">
     <?php if (function_exists('cu_wp_custom_breadcrumbs')) cu_wp_custom_breadcrumbs(); ?>
-    <h2 class="heading separator separator-before"><?php the_title(); ?></h2>
+    <?php if (get_post_type() == 'photo') { ?>
+        <h2 class="heading separator separator-before">Photos</h2>
+    <?php } else { ?>
+        <h2 class="heading separator separator-before"><?php single_post_title(); ?></h2>
+    <?php } ?>
     <?php if (has_excerpt()) { ?>
         <p><?= get_the_excerpt(); ?></p>
     <?php };
