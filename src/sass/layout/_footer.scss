@@ -8,21 +8,46 @@
       width: 133.499048rem;
       height: 78.971268rem;
       margin-right: 69.569926rem;
+      @include for-tablet {
+        width: 617.1rem;
+        height: 365rem;
+      }
     }
     .logo-txt {
       font-size: 30.084292rem;
       font-weight: $bold;
       line-height: 1;
+      @include for-tablet {
+        font-size: 122.6rem;
+      }
     }
     .about-txt {
       font-size: 26.323756rem;
       margin-top: 33.844829rem;
       margin-bottom: 65.80939rem;
       max-width: 686.297921rem;
+      @include for-tablet {
+        max-width: 100%;
+        font-size: 140rem;
+        margin-top: 150rem;
+        margin-bottom: 350rem;
+      }
     }
     .follow-us-wrapper {
+      @include for-tablet {
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: center;
+        margin-bottom: 390rem;
+      }
       p {
         margin-bottom: 45.126439rem;
+        @include for-tablet {
+          margin-right: 120rem;
+          font-size: 140rem;
+        }
       }
       li {
         &:not(:last-of-type) {
@@ -31,6 +56,10 @@
       }
     }
     .footer-links-col {
+      @include for-tablet {
+        flex: 0 0 100%;
+        width: 100%;
+      }
       .col-title {
         color: $lblue;
         text-transform: uppercase;

@@ -3,6 +3,10 @@
     background: $lblue;
     padding: 31.964561rem $sidePadding;
     color: #fff;
+    @include for-tablet {
+      padding-top: 190rem;
+      padding-bottom: 50rem;
+    }
     h5 {
       color: inherit;
       font-size: 45.126439rem;
@@ -21,6 +25,7 @@
         &:not(:last-of-type) {
           margin-right: 37.605366rem;
         }
+
         a {
           background: rgba(255, 255, 255, 0.1);
           color: #fff;
@@ -65,6 +70,9 @@
   .quick-links-wrapper {
     background: $darkerBlue;
     padding: 120.33717rem $sidePadding;
+    @include for-tablet {
+      padding-top: 340rem;
+    }
     ul {
       width: 100%;
       li {
@@ -72,8 +80,21 @@
         width: 500rem;
         color: #fff;
         padding-right: 52.647512rem;
+        @include for-tablet {
+          padding-right: 0;
+          padding-bottom: 300rem;
+        }
         &:not(:last-of-type) {
           border-right: 1px solid rgba(50, 67, 129, 1);
+          @include for-tablet {
+            border-right: none;
+            border-bottom: 1px solid rgba(50, 67, 129, 1);
+            margin-bottom: 300rem;
+          }
+        }
+        @include for-tablet {
+          flex: 0 0 100%;
+          width: 100%;
         }
         h4 {
           color: inherit;
@@ -82,6 +103,10 @@
           margin-bottom: 16.922414rem;
           line-height: 1.1;
           text-transform: capitalize;
+          @include for-tablet {
+            font-size: 180rem;
+            margin-bottom: 120rem;
+          }
         }
         p {
           color: inherit;
@@ -89,6 +114,10 @@
           line-height: 1.25;
           margin-bottom: 41.365902rem;
           text-transform: capitalize;
+          @include for-tablet {
+            font-size: 160rem;
+            margin-bottom: 100rem;
+          }
         }
         a {
           padding-top: 0;

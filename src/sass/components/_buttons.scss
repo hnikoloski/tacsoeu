@@ -47,6 +47,9 @@
         background: url("../../assets/icons/arrow-right-lblue.svg");
         @include bg-props(contain, center, no-repeat);
       }
+      @include for-tablet {
+        font-size: 140rem;
+      }
     }
   }
   &-fancy-arrow {
