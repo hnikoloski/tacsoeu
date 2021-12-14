@@ -1153,8 +1153,9 @@ body.logged-in.admin-bar #masthead {
 }
 @media (max-width: 768px) {
   .site-footer .site-info .footer-links-col {
-    flex: 0 0 100%;
-    width: 100%;
+    flex: 0 0 50%;
+    width: 50%;
+    margin-bottom: 330rem;
   }
 }
 .site-footer .site-info .footer-links-col .col-title {
@@ -1167,6 +1168,12 @@ body.logged-in.admin-bar #masthead {
 }
 .site-footer .site-info .footer-links-col .col-title:nth-of-type(2) {
   margin-bottom: 41.365902rem;
+}
+@media (max-width: 768px) {
+  .site-footer .site-info .footer-links-col .col-title {
+    font-size: 160rem;
+    margin-bottom: 190rem;
+  }
 }
 .site-footer .site-info .footer-links-col ul:not(:last-of-type) {
   margin-bottom: 67.689658rem;
@@ -1189,6 +1196,11 @@ body.logged-in.admin-bar #masthead {
   line-height: 1.25;
   color: #fff;
 }
+@media (max-width: 768px) {
+  .site-footer .site-info .footer-links-col ul li a {
+    font-size: 140rem;
+  }
+}
 .site-footer .site-info .footer-quick-links-wrapper {
   margin-top: 109.05556rem;
   padding-top: 47.006707rem;
@@ -1202,6 +1214,12 @@ body.logged-in.admin-bar #masthead {
   display: flex;
   justify-content: flex-start;
 }
+@media (max-width: 768px) {
+  .site-footer .site-info .footer-quick-links-wrapper .footer-copy {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
 .site-footer .site-info .footer-quick-links-wrapper .footer-copy p {
   flex: 0 0 auto;
   max-width: 765rem;
@@ -1211,6 +1229,25 @@ body.logged-in.admin-bar #masthead {
 .site-footer .site-info .footer-quick-links-wrapper .footer-copy p:not(:last-of-type) {
   margin-right: 94.013414rem;
 }
+@media (max-width: 768px) {
+  .site-footer .site-info .footer-quick-links-wrapper .footer-copy p:not(:last-of-type) {
+    margin-bottom: 290rem;
+  }
+}
+@media (max-width: 768px) {
+  .site-footer .site-info .footer-quick-links-wrapper .footer-copy p {
+    max-width: 100%;
+    font-size: 120rem;
+  }
+}
+@media (max-width: 768px) {
+  .site-footer .site-info .footer-quick-links-wrapper ul {
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 270rem;
+    margin-bottom: 310rem;
+  }
+}
 .site-footer .site-info .footer-quick-links-wrapper ul li:not(:last-of-type) {
   margin-right: 67.689658rem;
 }
@@ -1218,6 +1255,11 @@ body.logged-in.admin-bar #masthead {
   color: #fff;
   font-size: 30.084292rem;
   line-height: 1.25;
+}
+@media (max-width: 768px) {
+  .site-footer .site-info .footer-quick-links-wrapper ul li a {
+    font-size: 140rem;
+  }
 }
 .site-footer .footer-bottom-bar {
   padding: 71.450195rem var(--side-padding);
