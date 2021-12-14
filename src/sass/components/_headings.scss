@@ -2,6 +2,12 @@
   font-size: 90.252877rem;
   color: #000;
   font-weight: $bold;
+
+  @include for-tablet {
+    font-size: 350rem;
+    line-height: 1;
+  }
+
   &.separator {
     position: relative;
     &::before {
@@ -11,11 +17,18 @@
       width: 110.935828rem;
       height: 52.647512rem;
       background-color: $lblue;
+      @include for-tablet {
+        width: 470rem;
+        height: 230rem;
+      }
     }
     &-top {
       padding-top: 150.421462rem;
       &::before {
         top: 0;
+      }
+      @include for-tablet {
+        padding-top: 311.623559rem;
       }
     }
     &-before {
@@ -23,6 +36,14 @@
       &::before {
         @include ver-center();
         left: 0;
+      }
+      @include for-tablet {
+        margin-top: 311.623559rem;
+        padding-top: 311.623559rem;
+        padding-left: 0;
+        &::before {
+          top: 4rem;
+        }
       }
     }
   }
