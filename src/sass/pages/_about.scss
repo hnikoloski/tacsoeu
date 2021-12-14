@@ -22,12 +22,18 @@
       h2 {
         font-size: 90.252877rem;
         margin-bottom: 112.816097rem;
+        @include for-tablet {
+          font-size: 350rem;
+        }
       }
       p {
         line-height: 1.25;
         font-size: 41.365902rem;
         &:not(:last-of-type) {
           margin-bottom: 65.80939rem;
+        }
+        @include for-tablet {
+          font-size: 170rem;
         }
       }
       .wp-block-image {
@@ -49,6 +55,9 @@
         &:not(:last-of-type) {
           margin-bottom: 65.80939rem;
         }
+        @include for-tablet {
+          font-size: 170rem;
+        }
       }
       h3 {
         line-height: 1.25;
@@ -56,6 +65,10 @@
         margin-bottom: 150.421462rem;
         font-size: 67.689658rem;
         font-weight: $bold;
+
+        @include for-tablet {
+          font-size: 190rem;
+        }
       }
       .single-activity {
         flex: 0 0 auto;
@@ -64,17 +77,30 @@
         padding-right: 103.414755rem;
         margin-right: 142.900389rem;
         margin-bottom: 131.618779rem;
+        @include for-tablet {
+          flex: content;
+          border-bottom: 0.5px solid rgba(55, 165, 255, 0.2);
+          border-right: transparent;
+          padding-bottom: 200rem;
+        }
+
         h5 {
           color: $lblue;
           margin-bottom: 75.210731rem;
           font-size: 45.126439rem;
           font-weight: $bold;
+          @include for-tablet {
+            font-size: 170rem;
+          }
         }
         p {
           color: $dblue;
           font-size: 33.844829rem;
           line-height: 1.25;
           text-transform: capitalize;
+          @include for-tablet {
+            font-size: 150rem;
+          }
         }
       }
     }
@@ -84,6 +110,10 @@
       .img-wrapper {
         flex: 0 0 auto;
         width: 50%;
+        @include for-tablet {
+          flex: content;
+          width: 100%;
+        }
       }
       .content {
         padding-right: 178.625486rem;
@@ -95,6 +125,9 @@
           line-height: 1.25;
           &:not(:last-of-type) {
             margin-bottom: 65.80939rem;
+          }
+          @include for-tablet {
+            font-size: 150rem;
           }
           a {
             font-weight: $bold;
@@ -116,6 +149,9 @@
       .the-content {
         p {
           max-width: 1254.138941rem;
+          @include for-tablet {
+            max-width: 100%;
+          }
         }
         .wp-block-image {
           margin-top: 0;
@@ -136,11 +172,18 @@
         &#countryCoordinator {
           display: none;
         }
+        @include for-tablet {
+          flex-direction: column;
+        }
       }
       .single-person {
         position: relative;
         flex: 0 0 579.122629rem;
         max-width: 579.122629rem;
+        @include for-tablet {
+          max-width: 100%;
+        }
+
         &:not(:nth-of-type(4n)) {
           margin-right: 170rem;
         }
@@ -150,6 +193,12 @@
           position: relative;
           margin-bottom: 84.612072rem;
           @include borderRadius(50%);
+
+          @include for-tablet {
+            width: 2700rem;
+            height: 2700rem;
+          }
+
           img {
             @include borderRadius(50%);
           }
@@ -164,6 +213,13 @@
             height: 560.319946rem;
             pointer-events: none;
             z-index: 1;
+
+            @include for-tablet {
+              bottom: -878.625486rem;
+              left: -778.625486rem;
+              width: 3200rem;
+              height: 2700rem;
+            }
           }
         }
         a {
@@ -173,9 +229,20 @@
           width: 163.58334rem;
           height: 163.58334rem;
           z-index: 9;
+          @include for-tablet {
+            top: 1900rem;
+            right: 0rem;
+            width: 630rem;
+            height: 630rem;
+          }
           i {
             width: 100%;
             height: 100%;
+            @include for-tablet {
+              &::before {
+                background-size: 200rem;
+              }
+            }
           }
           &:hover {
             i {
@@ -189,11 +256,19 @@
           font-weight: $bold;
           line-height: 0.89;
           margin-bottom: 9.401341rem;
+          @include for-tablet {
+            font-size: 250rem;
+            padding-top: 300rem;
+          }
         }
         p {
           color: #a0a0a0;
           font-size: 37.605366rem;
           line-height: 1.4;
+          @include for-tablet {
+            font-size: 170rem;
+            padding-bottom: 460rem;
+          }
         }
       }
       .modal-person {
@@ -202,6 +277,9 @@
             max-height: 889.366895rem;
             overflow-y: auto;
             padding-right: 129.738511rem;
+            @include for-tablet {
+              max-height: 100%;
+            }
             &::-webkit-scrollbar {
               width: 12rem;
               &-track {
@@ -224,6 +302,9 @@
               &:not(:last-of-type) {
                 margin-bottom: 65.80939rem;
               }
+              @include for-tablet {
+                font-size: 170rem;
+              }
             }
           }
         }
@@ -238,8 +319,15 @@
       align-content: flex-start;
       justify-content: space-between;
       align-items: flex-start;
+
+      @include for-tablet {
+        flex-direction: column;
+      }
       .single-box {
         max-width: 1222.17438rem;
+        @include for-tablet {
+          max-width: 100%;
+        }
         .top-bar {
           padding-bottom: 63.929121rem;
           margin-bottom: 110.935828rem;
@@ -262,12 +350,36 @@
               @include fullSizeImg(contain);
             }
           }
+
+          @include for-tablet {
+            flex-direction: column-reverse;
+            align-content: flex-start;
+            justify-content: flex-start;
+            margin-top: 400rem;
+
+            border-bottom: 160rem solid $darkerBlue;
+            h3 {
+              text-align: left;
+              font-size: 350rem;
+            }
+            .img-wrapper {
+              max-width: 100%;
+              height: 290rem;
+              margin-right: auto;
+              img {
+                object-position: left;
+              }
+            }
+          }
         }
         p {
           font-size: 37.605366rem;
           line-height: 1.4;
           &:not(:last-of-type) {
             margin-bottom: 65.80939rem;
+          }
+          @include for-tablet {
+            font-size: 170rem;
           }
           a {
             color: $lblue;

@@ -5,6 +5,10 @@
   left: 0;
   top: 0;
 
+  @include for-tablet {
+    top: 56%;
+  }
+
   z-index: 1024;
   @include abs-center();
   &.active {
@@ -20,6 +24,11 @@
     align-content: center;
     padding: 235.033535rem 216.230852rem;
     position: relative;
+    @include for-tablet {
+      width: 100vw;
+      height: 87vh;
+      flex-direction: column;
+    }
     .close-modal {
       background: $lblue;
       width: 118.456901rem;
@@ -33,8 +42,15 @@
       color: #fff;
       @include borderRadius(50%);
       font-size: 37.605366rem;
+
       &:hover {
         background: $dblue;
+      }
+      @include for-tablet {
+        width: 630rem;
+        height: 630rem;
+        font-size: 200rem;
+        line-height: 618.456901rem;
       }
     }
   }

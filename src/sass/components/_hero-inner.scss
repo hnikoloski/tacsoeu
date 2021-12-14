@@ -5,6 +5,7 @@
   padding: 67.689658rem $sidePadding 203.068974rem $sidePadding;
   color: #fff;
   isolation: isolate;
+
   &::before {
     content: "";
     position: absolute;
@@ -15,20 +16,33 @@
     width: 1128.160966rem;
     height: 100%;
     z-index: -1;
+
+    @include for-tablet {
+      width: 100%;
+    }
   }
   .cu_breadcrumbs {
     margin-bottom: 129.738511rem;
     padding-bottom: 63.929121rem;
     border-bottom: 1px solid rgba(55, 165, 255, 0.2);
+    @include for-tablet {
+      display: none !important;
+    }
   }
   h2 {
     color: inherit;
     text-transform: uppercase;
     margin-bottom: 26.323756rem;
+    @include for-tablet {
+      margin-bottom: 190rem;
+    }
   }
   p {
     font-size: 41.365902rem;
     line-height: 1.4;
+    @include for-tablet {
+      font-size: 170rem;
+    }
   }
   .person-tabber-header {
     ul {
@@ -42,12 +56,19 @@
       // padding-bottom: 31.964561rem;
       border-bottom: 1px solid rgba(55, 165, 255, 0.2);
       margin-bottom: 112.816097rem;
+      @include for-tablet {
+        padding-bottom: 100rem;
+      }
       li {
         color: #fff;
         position: relative;
         &:not(:last-of-type) {
           padding-right: 157.942535rem;
           margin-right: 157.942535rem;
+          @include for-tablet {
+            padding-right: 100rem;
+            margin-right: 100rem;
+          }
           &::after {
             content: "";
             position: absolute;
@@ -57,6 +78,10 @@
             height: 37.605366rem;
             background: #fff;
             opacity: 0.2;
+            @include for-tablet {
+              height: 190rem;
+              width: 10rem;
+            }
           }
         }
         a {
@@ -68,6 +93,9 @@
           &::after {
             height: 9.401341rem;
             bottom: -6rem;
+            @include for-tablet {
+              bottom: -110rem;
+            }
           }
           &:hover,
           &.active {
@@ -81,6 +109,10 @@
               -webkit-transform-origin: left;
               -moz-transform-origin: left;
             }
+          }
+
+          @include for-tablet {
+            font-size: 190rem;
           }
         }
       }
