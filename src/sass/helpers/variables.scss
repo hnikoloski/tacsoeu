@@ -9,9 +9,14 @@ $calibri: "Calibri";
 $dblue: #253d92;
 $darkerBlue: #212e5a;
 $lblue: #37a5ff;
-
+:root {
+  --side-padding: 351.610168rem;
+  @media (max-width: 768px) {
+    --side-padding: 200rem;
+  }
+}
 // Spaces
-$sidePadding: 351.610168rem;
+$sidePadding: var(--side-padding);
 // responsive
 // $sidePadding: 160rem;
 
