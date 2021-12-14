@@ -12,17 +12,110 @@
       &-banner {
         width: 599.80558rem;
         height: 78.971268rem;
+        @include for-tablet {
+          height: 210rem;
+          width: auto;
+          max-width: 50%;
+        }
       }
       &-wrapper {
         width: 131.618779rem;
         height: 77.090999rem;
+        @include for-tablet {
+          height: 390rem;
+          width: 420rem;
+        }
       }
     }
   }
   .nav-bar {
     padding: 0 $sidePadding;
     background: $dblue;
+    @include for-tablet {
+      padding-top: 140rem;
+      padding-bottom: 140rem;
+    }
+    #menu-trigger {
+      display: none;
+      position: relative;
+      width: 180rem;
+      height: 180rem;
+      @include for-tablet {
+        display: block;
+      }
+      span {
+        display: block;
+        width: 100%;
+        height: 15rem;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        &:nth-of-type(1) {
+          top: 15rem;
+        }
+        &:nth-of-type(2) {
+          top: 52%;
+          transform: translate(0%, -50%);
+          -moz-transform: translate(0%, -50%);
+          -webkit-transform: translate(0%, -50%);
+          opacity: 1;
+        }
+        &:nth-of-type(3) {
+          bottom: 15rem;
+        }
+      }
+      &.active {
+        span {
+          &:nth-of-type(1) {
+            transform: translate(0%, -50%) rotate(45deg);
+            -moz-transform: translate(0%, -50%) rotate(45deg);
+            -webkit-transform: translate(0%, -50%) rotate(45deg);
+            top: 50%;
+          }
+          &:nth-of-type(2) {
+            width: 0;
+            opacity: 0;
+          }
+          &:nth-of-type(3) {
+            transform: translate(0%, -50%) rotate(-45deg);
+            -moz-transform: translate(0%, -50%) rotate(-45deg);
+            -webkit-transform: translate(0%, -50%) rotate(-45deg);
+            top: 50%;
+          }
+        }
+      }
+    }
     ul {
+      @include for-tablet {
+        transform: scaleX(0);
+        -moz-transform: scaleX(0);
+        -webkit-transform: scaleX(0);
+        -webkit-transform-origin: right;
+        -moz-transform-origin: right;
+        transform-origin: right;
+        transition: transform 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        -moz-transition: transform 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        -webkit-transition: transform 750ms
+          cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        position: fixed;
+        left: 700rem;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        &.active {
+          transform: scaleX(1);
+          -moz-transform: scaleX(1);
+          -webkit-transform: scaleX(1);
+          -webkit-transform-origin: right;
+          -moz-transform-origin: right;
+          transform-origin: right;
+          transition: transform 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+          -moz-transition: transform 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+          -webkit-transition: transform 750ms
+            cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+      }
       li {
         line-height: 165.463608rem;
         position: relative;
@@ -137,6 +230,12 @@
         transition: transform 250ms ease-in;
         -moz-transition: transform 250ms ease-in;
         -webkit-transition: transform 250ms ease-in;
+
+        @include for-tablet {
+          height: 250rem;
+          padding: 30rem 250rem;
+          font-size: 135rem;
+        }
       }
 
       button {
@@ -152,6 +251,12 @@
           background: transparent;
           color: #fff;
           font-size: 45.126439rem;
+          @include for-tablet {
+            padding: 0;
+            width: 180rem;
+            height: 180rem;
+            font-size: 180rem;
+          }
         }
         &.search-close {
           font-size: 22.563219rem;
@@ -178,6 +283,9 @@
       }
       &.active {
         width: 30%;
+        @include for-tablet {
+          width: 50%;
+        }
         input {
           border: 1.880268rem solid $lblue;
           transform: scaleX(1);
@@ -188,6 +296,9 @@
           &.search-btn {
             color: $dblue;
             margin-right: calc(100% - 58rem);
+            @include for-tablet {
+              margin-right: calc(100% - 230rem);
+            }
           }
           &.search-close {
             transform: scaleX(1) translate(0%, -50%);
@@ -196,12 +307,23 @@
             transition: transform 250ms ease-in;
             -moz-transition: transform 250ms ease-in;
             -webkit-transition: transform 250ms ease-in;
+            @include for-tablet {
+              width: 180rem;
+              height: 180rem;
+              font-size: 135rem;
+              i {
+                font-weight: 200;
+              }
+            }
           }
         }
       }
     }
     &.search-open {
       height: 167.343877rem;
+      @include for-tablet {
+        height: 100%;
+      }
       ul {
         opacity: 0;
         pointer-events: none;

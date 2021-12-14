@@ -2400,6 +2400,11 @@ jQuery(document).ready(function ($) {
     $("#masthead .nav-bar").toggleClass("search-open");
     $("#masthead .nav-bar form .search-btn").addClass("disabled");
   });
+  $("#menu-trigger").on("click", function (e) {
+    e.preventDefault();
+    $(this).toggleClass("active");
+    $("#masthead .nav-bar ul").toggleClass("active");
+  });
 });
 
 /***/ }),

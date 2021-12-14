@@ -1,4 +1,4 @@
-<section id="latest-photos">
+<section id="latest-photos" class="animated fadeInUp" data-delay="100">
     <div class="info-container">
         <h2 class="heading separator separator-before">
             Latest Photos

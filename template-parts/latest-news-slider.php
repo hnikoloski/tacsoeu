@@ -1,4 +1,4 @@
-<section id="latest-news" class="d-flex flex-direction-row flex-wrap justify-content-space-between align-items-center">
+<section id="latest-news" class="d-flex flex-direction-row flex-wrap justify-content-space-between align-items-center animated fadeInUp" data-delay="100">
     <div class="info-container ">
         <h2 class="heading separator separator-top animated fadeInLeft" data-delay="200">
             Latest News

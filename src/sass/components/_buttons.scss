@@ -3,6 +3,10 @@
   padding: 37.605366rem;
   font-size: 33.844829rem;
   font-weight: $semiBold;
+  @include for-tablet {
+    font-size: 137rem;
+    @include borderRadius(500rem);
+  }
   &-lblue {
     color: #fff;
     background: $lblue;
@@ -10,6 +14,9 @@
   &-arrow {
     padding: 37.605366rem 165rem 37.605366rem 65.80939rem;
     position: relative;
+    @include for-tablet {
+      padding: 160rem 500rem 160rem 250rem;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -19,9 +26,17 @@
       @include bg-props(contain, center, no-repeat);
       width: 41.365902rem;
       height: 20.04366rem;
+      @include for-tablet {
+        width: 168.3rem;
+        height: 81.5rem;
+        right: 200rem;
+      }
     }
     &:hover {
       padding-right: 180rem;
+      @include for-tablet {
+        padding-right: 500rem;
+      }
     }
     &-minimal {
       color: $lblue;

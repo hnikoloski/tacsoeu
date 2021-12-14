@@ -1,4 +1,4 @@
-<section id="latest-videos">
+<section id="latest-videos" class="animated fadeInUp" data-delay="100">
     <div class="info-container pr-0">
         <h2 class="heading separator separator-before">
             Latest Videos

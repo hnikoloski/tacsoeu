@@ -77,4 +77,143 @@
       }
     }
   }
+  &-single {
+    table {
+      th,
+      td {
+        vertical-align: middle;
+        padding: 28.204024rem 94.013414rem;
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+          text-align: center;
+        }
+      }
+      tr {
+        border-bottom: 1.880268rem solid rgba(55, 165, 255, 0.2);
+      }
+      thead {
+        th {
+          border: 9.401341rem solid #fff;
+          background: $lblue;
+          color: #fff;
+          font-size: 37.605366rem;
+          letter-spacing: 0.02em;
+          line-height: 1.2;
+          &:nth-of-type(1) {
+            width: 656.213629rem;
+          }
+          &:nth-of-type(2) {
+            width: 362.891777rem;
+          }
+          &:nth-of-type(3) {
+            width: 765.269189rem;
+          }
+          &:nth-of-type(4) {
+            width: 1088.675332rem;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            color: #000;
+            font-size: 41.365902rem;
+            line-height: 1.1;
+            &:first-of-type {
+              color: #202d5d;
+              font-weight: $bold;
+              font-size: 45.126439rem;
+            }
+          }
+        }
+      }
+    }
+    .container {
+      border-top: 1px solid rgba(55, 165, 255, 0.2);
+      border-bottom: 1px solid rgba(55, 165, 255, 0.2);
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: flex-start;
+        padding: 47.006707rem 0;
+        position: relative;
+        &:nth-last-of-type(1),
+        &:nth-last-of-type(2),
+        &:nth-last-of-type(3) {
+          &::after {
+            display: none;
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 5.640805rem;
+          width: 30%;
+          background: $lblue;
+        }
+        &:not(:last-of-type) {
+          border-bottom: 1px solid rgba(55, 165, 255, 0.2);
+        }
+        .col {
+          width: 70%;
+
+          &-label {
+            width: 30%;
+            padding-left: 188.026828rem;
+
+            h3 {
+              color: #202d5d;
+              font-size: 45.126439rem;
+              font-weight: $bold;
+              line-height: 1.45;
+            }
+          }
+          p {
+            padding-left: 156.062267rem;
+            font-size: 45.126439rem;
+            font-weight: $bold;
+            color: #202d5d;
+          }
+          &-description {
+            width: 100%;
+            padding-top: 122.217438rem;
+            padding-bottom: 122.217438rem;
+            p {
+              font-weight: 400;
+              font-size: 41.365902rem;
+            }
+          }
+          &-short {
+            width: 35%;
+            padding-left: 156.062267rem;
+            h5 {
+              color: #000;
+              font-size: 45.126439rem;
+              line-height: 1.45;
+            }
+            a,
+            p {
+              color: $lblue;
+              line-height: 1.1;
+              font-size: 45.126439rem;
+              font-weight: $bold;
+              padding-left: 0;
+              &:visited {
+                color: $lblue;
+              }
+            }
+            a {
+              &:hover {
+                color: $dblue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

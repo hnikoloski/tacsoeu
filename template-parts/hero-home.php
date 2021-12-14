@@ -1,4 +1,4 @@
-<div class="hero-home swiper">
+<div class="hero-home swiper animated fadeInUp">
     <div class="swiper-wrapper">
         <?php
         // WP_Query arguments
@@ -35,7 +35,7 @@
         ?>
     </div>
     <div class="swiper-pagination d-flex flex-wrap justify-content-start align-items-center align-content-center"></div>
-    <div class="follow-us-wrapper d-flex align-items-center align-content-center">
+    <div class="follow-us-wrapper d-flex align-items-center align-content-center animated fadeInRight" data-delay="200">
         <p>Follow Us On:</p>
         <ul class="socials list-inline">
             <?php if (get_field('facebook_url', 'option')) : ?>

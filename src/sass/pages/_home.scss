@@ -6,8 +6,17 @@
     h5 {
       color: inherit;
       font-size: 45.126439rem;
+      @include for-tablet {
+        flex: 0 0 100%;
+        width: 100%;
+        font-size: 180rem;
+        margin-bottom: 120rem;
+      }
     }
     ul {
+      @include for-tablet {
+        justify-content: flex-start;
+      }
       li {
         &:not(:last-of-type) {
           margin-right: 37.605366rem;
@@ -21,6 +30,13 @@
           &:hover,
           &.active {
             background: rgba(255, 255, 255, 0.3);
+          }
+          @include for-tablet {
+            font-size: 140rem;
+            padding: 80rem 140rem;
+            display: block;
+            margin-bottom: 120rem;
+            @include borderRadius(890rem);
           }
         }
       }

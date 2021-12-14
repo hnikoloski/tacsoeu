@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   height: 100%;
+
   &::before {
     content: "";
     position: absolute;
@@ -13,6 +14,12 @@
     @include bg-props(contain, center, no-repeat);
     z-index: 9;
     pointer-events: none;
+    @include for-tablet {
+      height: 100%;
+      width: 50%;
+      right: 0;
+      @include bg-props(cover, left, no-repeat);
+    }
   }
   .single-slide {
     background-size: cover !important;
@@ -22,7 +29,8 @@
     min-height: 1334.990476rem;
     padding-left: $sidePadding;
     @include for-tablet {
-      min-height: 5155.943528rem;
+      min-height: auto;
+      height: 5090rem;
     }
     &::before {
       content: "";
@@ -68,6 +76,10 @@
       max-width: 1580rem;
       max-height: 752.107311rem;
       z-index: 9;
+      @include for-tablet {
+        max-width: 95%;
+        max-height: 100%;
+      }
       .date {
         line-height: 1.5;
         position: relative;
@@ -75,6 +87,10 @@
         color: $lblue;
         margin-bottom: 40.030912rem;
         font-size: 33.844829rem;
+        @include for-tablet {
+          font-size: 120rem;
+          padding-left: 190rem;
+        }
         &::before {
           content: "";
           position: absolute;
@@ -84,6 +100,10 @@
           @include bg-props(contain, center, no-repeat);
           width: 28.204024rem;
           height: 28.204024rem;
+          @include for-tablet {
+            width: 170rem;
+            height: 170rem;
+          }
         }
       }
       h2 {
@@ -92,11 +112,19 @@
         line-height: 1.04;
         font-size: 139.139852rem;
         margin-bottom: 37.605366rem;
+        @include for-tablet {
+          font-size: 360rem;
+          margin-bottom: 120rem;
+        }
       }
       h4 {
         color: #fff;
         margin-bottom: 63.929121rem;
         font-size: 56.408048rem;
+        @include for-tablet {
+          font-size: 160rem;
+          margin-bottom: 270rem;
+        }
       }
     }
   }
@@ -110,6 +138,11 @@
       font-size: 33.844829rem;
       font-weight: $semiBold;
       margin-right: 56.408048rem;
+
+      @include for-tablet {
+        font-size: 120rem;
+        margin-right: 70rem;
+      }
     }
     li {
       &:not(:last-of-type) {
@@ -135,9 +168,16 @@
       }
       &:not(:last-of-type) {
         margin-right: 31.964561rem;
+        @include for-tablet {
+          margin-right: 120rem;
+        }
       }
       &-active {
         opacity: 1;
+      }
+      @include for-tablet {
+        width: 120rem;
+        height: 120rem;
       }
     }
   }

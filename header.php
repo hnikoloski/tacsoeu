@@ -47,6 +47,11 @@ $logoUrl = wp_get_attachment_image_src($custom_logo_id, 'full');
                 </a>
             </div>
             <div class="nav-bar d-flex flex-wrap justify-content-space-between align-items-center align-content-center">
+                <a href="javascript:void(0);" aria-label="Burger Menu" id="menu-trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
                 <?php wp_nav_menu(
                     array(
                         'theme_location' => 'menu-1',

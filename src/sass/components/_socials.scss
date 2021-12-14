@@ -6,6 +6,10 @@
         width: 60.168585rem;
         height: 60.168585rem;
         display: block;
+        @include for-tablet {
+          width: 193rem;
+          height: 193rem;
+        }
         &::before {
           content: "";
           position: absolute;
