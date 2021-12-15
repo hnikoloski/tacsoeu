@@ -66,6 +66,9 @@
     align-content: center;
     padding: 0 28.204024rem;
     position: relative;
+    @include for-tablet {
+      font-size: 180rem;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -104,6 +107,14 @@
         @include bg-props(41.365902rem, center, no-repeat);
         width: 100%;
         height: 100%;
+        @include for-tablet {
+          @include bg-props(180rem, center, no-repeat);
+        }
+      }
+      @include for-tablet {
+        width: 470rem;
+        height: 470rem;
+        margin-left: 220rem;
       }
     }
     &:hover {

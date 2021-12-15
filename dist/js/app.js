@@ -2532,9 +2532,15 @@ jQuery(document).ready(function ($) {
     spaceBetween: 0
   });
   var latestPhotosSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__.default(".latest-photos-slider ", {
-    slidesPerView: 2.5,
+    slidesPerView: 1.2,
     loop: true,
-    spaceBetween: 0
+    spaceBetween: 0,
+    breakpoints: {
+      // when window width is >= 320px
+      768: {
+        slidesPerView: 2.5
+      }
+    }
   });
   var singlePhotoSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__.default(".single-photo-slider ", {
     modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation],

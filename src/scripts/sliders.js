@@ -27,9 +27,15 @@ jQuery(document).ready(function ($) {
     spaceBetween: 0,
   });
   let latestPhotosSwiper = new Swiper(".latest-photos-slider ", {
-    slidesPerView: 2.5,
+    slidesPerView: 1.2,
     loop: true,
     spaceBetween: 0,
+    breakpoints: {
+      // when window width is >= 320px
+      768: {
+        slidesPerView: 2.5,
+      },
+    },
   });
 
   let singlePhotoSlider = new Swiper(".single-photo-slider ", {

@@ -15,6 +15,10 @@
       mix-blend-mode: multiply;
       opacity: 0.8;
     }
+    @include for-tablet {
+      height: 3200rem;
+      margin-bottom: 150rem;
+    }
   }
   .date {
     line-height: 1.5;
@@ -23,6 +27,11 @@
     color: $lblue;
     margin-bottom: 22.563219rem;
     font-size: 26.323756rem;
+    @include for-tablet {
+      font-size: 140rem;
+      padding-left: 190rem;
+      margin-bottom: 60rem;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -32,6 +41,10 @@
       @include bg-props(contain, center, no-repeat);
       width: 22.563219rem;
       height: 22.563219rem;
+      @include for-tablet {
+        width: 120rem;
+        height: 120rem;
+      }
     }
   }
   h3 {
@@ -39,5 +52,9 @@
     font-weight: $bold;
     color: #0d1037;
     margin-bottom: 78.971268rem;
+    @include for-tablet {
+      font-size: 200rem;
+      margin-bottom: 150rem;
+    }
   }
 }

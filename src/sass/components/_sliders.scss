@@ -293,4 +293,14 @@
 }
 #latest-photos {
   margin-bottom: 225.632193rem;
+  @include for-tablet {
+    padding-bottom: 260rem;
+    margin-bottom: 1420rem;
+    position: relative;
+    a.btn-fancy-arrow {
+      position: absolute;
+      bottom: -850rem;
+      @include hor-center();
+    }
+  }
 }
