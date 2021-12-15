@@ -44,6 +44,10 @@ $sidePadding: var(--side-padding);
     transition: transform 250ms ease-in;
     -moz-transition: transform 250ms ease-in;
     -webkit-transition: transform 250ms ease-in;
+    @media (max-width: 768px) {
+      height: 30rem;
+      bottom: -50rem;
+    }
   }
   &:hover,
   &.active {

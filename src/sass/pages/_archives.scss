@@ -23,6 +23,13 @@
         width: 48%;
         margin-right: 2%;
         flex: 0 0 auto;
+        @include for-tablet {
+          width: 100%;
+          margin-right: 0;
+          &:not(:last-of-type) {
+            margin-bottom: 290rem;
+          }
+        }
         &:hover {
           .img-wrapper {
             &::before {
@@ -37,6 +44,9 @@
         .img-wrapper {
           height: 889.366895rem;
           position: relative;
+          @include for-tablet {
+            height: 2200rem;
+          }
           &::before {
             content: "";
             position: absolute;
@@ -57,6 +67,10 @@
             background: url("../../assets/icons/play-button.svg");
             @include bg-props(contain, center, no-repeat);
             transition: 0.3s;
+            @include for-tablet {
+              width: 590rem;
+              height: 590rem;
+            }
           }
         }
       }
@@ -79,14 +93,36 @@
     margin-top: 63.929121rem;
     padding: 0 $sidePadding;
     ul {
+      @include for-tablet {
+        display: flex;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        width: 100%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        padding-bottom: 120rem;
+      }
       li {
         &:not(:last-of-type) {
           margin-right: 103.414755rem;
+          @include for-tablet {
+            margin-right: 220rem;
+          }
+        }
+        @include for-tablet {
+          display: block;
+          flex: 0 0 auto;
         }
         a {
           font-size: 45.126439rem;
           font-weight: $bold;
           color: #202d5d;
+          @include for-tablet {
+            font-size: 180rem;
+          }
         }
       }
     }

@@ -10,3 +10,4 @@ import "./scripts/videos";
 import "./scripts/fancybox";
 import "./scripts/stories";
 import "./scripts/country-filter";
+import "./scripts/move-it-on-mob";

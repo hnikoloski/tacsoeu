@@ -5,7 +5,22 @@
   padding: 67.689658rem $sidePadding 203.068974rem $sidePadding;
   color: #fff;
   isolation: isolate;
-
+  @include for-tablet {
+    .swiper-btns-wrapper {
+      position: absolute;
+      bottom: 120rem;
+      right: 200rem;
+      display: flex;
+      .swiper-button {
+        width: 320rem;
+        height: 320rem;
+        font-size: 160rem;
+        &:first-of-type {
+          margin-right: 100rem;
+        }
+      }
+    }
+  }
   &::before {
     content: "";
     position: absolute;
@@ -178,6 +193,10 @@
       &.no-icon {
         padding-left: 178.625486rem;
         font-size: 45.126439rem;
+        @include for-tablet {
+          font-size: 140rem;
+          padding-left: 0;
+        }
         &::before {
           display: none;
         }

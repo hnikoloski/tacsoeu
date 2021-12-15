@@ -131,10 +131,11 @@
         line-height: 165.463608rem;
         position: relative;
         @include for-tablet {
-          flex: 0 0 100%;
+          flex: 0 0 auto;
           width: 100%;
           line-height: 1.4;
           display: block;
+          text-align: center;
         }
         &.lblue {
           a {

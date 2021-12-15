@@ -145,10 +145,16 @@
     article {
       padding: 56.408048rem 0;
       width: 100%;
+      @include for-tablet {
+        padding: 250rem 0;
+      }
       .single-slide {
         max-width: 80%;
         width: auto;
         height: 1287.98377rem;
+        @include for-tablet {
+          height: 2230rem;
+        }
         img {
           @include fullSizeImg(cover);
         }
@@ -172,6 +178,10 @@
     font-size: 67.689658rem;
     font-weight: $bold;
     margin-bottom: 11.28161rem;
+    @include for-tablet {
+      font-size: 240rem;
+      margin-bottom: 140rem;
+    }
   }
   p {
     a {
@@ -180,6 +190,10 @@
       color: #000;
       &:hover {
         color: $lblue;
+      }
+      @include for-tablet {
+        font-size: 180rem;
+        padding-left: 0;
       }
     }
   }
