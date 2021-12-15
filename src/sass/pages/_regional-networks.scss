@@ -4,12 +4,17 @@
   }
   #regional_networks-lists {
     max-width: 1647.11501rem;
+    @include for-tablet {
+      max-width: 100%;
+    }
     li {
       padding-left: 72px;
       position: relative;
       border-bottom: 1px solid rgba(55, 165, 255, 0.2);
       padding-top: 75.210731rem;
       padding-bottom: 75.210731rem;
+      @include for-tablet {
+      }
       &:first-of-type {
         border-top: 1px solid rgba(55, 165, 255, 0.2);
       }
