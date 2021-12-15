@@ -184,9 +184,30 @@
 }
 #latest-news {
   padding-left: $sidePadding;
+  @include for-tablet {
+    position: relative;
+    margin-bottom: 1460rem;
+    padding-bottom: 180rem;
+    padding-left: $sidePadding;
+    padding-right: $sidePadding;
+    .blog-card {
+      &:not(:last-of-type) {
+        margin-bottom: 180rem;
+      }
+    }
+    a.btn-arrow {
+      position: absolute;
+      bottom: -850rem;
+      width: calc(100% - 400rem);
+      @include hor-center();
+    }
+  }
   .info-container {
     flex: 0 0 auto;
     width: 611.08719rem;
+    @include for-tablet {
+      width: 100%;
+    }
     h2 {
       margin-bottom: 60.168585rem;
     }
@@ -195,12 +216,23 @@
       line-height: 1.25;
       color: #000;
       margin-bottom: 94.013414rem;
+      @include for-tablet {
+        font-size: 180rem;
+        margin-bottom: 220rem;
+        padding-right: $sidePadding;
+      }
     }
   }
   .swiper {
     width: calc(100% - 611.08719rem - 131.618779rem);
     margin-left: auto;
     margin-right: 0;
+    @include for-tablet {
+      width: 100%;
+      .swiper-wrapper {
+        flex-direction: column;
+      }
+    }
     &::before {
       content: "";
       position: absolute;
@@ -227,12 +259,18 @@
         rgba(255, 255, 255, 0) 72.5%
       );
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#364b98",endColorstr="#ffffff",GradientType=1);
+      @include for-tablet {
+        display: none;
+      }
     }
     .swiper-btns-wrapper {
       position: absolute;
       right: $sidePadding;
       top: 131.618779rem;
       z-index: 9;
+      @include for-tablet {
+        display: none;
+      }
     }
   }
 }
@@ -277,6 +315,12 @@
 }
 #latest-videos {
   padding-right: $sidePadding;
+  @include for-tablet {
+    .swiper-wrapper {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
 }
 #latest-videos,
 #latest-photos {
@@ -289,18 +333,25 @@
     align-items: center;
     margin-bottom: 73.330463rem;
     padding-right: $sidePadding;
+    @include for-tablet {
+      margin-bottom: 220rem;
+    }
   }
-}
-#latest-photos {
-  margin-bottom: 225.632193rem;
   @include for-tablet {
     padding-bottom: 260rem;
     margin-bottom: 1420rem;
     position: relative;
+    padding-top: 0;
     a.btn-fancy-arrow {
       position: absolute;
       bottom: -850rem;
       @include hor-center();
     }
+  }
+}
+#latest-photos {
+  margin-bottom: 225.632193rem;
+  @include for-tablet {
+    margin-bottom: 1420rem;
   }
 }

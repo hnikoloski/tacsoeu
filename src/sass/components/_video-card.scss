@@ -1,5 +1,10 @@
 .video-card {
   width: 970.218431rem;
+  @include for-tablet {
+    &:not(:last-of-type) {
+      margin-bottom: 200rem;
+    }
+  }
   &:hover {
     .img-wrapper {
       &::before {
@@ -16,6 +21,10 @@
     width: 100%;
     height: 601.685849rem;
     margin-bottom: 40.613795rem;
+    @include for-tablet {
+      height: 2040rem;
+      margin-bottom: 160rem;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -36,10 +45,17 @@
       background: url("../../assets/icons/play-button.svg");
       @include bg-props(contain, center, no-repeat);
       transition: 0.3s;
+      @include for-tablet {
+        width: 580rem;
+        height: 580rem;
+      }
     }
   }
   h3 {
     font-size: 45.126439rem;
     color: #000;
+    @include for-tablet {
+      font-size: 200rem;
+    }
   }
 }

@@ -12,6 +12,10 @@
     img {
       @include fullSizeImg(cover);
     }
+    @include for-tablet {
+      height: 2200rem;
+      margin-bottom: 190rem;
+    }
   }
   .country-tags {
     position: absolute;
@@ -22,6 +26,10 @@
     align-items: center;
     justify-content: flex-start;
     align-content: center;
+    @include for-tablet {
+      left: 240rem;
+      top: 240rem;
+    }
     .main-country {
       color: $lblue;
       @include borderRadius(167.343877rem);
@@ -34,6 +42,11 @@
       //   background: $lblue;
       //   color: #fff;
       // }
+      @include for-tablet {
+        font-size: 160rem;
+        padding: 90rem 210rem;
+        @include borderRadius(890rem);
+      }
     }
     span {
       margin-left: 11.28161rem;
@@ -47,6 +60,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      @include for-tablet {
+        font-size: 160rem;
+        width: 360rem;
+        height: 360rem;
+        margin-left: 110rem;
+      }
     }
   }
   .date {
@@ -56,6 +75,11 @@
     color: $lblue;
     margin-bottom: 22.563219rem;
     font-size: 26.323756rem;
+    @include for-tablet {
+      font-size: 140rem;
+      margin-bottom: 130rem;
+      padding-left: 190rem;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -65,6 +89,10 @@
       @include bg-props(contain, center, no-repeat);
       width: 22.563219rem;
       height: 22.563219rem;
+      @include for-tablet {
+        width: 120rem;
+        height: 120rem;
+      }
     }
   }
   h3 {
@@ -72,5 +100,8 @@
     line-height: 1.1;
     color: #0d1037;
     font-weight: $bold;
+    @include for-tablet {
+      font-size: 200rem;
+    }
   }
 }

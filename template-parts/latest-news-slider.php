@@ -10,9 +10,11 @@
         <div class="swiper-wrapper">
             <?php
             // WP_Query arguments
+
+
             $args = array(
                 'post_status'            => array('publish'),
-                'posts_per_page'         => '10',
+                'posts_per_page'         => 10,
             );
 
             // The Query
