@@ -4,25 +4,53 @@
 
   .site-info {
     padding: 156.062267rem $sidePadding 0 $sidePadding;
+    @include for-tablet {
+      padding: 400rem $sidePadding 0 $sidePadding;
+    }
     .logo-wrapper {
       width: 133.499048rem;
       height: 78.971268rem;
       margin-right: 69.569926rem;
+      @include for-tablet {
+        width: 617.1rem;
+        height: 365rem;
+      }
     }
     .logo-txt {
       font-size: 30.084292rem;
       font-weight: $bold;
       line-height: 1;
+      @include for-tablet {
+        font-size: 122.6rem;
+      }
     }
     .about-txt {
       font-size: 26.323756rem;
       margin-top: 33.844829rem;
       margin-bottom: 65.80939rem;
       max-width: 686.297921rem;
+      @include for-tablet {
+        max-width: 100%;
+        font-size: 140rem;
+        margin-top: 150rem;
+        margin-bottom: 350rem;
+      }
     }
     .follow-us-wrapper {
+      @include for-tablet {
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: center;
+        margin-bottom: 390rem;
+      }
       p {
         margin-bottom: 45.126439rem;
+        @include for-tablet {
+          margin-right: 120rem;
+          font-size: 140rem;
+        }
       }
       li {
         &:not(:last-of-type) {
@@ -31,6 +59,11 @@
       }
     }
     .footer-links-col {
+      @include for-tablet {
+        flex: 0 0 50%;
+        width: 50%;
+        margin-bottom: 330rem;
+      }
       .col-title {
         color: $lblue;
         text-transform: uppercase;
@@ -40,6 +73,10 @@
         margin-bottom: 69.569926rem;
         &:nth-of-type(2) {
           margin-bottom: 41.365902rem;
+        }
+        @include for-tablet {
+          font-size: 160rem;
+          margin-bottom: 190rem;
         }
       }
       ul {
@@ -74,6 +111,9 @@
             font-size: 30.084292rem;
             line-height: 1.25;
             color: #fff;
+            @include for-tablet {
+              font-size: 140rem;
+            }
           }
         }
       }
@@ -85,10 +125,17 @@
       border-top: 1.934646rem solid rgba(55, 165, 255, 0.2);
       flex: 0 0 auto;
       width: 100%;
+      @include for-tablet {
+        padding-top: 340rem;
+      }
       .footer-copy {
         width: 70%;
         display: flex;
         justify-content: flex-start;
+        @include for-tablet {
+          width: 100%;
+          flex-wrap: wrap;
+        }
         p {
           flex: 0 0 auto;
           max-width: 765rem;
@@ -96,10 +143,23 @@
           line-height: 1.25;
           &:not(:last-of-type) {
             margin-right: 94.013414rem;
+            @include for-tablet {
+              margin-bottom: 290rem;
+            }
+          }
+          @include for-tablet {
+            max-width: 100%;
+            font-size: 120rem;
           }
         }
       }
       ul {
+        @include for-tablet {
+          justify-content: space-between;
+          width: 100%;
+          margin-top: 270rem;
+          margin-bottom: 310rem;
+        }
         li {
           &:not(:last-of-type) {
             margin-right: 67.689658rem;
@@ -108,6 +168,9 @@
             color: #fff;
             font-size: 30.084292rem;
             line-height: 1.25;
+            @include for-tablet {
+              font-size: 140rem;
+            }
           }
         }
       }
@@ -116,23 +179,61 @@
   .footer-bottom-bar {
     padding: 71.450195rem $sidePadding;
     background: #fff;
+    @include for-tablet {
+      flex-direction: column;
+      .additional-images {
+        width: 100%;
+      }
+    }
     .eu-logo-wrapper {
       width: 861.162871rem;
       height: 78.971268rem;
       img {
         @include fullSizeImg(contain);
       }
+      @include for-tablet {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        margin-bottom: 130rem;
+      }
     }
     ul {
+      @include for-tablet {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
       li {
         &:not(:last-of-type) {
           margin-right: 112.816097rem;
+          @include for-tablet {
+            margin-right: 0;
+          }
+        }
+        @include for-tablet {
+          flex: 0 0 auto;
+          &:first-of-type {
+            width: 2530rem;
+            height: 250rem;
+          }
+          &:last-of-type {
+            width: 280rem;
+            height: 250rem;
+          }
         }
         a {
           display: block;
           height: 78.971268rem;
           img {
             @include fullSizeImg(contain);
+          }
+          @include for-tablet {
+            height: 250rem;
+            max-width: 100%;
           }
         }
       }

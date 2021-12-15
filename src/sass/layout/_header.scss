@@ -100,9 +100,18 @@
         position: fixed;
         left: 700rem;
         top: 0;
-        width: 100%;
+        width: calc(100% - 700rem);
         height: 100%;
-        background: #fff;
+        max-height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background: $dblue;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
         &.active {
           transform: scaleX(1);
           -moz-transform: scaleX(1);
@@ -114,11 +123,18 @@
           -moz-transition: transform 750ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
           -webkit-transition: transform 750ms
             cubic-bezier(0.68, -0.55, 0.27, 1.55);
+          z-index: 9;
         }
       }
       li {
         line-height: 165.463608rem;
         position: relative;
+        @include for-tablet {
+          flex: 0 0 100%;
+          width: 100%;
+          line-height: 1.4;
+          display: block;
+        }
         &.lblue {
           a {
             color: $lblue;
@@ -126,6 +142,10 @@
         }
         &:not(:last-of-type) {
           margin-right: 131.618779rem;
+          @include for-tablet {
+            margin-right: 0;
+            margin-bottom: 150rem;
+          }
         }
         a {
           color: #fff;
@@ -134,6 +154,9 @@
           letter-spacing: 0.02em;
           text-transform: uppercase;
           position: relative;
+          @include for-tablet {
+            font-size: 212rem;
+          }
           &::before {
             content: "";
             position: absolute;
@@ -181,6 +204,8 @@
           z-index: 99;
           background: #fff;
           padding: 75.210731rem;
+          @include for-tablet {
+          }
           li {
             display: block;
             line-height: 1.5;
@@ -360,5 +385,11 @@ body.logged-in.admin-bar {
   &:hover {
     background: $lblue;
     color: #fff;
+  }
+  @include for-tablet {
+    width: 350rem;
+    height: 350rem;
+    line-height: 350rem;
+    font-size: 250rem;
   }
 }
