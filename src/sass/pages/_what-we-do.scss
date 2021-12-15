@@ -166,6 +166,8 @@
         @include for-tablet {
           width: 140rem;
           height: 140rem;
+          @include rm-transform();
+          top: 70rem;
         }
       }
     }

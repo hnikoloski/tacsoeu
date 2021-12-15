@@ -32,6 +32,11 @@
             color: #fff;
           }
         }
+        @include for-tablet {
+          width: 300rem;
+          height: 300rem;
+          font-size: 160rem;
+        }
       }
     }
   }

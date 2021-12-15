@@ -140,10 +140,16 @@
           animation: LeftRight 1.6s ease-in-out infinite;
         }
       }
+      @include for-tablet {
+        display: none;
+      }
     }
     h2 {
       line-height: 1.05;
       margin-bottom: 65.80939rem;
+      @include for-tablet {
+        margin-bottom: 200rem;
+      }
     }
     .date {
       line-height: 1.5;
@@ -151,6 +157,10 @@
       padding-left: 33.844829rem;
       color: $lblue;
       font-size: 30.084292rem;
+      @include for-tablet {
+        font-size: 140rem;
+        padding-left: 190rem;
+      }
       &::before {
         content: "";
         position: absolute;
@@ -160,6 +170,10 @@
         @include bg-props(contain, center, no-repeat);
         width: 22.563219rem;
         height: 22.563219rem;
+        @include for-tablet {
+          width: 120rem;
+          height: 120rem;
+        }
       }
       &.no-icon {
         padding-left: 178.625486rem;

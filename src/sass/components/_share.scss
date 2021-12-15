@@ -5,11 +5,18 @@
     font-size: 32.603852rem;
     margin-right: 56.408048rem;
     text-transform: uppercase;
+    @include for-tablet {
+      font-size: 160rem;
+      margin-right: 130rem;
+    }
   }
   ul {
     li {
       &:not(:last-of-type) {
         margin-right: 48.886975rem;
+        @include for-tablet {
+          margin-right: 120rem;
+        }
       }
       a {
         width: 77.090999rem;
@@ -19,6 +26,11 @@
         color: #202d5d;
         font-size: 26.323756rem;
         transition: 0.2s;
+        @include for-tablet {
+          width: 300rem;
+          height: 300rem;
+          font-size: 160rem;
+        }
         &:hover {
           background: #202d5d;
           color: #fff;

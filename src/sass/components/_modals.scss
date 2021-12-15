@@ -6,7 +6,9 @@
   top: 0;
 
   @include for-tablet {
-    top: 56%;
+    @include rm-transform();
+    left: 0;
+    top: 0;
   }
 
   z-index: 1024;
@@ -26,8 +28,9 @@
     position: relative;
     @include for-tablet {
       width: 100vw;
-      height: 87vh;
+      height: 95vh;
       flex-direction: column;
+      top: 4.5vh;
     }
     .close-modal {
       background: $lblue;

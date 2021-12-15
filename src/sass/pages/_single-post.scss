@@ -8,6 +8,10 @@
   article {
     width: 2094.61886rem;
     // margin-right: 150.421462rem;
+    @include for-tablet {
+      width: 100%;
+      order: 1;
+    }
     .featured-image {
       width: 100%;
       height: 1316.187794rem;
@@ -18,6 +22,9 @@
         font-size: 37.605366rem;
         line-height: 1.45;
         letter-spacing: -0.02em;
+        @include for-tablet {
+          font-size: 160rem;
+        }
         b,
         strong {
           font-weight: $bold;
@@ -35,25 +42,46 @@
         }
         &:not(:last-of-type) {
           margin-bottom: 65.80939rem;
+          @include for-tablet {
+            margin-bottom: 180rem;
+          }
         }
       }
       h1 {
         font-size: 60.168585rem;
+        @include for-tablet {
+          font-size: 280rem;
+        }
       }
       h2 {
         font-size: 56.408048rem;
+        @include for-tablet {
+          font-size: 260rem;
+        }
       }
       h3 {
         font-size: 52.647512rem;
+        @include for-tablet {
+          font-size: 240rem;
+        }
       }
       h4 {
         font-size: 48.886975rem;
+        @include for-tablet {
+          font-size: 220rem;
+        }
       }
       h5 {
         font-size: 45.126439rem;
+        @include for-tablet {
+          font-size: 200rem;
+        }
       }
       h6 {
         font-size: 41.365902rem;
+        @include for-tablet {
+          font-size: 180rem;
+        }
       }
       h1,
       h2,
@@ -85,6 +113,10 @@
   aside {
     width: 678.776848rem;
     flex: 0 0 auto;
+    @include for-tablet {
+      width: 100%;
+      order: 2;
+    }
     .sidebar-content {
       .title {
         font-size: 60.689658rem;
@@ -93,6 +125,11 @@
         margin-bottom: 92.133146rem;
         color: #0d1037;
         line-height: 1;
+        @include for-tablet {
+          font-size: 240rem;
+          margin-bottom: 330rem;
+          margin-top: 900rem;
+        }
       }
       .blog-card {
         &:not(:last-of-type) {
