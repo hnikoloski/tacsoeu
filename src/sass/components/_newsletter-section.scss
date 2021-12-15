@@ -11,15 +11,28 @@
   flex-direction: row;
   align-items: stretch;
   align-content: flex-start;
+  @include for-tablet {
+    flex-direction: column;
+  }
   .box-container {
     width: 1983.683032rem;
     border: 1px solid rgba(55, 165, 255, 0.2);
     padding: 65.80939rem 75.210731rem;
     background: #fff;
+    @include for-tablet {
+      width: 100%;
+      margin-bottom: 340rem;
+      padding: 230rem;
+    }
     .imgs-wrapper {
       width: 620.488531rem;
       padding-right: 63.929121rem;
       border-right: 1px solid rgba(55, 165, 255, 0.2);
+      @include for-tablet {
+        width: 100%;
+        margin-bottom: 190rem;
+        padding-right: 0;
+      }
       img {
         object-fit: cover;
         object-position: center;
@@ -30,18 +43,29 @@
     .content {
       padding: 0 188.026828rem 0 148.541194rem;
       width: calc(100% - 620.488531rem);
+      @include for-tablet {
+        width: 100%;
+      }
       h3 {
         font-size: 90.252877rem;
         font-weight: $bold;
         color: $dblue;
         margin-bottom: 33.844829rem;
         line-height: 1.05;
+        @include for-tablet {
+          font-size: 300rem;
+          margin-bottom: 130rem;
+        }
       }
       p {
         font-size: 41.365902rem;
         line-height: 1.25;
         margin-bottom: 94.013414rem;
         color: #000;
+        @include for-tablet {
+          font-size: 160rem;
+          margin-bottom: 400rem;
+        }
       }
     }
   }
@@ -55,6 +79,14 @@
       background: $darkerBlue;
       &:not(:last-of-type) {
         margin-bottom: 54.52778rem;
+        @include for-tablet {
+          margin-bottom: 340rem;
+        }
+      }
+      @include for-tablet {
+        max-width: 100%;
+        width: 100%;
+        padding: 420rem 250rem;
       }
       h3 {
         font-size: 56.408048rem;
@@ -62,12 +94,20 @@
         font-weight: $bold;
         color: inherit;
         margin-bottom: 22.563219rem;
+        @include for-tablet {
+          font-size: 240rem;
+          margin-bottom: 150rem;
+        }
       }
       p {
         color: inherit;
         font-size: 33.844829rem;
         line-height: 1.25;
         margin-bottom: 47.006707rem;
+        @include for-tablet {
+          font-size: 160rem;
+          margin-bottom: 220rem;
+        }
       }
       a {
         padding-top: 0;
