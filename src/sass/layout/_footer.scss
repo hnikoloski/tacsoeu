@@ -4,6 +4,9 @@
 
   .site-info {
     padding: 156.062267rem $sidePadding 0 $sidePadding;
+    @include for-tablet {
+      padding: 400rem $sidePadding 0 $sidePadding;
+    }
     .logo-wrapper {
       width: 133.499048rem;
       height: 78.971268rem;
@@ -122,6 +125,9 @@
       border-top: 1.934646rem solid rgba(55, 165, 255, 0.2);
       flex: 0 0 auto;
       width: 100%;
+      @include for-tablet {
+        padding-top: 340rem;
+      }
       .footer-copy {
         width: 70%;
         display: flex;
@@ -173,23 +179,61 @@
   .footer-bottom-bar {
     padding: 71.450195rem $sidePadding;
     background: #fff;
+    @include for-tablet {
+      flex-direction: column;
+      .additional-images {
+        width: 100%;
+      }
+    }
     .eu-logo-wrapper {
       width: 861.162871rem;
       height: 78.971268rem;
       img {
         @include fullSizeImg(contain);
       }
+      @include for-tablet {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        margin-bottom: 130rem;
+      }
     }
     ul {
+      @include for-tablet {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
       li {
         &:not(:last-of-type) {
           margin-right: 112.816097rem;
+          @include for-tablet {
+            margin-right: 0;
+          }
+        }
+        @include for-tablet {
+          flex: 0 0 auto;
+          &:first-of-type {
+            width: 2530rem;
+            height: 250rem;
+          }
+          &:last-of-type {
+            width: 280rem;
+            height: 250rem;
+          }
         }
         a {
           display: block;
           height: 78.971268rem;
           img {
             @include fullSizeImg(contain);
+          }
+          @include for-tablet {
+            height: 250rem;
+            max-width: 100%;
           }
         }
       }

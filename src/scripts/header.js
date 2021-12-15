@@ -6,10 +6,14 @@ jQuery(document).ready(function ($) {
 
     if (scroll >= 100) {
       sticky.slideUp();
-      $("#to-top").slideDown();
+      if ($(window).width() > 768) {
+        $("#to-top").slideDown();
+      }
     } else {
       sticky.slideDown();
-      $("#to-top").slideUp();
+      if ($(window).width() > 768) {
+        $("#to-top").slideUp();
+      }
     }
   });
 

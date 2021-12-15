@@ -1086,6 +1086,14 @@ body.logged-in.admin-bar #masthead {
   background: #37a5ff;
   color: #fff;
 }
+@media (max-width: 768px) {
+  #to-top {
+    width: 350rem;
+    height: 350rem;
+    line-height: 350rem;
+    font-size: 250rem;
+  }
+}
 
 .site-footer {
   background: #253d92;
@@ -1093,6 +1101,11 @@ body.logged-in.admin-bar #masthead {
 }
 .site-footer .site-info {
   padding: 156.062267rem var(--side-padding) 0 var(--side-padding);
+}
+@media (max-width: 768px) {
+  .site-footer .site-info {
+    padding: 400rem var(--side-padding) 0 var(--side-padding);
+  }
 }
 .site-footer .site-info .logo-wrapper {
   width: 133.499048rem;
@@ -1209,6 +1222,11 @@ body.logged-in.admin-bar #masthead {
   flex: 0 0 auto;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .site-footer .site-info .footer-quick-links-wrapper {
+    padding-top: 340rem;
+  }
+}
 .site-footer .site-info .footer-quick-links-wrapper .footer-copy {
   width: 70%;
   display: flex;
@@ -1265,6 +1283,14 @@ body.logged-in.admin-bar #masthead {
   padding: 71.450195rem var(--side-padding);
   background: #fff;
 }
+@media (max-width: 768px) {
+  .site-footer .footer-bottom-bar {
+    flex-direction: column;
+  }
+  .site-footer .footer-bottom-bar .additional-images {
+    width: 100%;
+  }
+}
 .site-footer .footer-bottom-bar .eu-logo-wrapper {
   width: 861.162871rem;
   height: 78.971268rem;
@@ -1277,8 +1303,44 @@ body.logged-in.admin-bar #masthead {
   -o-object-position: center;
      object-position: center;
 }
+@media (max-width: 768px) {
+  .site-footer .footer-bottom-bar .eu-logo-wrapper {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 130rem;
+  }
+}
+@media (max-width: 768px) {
+  .site-footer .footer-bottom-bar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 .site-footer .footer-bottom-bar ul li:not(:last-of-type) {
   margin-right: 112.816097rem;
+}
+@media (max-width: 768px) {
+  .site-footer .footer-bottom-bar ul li:not(:last-of-type) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .site-footer .footer-bottom-bar ul li {
+    flex: 0 0 auto;
+  }
+  .site-footer .footer-bottom-bar ul li:first-of-type {
+    width: 2530rem;
+    height: 250rem;
+  }
+  .site-footer .footer-bottom-bar ul li:last-of-type {
+    width: 280rem;
+    height: 250rem;
+  }
 }
 .site-footer .footer-bottom-bar ul li a {
   display: block;
@@ -1291,6 +1353,12 @@ body.logged-in.admin-bar #masthead {
      object-fit: contain;
   -o-object-position: center;
      object-position: center;
+}
+@media (max-width: 768px) {
+  .site-footer .footer-bottom-bar ul li a {
+    height: 250rem;
+    max-width: 100%;
+  }
 }
 
 .hero-home {

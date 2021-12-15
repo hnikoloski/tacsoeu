@@ -386,4 +386,10 @@ body.logged-in.admin-bar {
     background: $lblue;
     color: #fff;
   }
+  @include for-tablet {
+    width: 350rem;
+    height: 350rem;
+    line-height: 350rem;
+    font-size: 250rem;
+  }
 }
