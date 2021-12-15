@@ -23,16 +23,28 @@
     font-weight: $bold;
     margin-bottom: 112.816097rem;
     line-height: 1.05;
+    @include for-tablet {
+      font-size: 250rem;
+    }
   }
   h3 {
     font-weight: $bold;
     font-size: 67.689658rem;
     line-height: 1.25;
+    @include for-tablet {
+      font-size: 190rem;
+    }
   }
   p {
     font-size: 41.365902rem;
     &:not(:last-of-type) {
       margin-bottom: 65.80939rem;
+    }
+    @include for-tablet {
+      font-size: 170rem;
+      &:not(:last-of-type) {
+        margin-bottom: 200rem;
+      }
     }
     strong,
     b {
@@ -46,6 +58,10 @@
     h2 {
       margin-bottom: 112.816097rem;
       font-size: 67.689658rem;
+      @include for-tablet {
+        font-size: 190rem;
+        margin-bottom: 300rem;
+      }
     }
   }
   .wp-block-columns.border-top {
@@ -58,7 +74,20 @@
       max-width: 829.19831rem;
       &:last-of-type {
         margin-bottom: 131.618779rem;
+        @include for-tablet {
+          margin-bottom: 261.618779rem;
+        }
       }
+      @include for-tablet {
+        font-size: 170rem;
+        max-width: 100%;
+        border-top: 40rem solid $lblue;
+        margin-bottom: 365.80939rem;
+        padding-top: 360.168585rem;
+      }
+    }
+    @include for-tablet {
+      margin-bottom: 0;
     }
   }
   .border-right-light {
@@ -69,10 +98,19 @@
         padding-right: 225.632193rem;
         margin-right: 223.751925rem;
         border-right: 1px solid #eef2ff;
+        @include for-tablet {
+          padding-right: 0;
+          margin-right: 0;
+          border-right: transparent;
+          margin-bottom: 200rem;
+        }
       }
       .num-marker {
         color: $lblue;
       }
+    }
+    @include for-tablet {
+      margin: 300rem 0;
     }
   }
   .wp-block-spacer {
@@ -86,6 +124,13 @@
     img {
       @include fullSizeImg(contain);
     }
+
+    @include for-tablet {
+      max-width: 100%;
+      figure {
+        margin-left: 0;
+      }
+    }
   }
   .fancy-list {
     li {
@@ -94,6 +139,14 @@
       padding-left: 84.612072rem;
       &:not(:last-of-type) {
         margin-bottom: 56.408048rem;
+        @include for-tablet {
+          margin-bottom: 250rem;
+        }
+      }
+      @include for-tablet {
+        margin-bottom: 250rem;
+        font-size: 170rem;
+        padding-left: 230rem;
       }
       b,
       strong {
@@ -110,11 +163,18 @@
         width: 28.204024rem;
         height: 28.204024rem;
         background: $lblue;
+        @include for-tablet {
+          width: 140rem;
+          height: 140rem;
+        }
       }
     }
   }
   .space-left {
     padding-left: 188.026828rem;
+    @include for-tablet {
+      padding-left: 0;
+    }
   }
   .space-right {
     padding-right: 188.026828rem;
