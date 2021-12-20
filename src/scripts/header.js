@@ -36,4 +36,23 @@ jQuery(document).ready(function ($) {
     $(this).toggleClass("active");
     $("#masthead .nav-bar ul").toggleClass("active");
   });
+  if ($(window).width() < 769) {
+    $("#masthead .nav-bar ul li.menu-item-has-children a").on(
+      "click",
+      function (e) {
+        e.preventDefault();
+        $(this)
+          .parent()
+          .find(".sub-menu")
+          .append(
+            "<a href='#' class='close-sub-menu'><i class='fas fa-long-arrow-alt-left'></i></a>"
+          );
+        $(this).parent().find(".sub-menu").css("display", "flex");
+        $(".close-sub-menu").on("click", function (e) {
+          e.preventDefault();
+          $("#masthead .nav-bar ul li .sub-menu").css("display", "none");
+        });
+      }
+    );
+  }
 });

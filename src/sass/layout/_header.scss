@@ -207,6 +207,16 @@
           background: #fff;
           padding: 75.210731rem;
           @include for-tablet {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            .close-sub-menu {
+              position: absolute;
+              top: 100rem;
+              left: 150rem;
+              color: $dblue;
+            }
           }
           li {
             display: block;
@@ -232,6 +242,25 @@
               -webkit-transform-origin: top;
               -moz-transform-origin: top;
               transform-origin: top;
+              @include for-tablet {
+                @include rm-transform();
+                align-items: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+                height: 100vh;
+                overflow-y: auto;
+                padding-top: 450rem;
+                padding-bottom: 350rem;
+                width: 100%;
+                li {
+                  flex: 1 1 100%;
+                  &:not(:last-of-type) {
+                    margin-bottom: 350rem;
+                  }
+                }
+              }
             }
           }
         }
