@@ -42,7 +42,7 @@ jQuery(document).ready(function ($) {
     loop: true,
     spaceBetween: 0,
     breakpoints: {
-      // when window width is >= 320px
+      // when window width is >= 768
       768: {
         slidesPerView: 2.5,
       },
@@ -62,12 +62,19 @@ jQuery(document).ready(function ($) {
   });
   let relatedCountrySwiper = new Swiper("#related-country-news .slider ", {
     modules: [Navigation],
-    slidesPerView: 4,
+    slidesPerView: 1,
     loop: true,
-    spaceBetween: 30,
+    spaceBetween: 0,
     navigation: {
       nextEl: "#related-country-news .slider .swiper-button-next",
       prevEl: "#related-country-news .slider .swiper-button-prev",
+    },
+    breakpoints: {
+      // when window width is >= 768
+      768: {
+        spaceBetween: 30,
+        slidesPerView: 4,
+      },
     },
   });
 });

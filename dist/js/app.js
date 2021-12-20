@@ -2414,6 +2414,18 @@ jQuery(document).ready(function ($) {
     $(this).toggleClass("active");
     $("#masthead .nav-bar ul").toggleClass("active");
   });
+
+  if ($(window).width() < 769) {
+    $("#masthead .nav-bar ul li.menu-item-has-children a").on("click", function (e) {
+      e.preventDefault();
+      $(this).parent().find(".sub-menu").append("<a href='#' class='close-sub-menu'><i class='fas fa-long-arrow-alt-left'></i></a>");
+      $(this).parent().find(".sub-menu").css("display", "flex");
+      $(".close-sub-menu").on("click", function (e) {
+        e.preventDefault();
+        $("#masthead .nav-bar ul li .sub-menu").css("display", "none");
+      });
+    });
+  }
 });
 
 /***/ }),
@@ -2569,7 +2581,7 @@ jQuery(document).ready(function ($) {
     loop: true,
     spaceBetween: 0,
     breakpoints: {
-      // when window width is >= 320px
+      // when window width is >= 768
       768: {
         slidesPerView: 2.5
       }
@@ -2588,12 +2600,19 @@ jQuery(document).ready(function ($) {
   });
   var relatedCountrySwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__.default("#related-country-news .slider ", {
     modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation],
-    slidesPerView: 4,
+    slidesPerView: 1,
     loop: true,
-    spaceBetween: 30,
+    spaceBetween: 0,
     navigation: {
       nextEl: "#related-country-news .slider .swiper-button-next",
       prevEl: "#related-country-news .slider .swiper-button-prev"
+    },
+    breakpoints: {
+      // when window width is >= 768
+      768: {
+        spaceBetween: 30,
+        slidesPerView: 4
+      }
     }
   });
 });

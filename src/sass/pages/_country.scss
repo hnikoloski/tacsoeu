@@ -21,6 +21,9 @@ body.single-country {
   .the-content {
     p {
       font-size: 41.365902rem;
+      @include for-tablet {
+        font-size: 180rem;
+      }
       strong,
       b {
         font-weight: $bold;
@@ -30,6 +33,9 @@ body.single-country {
       }
       &:not(:last-of-type) {
         margin-bottom: 65.80939rem;
+        @include for-tablet {
+          margin-bottom: 180rem;
+        }
       }
       a {
         color: $lblue;
@@ -42,6 +48,19 @@ body.single-country {
     .wp-block-image {
       img {
         @include fullSizeImg(contain);
+      }
+      @include for-tablet {
+        figure {
+          height: 2260rem;
+        }
+      }
+    }
+    .wp-block-buttons {
+      @include for-tablet {
+        width: 100%;
+        .wp-block-button {
+          width: 100%;
+        }
       }
     }
     .wp-block-button__link {
@@ -59,10 +78,19 @@ body.single-country {
         @include ver-center();
         font-size: 48.886975rem;
         right: 65.80939rem;
+        @include for-tablet {
+          font-size: 250rem;
+          right: 300rem;
+        }
       }
       &:hover {
         border-color: $lblue;
         background: $lblue;
+      }
+      @include for-tablet {
+        width: 100%;
+        padding: 260rem 740rem 260rem 290rem;
+        font-size: 160rem;
       }
     }
   }
@@ -70,6 +98,21 @@ body.single-country {
     margin-top: 332.807485rem;
     margin-bottom: 291.441583rem;
     padding-left: $sidePadding;
+    @include for-tablet {
+      padding-bottom: 300rem;
+      margin-bottom: 1460rem;
+      padding-right: $sidePadding;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 90%;
+        height: 10rem;
+        bottom: 0;
+        @include hor-center();
+        background: rgba(55, 165, 255, 0.2);
+      }
+    }
     .info-container {
       padding-right: $sidePadding;
       margin-bottom: 84.612072rem;
@@ -77,6 +120,16 @@ body.single-country {
       align-items: center;
       align-content: center;
       justify-content: space-between;
+      @include for-tablet {
+        h2 {
+          font-size: 220rem;
+        }
+        .btn {
+          position: absolute;
+          bottom: -850rem;
+          @include hor-center();
+        }
+      }
     }
     .swiper {
       position: relative;
@@ -96,12 +149,22 @@ body.single-country {
           rgba(255, 255, 255, 0) 73%
         );
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#364b98",endColorstr="#ffffff",GradientType=1);
+        @include for-tablet {
+          display: none;
+        }
       }
       .swiper-btns-wrapper {
         position: absolute;
         right: $sidePadding;
         top: 131.618779rem;
         z-index: 9;
+        @include for-tablet {
+          .swiper-button {
+            width: 360rem;
+            height: 360rem;
+            font-size: 100rem;
+          }
+        }
       }
     }
   }
