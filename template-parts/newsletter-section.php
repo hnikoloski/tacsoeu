@@ -28,18 +28,7 @@
 
                 </div>
             </div>
-            <div class="additional-boxes">
-                <div class="single-box animated fadeInRight">
-                    <h3>Database</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                    <a href="#!" class="btn d-block btn-arrow btn-arrow-minimal w-fit-content">View More</a>
-                </div>
-                <div class="single-box animated fadeInRight" data-delay="200">
-                    <h3>Newsletter Archive</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                    <a href="#!" class="btn d-block btn-arrow btn-arrow-minimal w-fit-content">View More</a>
-                </div>
-            </div>
+
     <?php
         }
     } else {
@@ -49,5 +38,16 @@
     // Restore original Post Data
     wp_reset_postdata();
     ?>
-
+    <div class="additional-boxes">
+        <div class="single-box animated fadeInRight">
+            <h3><?= the_field('box_1_title'); ?></h3>
+            <p><?= the_field('box_1_description'); ?></p>
+            <a href="<?= the_field('box_1_link'); ?>" class="btn d-block btn-arrow btn-arrow-minimal w-fit-content">View More</a>
+        </div>
+        <div class="single-box animated fadeInRight" data-delay="200">
+            <h3><?= the_field('box_2_title'); ?></h3>
+            <p><?= the_field('box_2_description'); ?></p>
+            <a href="<?= the_field('box_2_link'); ?>" class="btn d-block btn-arrow btn-arrow-minimal w-fit-content">View More</a>
+        </div>
+    </div>
 </section>

@@ -30,8 +30,8 @@ $logoUrl = wp_get_attachment_image_src($custom_logo_id, 'full');
 <body <?php body_class('overflow-hidden'); ?> id="ceiling">
     <?php wp_body_open(); ?>
     <div id="preloader">
-        <div class="clock"></div>
-        <h2>Loading</h2>
+        <!-- <div class="clock"></div>
+        <h2>Loading</h2> -->
     </div>
     <a href="#ceiling" id="to-top">
         <i class="fas fa-chevron-up"></i>

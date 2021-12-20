@@ -58,11 +58,20 @@
         }
       }
     }
+    #widget-area {
+      width: calc(100% - 795rem);
+      @include for-tablet {
+        flex: 0 0 100%;
+        margin-bottom: 330rem;
+        width: 100%;
+      }
+    }
     .footer-links-col {
       @include for-tablet {
         flex: 0 0 50%;
         width: 50%;
         margin-bottom: 330rem;
+        flex-basis: 50% !important;
       }
       .col-title {
         color: $lblue;
@@ -168,6 +177,7 @@
             color: #fff;
             font-size: 30.084292rem;
             line-height: 1.25;
+
             @include for-tablet {
               font-size: 140rem;
             }

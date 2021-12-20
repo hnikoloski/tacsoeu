@@ -7,7 +7,6 @@ get_header();
     <?php if (function_exists('cu_wp_custom_breadcrumbs')) cu_wp_custom_breadcrumbs(); ?>
     <h2 class="heading separator separator-before">Publications</h2>
 </div>
-
 <section id="regions">
     <div class="top-bar d-flex flex-direction-row flex-wrap justify-content-space-between align-items-center animated fadeInUp">
         <h5>Regions</h5>
@@ -20,17 +19,14 @@ get_header();
                 'posts_per_page'         => '-1',
 
             );
-
             // The Query
             $query = new WP_Query($args);
-
             // The Loop
             if ($query->have_posts()) {
                 $counter = 0;
                 while ($query->have_posts()) {
                     $query->the_post();
                     // do something
-
             ?>
                     <li class="animated fadeInUp" data-delay="<?= $counter * 100; ?>"><a href="<?= get_post_field('post_name', get_the_ID()); ?>"><?= the_title(); ?></a></li>
             <?php
@@ -39,18 +35,14 @@ get_header();
             } else {
                 // no posts found
             }
-
             // Restore original Post Data
             wp_reset_postdata();
             ?>
         </ul>
     </div>
-
 </section>
 <div class="archive-grid page-padding-x page-padding-y js-filter-results">
-
     <?php
-
     // WP_Query arguments
     $args = array(
         'post_type'              => array('publication'),
@@ -58,10 +50,8 @@ get_header();
         'posts_per_page'         => '20',
         'paged'                  => get_query_var('paged'),
     );
-
     // The Query
     $query = new WP_Query($args);
-
     // The Loop
     if ($query->have_posts()) {
         while ($query->have_posts()) {
@@ -73,7 +63,6 @@ get_header();
                 $imgUrl = get_the_post_thumbnail_url();
             }
     ?>
-
             <a href="<?= the_permalink(); ?>" data-post-id="<?= the_id(); ?>" class="animated fadeInUp blog-card filter-single-result d-block single-slide swiper-slide d-flex flex-direction-col flex-wrap justify-content-start align-items-start card-type card-type-<?= get_post_type(); ?>">
                 <div class="img-wrapper">
                     <img src="<?= $imgUrl; ?>" alt="<?php the_title(); ?>">
@@ -111,7 +100,6 @@ get_header();
     } else {
         // no posts found
     }
-
     // Pagination
     require('template-parts/pagination.php');
     ?>
@@ -119,11 +107,7 @@ get_header();
     <?php
     // Restore original Post Data
     wp_reset_postdata();
-
     ?>
-
-
 </div>
-
 <?php
 get_footer();

@@ -9,3 +9,18 @@
     font-weight: $semiBold;
   }
 }
+body.search-results {
+  .archive-grid {
+    .posts-navigation {
+      .nav-links {
+        a {
+          font-size: 33.844829rem;
+          color: $lblue;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

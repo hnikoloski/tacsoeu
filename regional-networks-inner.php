@@ -27,7 +27,6 @@ get_header();
 </div>
 <div class="regional-networks regional-networks-single page-padding-x page-padding-y">
     <div class="the_content">
-
         <?php
         if (get_field('show_full_description') == 'no') {
             the_content();

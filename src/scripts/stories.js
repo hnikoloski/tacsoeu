@@ -29,7 +29,6 @@ jQuery(document).ready(function ($) {
         $(this).remove();
       });
       let selectedCountry = $(this).attr("href");
-      console.log(selectedCountry);
       $(".blog-card").hide();
       $("." + selectedCountry).show();
     });

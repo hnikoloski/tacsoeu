@@ -37,69 +37,24 @@
                 </ul>
             </div>
         </div>
-        <div class="footer-links-col">
-            <h4 class="col-title">About</h4>
-            <ul>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Project Description</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Who We Are</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Consortium</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">European Union</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Contacts</a></li>
-            </ul>
-        </div>
-        <div class="footer-links-col">
-            <h3 class="col-title">What we Do</h3>
-            <ul class="space-s">
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Project Description</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Who We Are</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Consortium</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">European Union</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Contacts</a></li>
-            </ul>
-        </div>
-        <div class="footer-links-col">
-            <h3 class="col-title">IPA BENEFICIARIES</h3>
-            <ul class="space-s">
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Project Description</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Who We Are</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Consortium</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">European Union</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Contacts</a></li>
-            </ul>
-        </div>
-        <div class="footer-links-col">
-            <h3 class="col-title"> LIBRARY</h3>
-            <ul class="space-s">
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Project Description</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Who We Are</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Consortium</a></li>
-            </ul>
-            <h3 class="col-title">MEDIA</h3>
-            <ul class="space-s">
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">European Union</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Contacts</a></li>
-            </ul>
-        </div>
-        <div class="footer-links-col">
-            <h3 class="col-title">SURVEYS</h3>
-            <ul class="space-lg">
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Project Description</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Who We Are</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Consortium</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Consortium</a></li>
-            </ul>
+        <?php get_sidebar();
+        ?>
 
-        </div>
         <div class="footer-quick-links-wrapper d-flex flex-wrap justify-content-space-between align-items-center align-content-center">
             <div class="footer-copy">
                 <p>This website was created and maintained with the financial support of the European Union. Its contents are the sole responsibility of GDSI Limited and do not neccessarily reflect the views of the European Union</p>
                 <p>Kosovo (*) – This designation is without prejudice to positions on status, and is in line with UNSCR 1244/1999 and the ICJ opinion on the Kosovo declaration of independence.</p>
             </div>
-            <ul class="quick-links d-flex flex-wrap justify-content-end align-items-start align-content-center">
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Cookies</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Privacy Policy</a></li>
-                <li><a href="#!" class="fancy-hover fancy-hover-lblue">Legal Notice</a></li>
-            </ul>
+
+            <?php wp_nav_menu(
+                array(
+                    'theme_location' => 'menu-3',
+                    'menu_class'     => 'quick-links d-flex flex-wrap justify-content-end align-items-start align-content-center',
+                    'container'      => false,
+                    'add_a_class'     => 'fancy-hover fancy-hover-lblue',
+                )
+            );
+            ?>
         </div>
     </div><!-- .site-info -->
     <div class="footer-bottom-bar d-flex flex-wrap justify-content-space-between align-items-start align-content-center">
@@ -133,10 +88,14 @@
             <?php endif; ?>
         </div>
     </div>
+
+
 </footer><!-- #colophon -->
 </div><!-- #page -->
 
-<?php wp_footer(); ?>
+<?php
+
+wp_footer(); ?>
 
 </body>
 

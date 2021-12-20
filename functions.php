@@ -63,8 +63,20 @@ if (!function_exists('starter_setup')) :
             array(
                 'menu-1' => esc_html__('Primary', 'starter'),
                 'menu-2' => esc_html__('QuickLinks', 'starter'),
+                'menu-3' => esc_html__('Footer bottom bar', 'starter'),
             )
         );
+
+        // Custom classes to "a" tag in wp_nav_menu
+        function add_additional_class_on_a($classes, $item, $args)
+        {
+            if (isset($args->add_a_class)) {
+                $classes['class'] = $args->add_a_class;
+            }
+            return $classes;
+        }
+
+        add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
 
         /*
 		 * Switch default core markup for search form, comment form, and comments

@@ -7,4 +7,7 @@ jQuery(document).ready(function ($) {
     // if($('.try-to-hide').hasClass)
     $(`.try-to-hide.${$(".checkCountry").val()}`).hide();
   }
+  $(".site-footer .site-info .footer-links-col ul li a").addClass(
+    "fancy-hover fancy-hover-lblue"
+  );
 });
