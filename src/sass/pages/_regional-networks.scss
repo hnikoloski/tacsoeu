@@ -8,12 +8,13 @@
       max-width: 100%;
     }
     li {
-      padding-left: 72px;
+      padding-left: 135.379316rem;
       position: relative;
       border-bottom: 1px solid rgba(55, 165, 255, 0.2);
       padding-top: 75.210731rem;
       padding-bottom: 75.210731rem;
       @include for-tablet {
+        padding-left: 250rem;
       }
       &:first-of-type {
         border-top: 1px solid rgba(55, 165, 255, 0.2);
@@ -27,11 +28,23 @@
         height: 52.647512rem;
         @include borderRadius(50%);
         background: #ecf8ff;
+        @include for-tablet {
+          @include rm-transform();
+          top: 135rem;
+          width: 200rem;
+          height: 200rem;
+        }
       }
       &:hover {
         background: #ecf8ff;
+        @include for-tablet {
+          background: transparent;
+        }
         a {
           color: $lblue;
+          @include for-tablet {
+            color: $darkerBlue;
+          }
           ul {
             display: block;
           }
@@ -44,6 +57,9 @@
         color: $darkerBlue;
         width: fit-content;
         width: -moz-fit-content;
+        @include for-tablet {
+          font-size: 200rem;
+        }
         ul {
           padding: 103.414755rem;
           background: #ecf8ff;
@@ -56,6 +72,16 @@
           left: calc(100% + 132rem);
           z-index: 99;
           min-width: 864.080483rem;
+          @include for-tablet {
+            display: block;
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            @include rm-transform();
+            margin-top: 200rem;
+          }
           li {
             padding-left: 41.365902rem;
             position: relative;
@@ -67,6 +93,10 @@
             &:not(:last-of-type) {
               margin-bottom: 33.844829rem;
             }
+            @include for-tablet {
+              font-size: 160rem;
+              padding-left: 350rem;
+            }
             &:before {
               content: "";
               position: absolute;
@@ -76,6 +106,13 @@
               height: 15.042146rem;
               @include borderRadius(50%);
               background: #202d5d;
+              @include for-tablet {
+                width: 80rem;
+                height: 80rem;
+                @include rm-transform();
+                top: 80rem;
+                left: 0;
+              }
             }
           }
         }

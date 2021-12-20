@@ -13,6 +13,10 @@
       &::after {
         width: 200rem;
         height: 200rem;
+        @include for-tablet {
+          width: 580rem;
+          height: 580rem;
+        }
       }
     }
   }

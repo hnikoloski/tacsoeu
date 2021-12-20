@@ -2395,6 +2395,12 @@ body.logged-in.admin-bar #masthead {
   width: 200rem;
   height: 200rem;
 }
+@media (max-width: 768px) {
+  .video-card:hover .img-wrapper::after {
+    width: 580rem;
+    height: 580rem;
+  }
+}
 .video-card .img-wrapper {
   position: relative;
   width: 100%;
@@ -4475,11 +4481,22 @@ body.logged-in.admin-bar #masthead {
   position: relative;
   z-index: 2;
 }
+@media (max-width: 768px) {
+  .contact-us .top-bar {
+    display: none;
+  }
+}
 .contact-us .row {
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .contact-us .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .contact-us .row .col {
   position: relative;
@@ -4487,13 +4504,30 @@ body.logged-in.admin-bar #masthead {
   flex: 0 0 45%;
   width: 45%;
 }
+@media (max-width: 768px) {
+  .contact-us .row .col {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+}
 .contact-us .row .col-map {
   flex: 0 0 50%;
   width: 50%;
 }
+@media (max-width: 768px) {
+  .contact-us .row .col-map {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+}
 .contact-us .row .col-map #map {
   height: 846.120725rem;
   z-index: 1;
+}
+@media (max-width: 768px) {
+  .contact-us .row .col-map #map {
+    height: 2500rem;
+  }
 }
 .contact-us .row .col-map #map > .leaflet-map {
   height: 100% !important;
@@ -4518,8 +4552,24 @@ body.logged-in.admin-bar #masthead {
   margin-bottom: 178.625486rem;
   font-weight: 700;
 }
+.contact-us .row .col h4 span {
+  font-weight: inherit;
+}
+@media (max-width: 768px) {
+  .contact-us .row .col h4 {
+    font-size: 200rem;
+    padding-left: 0;
+    margin-bottom: 150rem;
+  }
+}
 .contact-us .row .col ul {
   padding-left: 178.625486rem;
+}
+@media (max-width: 768px) {
+  .contact-us .row .col ul {
+    padding-left: 0;
+    margin-bottom: 200rem;
+  }
 }
 .contact-us .row .col ul li {
   display: flex;
@@ -4529,8 +4579,18 @@ body.logged-in.admin-bar #masthead {
 .contact-us .row .col ul li:hover i {
   transform: scale(1.1);
 }
+@media (max-width: 768px) {
+  .contact-us .row .col ul li:hover i {
+    transform: scale(1);
+  }
+}
 .contact-us .row .col ul li:not(:last-of-type) {
   margin-bottom: 65.80939rem;
+}
+@media (max-width: 768px) {
+  .contact-us .row .col ul li:not(:last-of-type) {
+    margin-bottom: 220rem;
+  }
 }
 .contact-us .row .col ul li i {
   background: #243368;
@@ -4545,10 +4605,24 @@ body.logged-in.admin-bar #masthead {
   text-align: center;
   margin-right: 56.408048rem;
 }
+@media (max-width: 768px) {
+  .contact-us .row .col ul li i {
+    font-size: 220rem;
+    margin-right: 140rem;
+    width: 220rem;
+    height: 220rem;
+    background: transparent;
+  }
+}
 .contact-us .row .col ul li a {
   color: #fff;
   font-size: 41.365902rem;
   transition: 0.3s;
+}
+@media (max-width: 768px) {
+  .contact-us .row .col ul li a {
+    font-size: 160rem;
+  }
 }
 .contact-us .row .col ul li a:hover {
   color: #37a5ff;
@@ -4557,6 +4631,12 @@ body.logged-in.admin-bar #masthead {
   font-size: 41.365902rem;
   max-width: 861.162871rem;
   line-height: 1.45;
+}
+@media (max-width: 768px) {
+  .contact-us .row .col ul li p {
+    font-size: 160rem;
+    max-width: 100%;
+  }
 }
 
 body.single-country .hero-inner .date {
@@ -4755,11 +4835,16 @@ body.single-country #related-country-news .swiper .swiper-btns-wrapper {
   }
 }
 .regional-networks #regional_networks-lists li {
-  padding-left: 72px;
+  padding-left: 135.379316rem;
   position: relative;
   border-bottom: 1px solid rgba(55, 165, 255, 0.2);
   padding-top: 75.210731rem;
   padding-bottom: 75.210731rem;
+}
+@media (max-width: 768px) {
+  .regional-networks #regional_networks-lists li {
+    padding-left: 250rem;
+  }
 }
 .regional-networks #regional_networks-lists li:first-of-type {
   border-top: 1px solid rgba(55, 165, 255, 0.2);
@@ -4779,11 +4864,31 @@ body.single-country #related-country-news .swiper .swiper-btns-wrapper {
   -webkit-border-radius: 50%;
   background: #ecf8ff;
 }
+@media (max-width: 768px) {
+  .regional-networks #regional_networks-lists li::before {
+    transform: none;
+    -moz-transform: none;
+    -webkit-transform: none;
+    top: 135rem;
+    width: 200rem;
+    height: 200rem;
+  }
+}
 .regional-networks #regional_networks-lists li:hover {
   background: #ecf8ff;
 }
+@media (max-width: 768px) {
+  .regional-networks #regional_networks-lists li:hover {
+    background: transparent;
+  }
+}
 .regional-networks #regional_networks-lists li:hover a {
   color: #37a5ff;
+}
+@media (max-width: 768px) {
+  .regional-networks #regional_networks-lists li:hover a {
+    color: #212e5a;
+  }
 }
 .regional-networks #regional_networks-lists li:hover a ul {
   display: block;
@@ -4796,6 +4901,11 @@ body.single-country #related-country-news .swiper .swiper-btns-wrapper {
   width: -webkit-fit-content;
   width: fit-content;
   width: -moz-fit-content;
+}
+@media (max-width: 768px) {
+  .regional-networks #regional_networks-lists li a {
+    font-size: 200rem;
+  }
 }
 .regional-networks #regional_networks-lists li a ul {
   padding: 103.414755rem;
@@ -4814,6 +4924,20 @@ body.single-country #related-country-news .swiper .swiper-btns-wrapper {
   z-index: 99;
   min-width: 864.080483rem;
 }
+@media (max-width: 768px) {
+  .regional-networks #regional_networks-lists li a ul {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    transform: none;
+    -moz-transform: none;
+    -webkit-transform: none;
+    margin-top: 200rem;
+  }
+}
 .regional-networks #regional_networks-lists li a ul li {
   padding-left: 41.365902rem;
   position: relative;
@@ -4825,6 +4949,12 @@ body.single-country #related-country-news .swiper .swiper-btns-wrapper {
 }
 .regional-networks #regional_networks-lists li a ul li:not(:last-of-type) {
   margin-bottom: 33.844829rem;
+}
+@media (max-width: 768px) {
+  .regional-networks #regional_networks-lists li a ul li {
+    font-size: 160rem;
+    padding-left: 350rem;
+  }
 }
 .regional-networks #regional_networks-lists li a ul li:before {
   content: "";
@@ -4840,6 +4970,17 @@ body.single-country #related-country-news .swiper .swiper-btns-wrapper {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   background: #202d5d;
+}
+@media (max-width: 768px) {
+  .regional-networks #regional_networks-lists li a ul li:before {
+    width: 80rem;
+    height: 80rem;
+    transform: none;
+    -moz-transform: none;
+    -webkit-transform: none;
+    top: 80rem;
+    left: 0;
+  }
 }
 .regional-networks-single table th,
 .regional-networks-single table td {

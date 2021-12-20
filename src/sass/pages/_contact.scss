@@ -24,23 +24,41 @@
     margin-bottom: 129.738511rem;
     position: relative;
     z-index: 2;
+    @include for-tablet {
+      display: none;
+    }
   }
   .row {
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: space-between;
+    @include for-tablet {
+      flex-direction: column;
+      align-items: flex-start;
+    }
     .col {
       position: relative;
       z-index: 9;
       flex: 0 0 45%;
       width: 45%;
+      @include for-tablet {
+        flex: 0 0 100%;
+        width: 100%;
+      }
       &-map {
         flex: 0 0 50%;
         width: 50%;
+        @include for-tablet {
+          flex: 0 0 100%;
+          width: 100%;
+        }
         #map {
           height: 846.120725rem;
           z-index: 1;
+          @include for-tablet {
+            height: 2500rem;
+          }
           & > .leaflet-map {
             height: 100% !important;
             z-index: 1 !important;
@@ -67,9 +85,21 @@
         margin-top: 18.802683rem;
         margin-bottom: 178.625486rem;
         font-weight: $bold;
+        span {
+          font-weight: inherit;
+        }
+        @include for-tablet {
+          font-size: 200rem;
+          padding-left: 0;
+          margin-bottom: 150rem;
+        }
       }
       ul {
         padding-left: 178.625486rem;
+        @include for-tablet {
+          padding-left: 0;
+          margin-bottom: 200rem;
+        }
         li {
           display: flex;
           align-items: center;
@@ -78,9 +108,17 @@
             i {
               transform: scale(1.1);
             }
+            @include for-tablet {
+              i {
+                transform: scale(1);
+              }
+            }
           }
           &:not(:last-of-type) {
             margin-bottom: 65.80939rem;
+            @include for-tablet {
+              margin-bottom: 220rem;
+            }
           }
           i {
             background: #243368;
@@ -92,11 +130,21 @@
             line-height: 103.414755rem;
             text-align: center;
             margin-right: 56.408048rem;
+            @include for-tablet {
+              font-size: 220rem;
+              margin-right: 140rem;
+              width: 220rem;
+              height: 220rem;
+              background: transparent;
+            }
           }
           a {
             color: #fff;
             font-size: 41.365902rem;
             transition: 0.3s;
+            @include for-tablet {
+              font-size: 160rem;
+            }
             &:hover {
               color: $lblue;
             }
@@ -105,6 +153,10 @@
             font-size: 41.365902rem;
             max-width: 861.162871rem;
             line-height: 1.45;
+            @include for-tablet {
+              font-size: 160rem;
+              max-width: 100%;
+            }
           }
         }
       }
