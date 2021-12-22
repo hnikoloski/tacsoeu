@@ -54,5 +54,9 @@ jQuery(document).ready(function ($) {
         });
       }
     );
+    $('#masthead .nav-bar ul li.menu-item-has-children .sub-menu li a').on('click', function (e) {
+      window.location = this.href
+    })
   }
+
 });
