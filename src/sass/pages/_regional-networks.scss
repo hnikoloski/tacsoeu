@@ -185,7 +185,7 @@
                 color: #558DBC;
                 font-size: 160rem;
                 line-height: 350rem;
-                padding: 0 100rem;
+                padding: 0 180rem 0 180rem;
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -199,7 +199,7 @@
                color: #fff;
                flex: 0 0 100%;
                width: 100%;
-               padding: 220rem 100rem 220rem 100rem;
+               padding: 220rem 100rem 220rem 250rem;
                text-align: center;
                justify-content: center;
                align-items: center;
@@ -223,13 +223,12 @@
              }
              &:nth-of-type(2),
              &:nth-of-type(3){
-            
                font-size: 180rem;
                color: #000;
                text-align: center;
                justify-content: center;
                align-items: center;
-               padding: 550rem 100rem 220rem 100rem;
+               padding: 550rem 100rem 220rem 250rem;
                position: relative;
              }
              &:nth-of-type(4){
@@ -238,7 +237,7 @@
               font-size: 180rem;
               color: #000;
               margin-bottom: 220rem;
-              padding: 550rem 100rem 220rem 100rem;
+              padding: 550rem 100rem 220rem 250rem;
               border-bottom: 1px solid rgba(55, 165, 255, 0.2);
               position: relative;
               &::before{
@@ -246,7 +245,7 @@
                 color: #558DBC;
                 font-size: 160rem;
                 line-height: 350rem;
-                padding: 0 100rem;
+                padding: 0 250rem;
                 position: absolute;
                 left: 0;
                 top: 0;
