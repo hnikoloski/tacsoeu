@@ -17,9 +17,14 @@ require('template-parts/hero-inner-post.php');
 <main id="primary" class="site-main <?php if (get_post_type() != 'photo') { ?>page-padding-x page-padding-y <?php }; ?> single-post single-post-<?= get_post_type(); ?>">
 	<?php if (get_post_type() != 'photo') { ?>
 		<article>
-			<div class="featured-image">
-				<img src="<?= get_the_post_thumbnail_url(); ?>" alt="<?= the_title(); ?>" class="full-size-img full-size-img-cover">
-			</div>
+			<?php if (has_post_thumbnail($post->ID)) : ?>
+				<div class="featured-image">
+					<?php
+					$imageUrl = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+					?>
+					<img src="<?= $imageUrl; ?>" alt="<?= the_title(); ?>" class="full-size-img full-size-img-cover">
+				</div>
+			<?php endif; ?>
 			<div class="the-content">
 				<?php the_content(); ?>
 			</div>

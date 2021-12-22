@@ -251,13 +251,16 @@
                 align-content: center;
                 height: 100vh;
                 overflow-y: auto;
-                padding-top: 450rem;
+                // padding-top: 450rem;
                 padding-bottom: 350rem;
                 width: 100%;
                 li {
                   flex: 1 1 100%;
                   &:not(:last-of-type) {
                     margin-bottom: 350rem;
+                  }
+                  &:first-of-type{
+                    margin-top: 2150rem;
                   }
                 }
               }

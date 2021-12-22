@@ -2,6 +2,9 @@ jQuery(document).ready(function ($) {
   if ($(".js-filter").length) {
     $(".js-filter li a").on("click", function (e) {
       e.preventDefault();
+      if ($('.res-filter').length) {
+        $('.res-filter').remove();
+      }
       $("#regions .top-bar").append(
         '<div class="res-filter"><a href="#">Reset <i class="fas fa-times"></i></a></div>'
       );

@@ -37,8 +37,7 @@
                 </ul>
             </div>
         </div>
-        <?php get_sidebar();
-        ?>
+        <?php get_sidebar(); ?>
 
         <div class="footer-quick-links-wrapper d-flex flex-wrap justify-content-space-between align-items-center align-content-center">
             <div class="footer-copy">

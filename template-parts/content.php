@@ -11,7 +11,15 @@ $countryTags = get_field('country_tag');
 ?>
 <a href="<?= the_permalink(); ?>" data-post-id="<?= the_id(); ?>" class=" blog-card d-block d-flex flex-direction-col flex-wrap justify-content-start align-items-start">
     <div class="img-wrapper">
-        <img src="<?= get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+        <?php if (has_post_thumbnail($post->ID)) { ?>
+
+            <img src="<?= get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+        <?php } else {    ?>
+            <img src="<?= get_home_url() . '/wp-content/uploads/2021/12/default-img.jpg'; ?>" alt="<?php the_title(); ?>" class="default-img" style="
+    object-fit: contain;
+">
+        <?php
+        }; ?>
     </div>
     <?php
 

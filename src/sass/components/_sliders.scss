@@ -74,7 +74,7 @@
     .content {
       position: relative;
       max-width: 1580rem;
-      max-height: 752.107311rem;
+      max-height: 1780.107311rem;
       z-index: 9;
       @include for-tablet {
         max-width: 95%;
@@ -152,8 +152,8 @@
   }
   .swiper-pagination {
     position: absolute;
-    left: 370.412851rem;
-    bottom: 165.463608rem;
+    bottom: 35.463608rem;
+    left: 140.412851rem;
     z-index: 9;
     &-bullet {
       display: block;
@@ -351,6 +351,11 @@
 }
 #latest-photos {
   margin-bottom: 225.632193rem;
+  h3{
+    display: flex;
+    align-items: center;
+    min-height: 169.224145rem;
+  }
   @include for-tablet {
     margin-bottom: 1420rem;
   }

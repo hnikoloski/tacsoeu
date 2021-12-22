@@ -162,6 +162,9 @@
   &-who-we-are {
     margin-top: -376.053655rem;
     .person-tabber-content {
+      * {
+        transition: 0s;
+      }
       .tab {
         display: flex;
         align-items: flex-start;
@@ -181,6 +184,7 @@
         position: relative;
         flex: 0 0 579.122629rem;
         max-width: 579.122629rem;
+        margin-bottom: 100rem;
         @include for-tablet {
           max-width: 100%;
         }
@@ -205,6 +209,7 @@
 
           img {
             @include borderRadius(50%);
+            object-position: top;
           }
           &::after {
             content: "";

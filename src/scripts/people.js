@@ -8,6 +8,7 @@ jQuery(document).ready(function ($) {
       let selectedTab = $(this).attr("href");
       $(".tab").hide();
       $(selectedTab).fadeIn(300);
+      $(selectedTab).css("display", "flex");
     });
     $(".single-person a").on("click", function (e) {
       e.preventDefault();
