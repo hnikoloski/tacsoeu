@@ -27,6 +27,7 @@ get_header();
 </div>
 <div class="regional-networks regional-networks-single page-padding-x page-padding-y">
     <div class="the_content">
+
         <?php
         if (get_field('show_full_description') == 'no') {
             the_content();
@@ -91,7 +92,7 @@ get_header();
                 <div class="row">
                     <div class="col col-short">
                         <h5>Email</h5>
-                        <a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
+                        <?php the_field('email'); ?>
                     </div>
                     <div class="col col-short">
                         <h5>CSF project (year)</h5>

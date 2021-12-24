@@ -41,12 +41,16 @@
     <div class="additional-boxes">
         <div class="single-box animated fadeInRight">
             <h3><?= the_field('box_1_title'); ?></h3>
-            <p><?= the_field('box_1_description'); ?></p>
+            <?php if (get_field('box_1_description')) : ?>
+                <p><?= the_field('box_1_description'); ?></p>
+            <?php endif; ?>
             <a href="<?= the_field('box_1_link'); ?>" class="btn d-block btn-arrow btn-arrow-minimal w-fit-content">View More</a>
         </div>
         <div class="single-box animated fadeInRight" data-delay="200">
             <h3><?= the_field('box_2_title'); ?></h3>
-            <p><?= the_field('box_2_description'); ?></p>
+            <?php if (get_field('box_2_description')) : ?>
+                <p><?= the_field('box_2_description'); ?></p>
+            <?php endif; ?>
             <a href="<?= the_field('box_2_link'); ?>" class="btn d-block btn-arrow btn-arrow-minimal w-fit-content">View More</a>
         </div>
     </div>

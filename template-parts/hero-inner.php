@@ -2,6 +2,8 @@
     <?php if (function_exists('cu_wp_custom_breadcrumbs')) cu_wp_custom_breadcrumbs(); ?>
     <?php if (get_post_type() == 'photo') { ?>
         <h2 class="heading separator separator-before">Photos</h2>
+    <?php } elseif (get_post_type() == 'newsletter') { ?>
+        <h2 class="heading separator separator-before">Newsletters</h2>
     <?php } else { ?>
         <h2 class="heading separator separator-before"><?php single_post_title(); ?></h2>
     <?php } ?>

@@ -7,11 +7,21 @@
         font-size: 67.689658rem;
         font-weight: $bold;
         margin-bottom: 65.80939rem;
+        @include for-tablet{
+          font-size: 240rem;
+          margin-bottom: 220rem;
+        }
       }
       p {
         font-size: 41.365902rem;
+        @include for-tablet{
+          font-size:160rem;
+        }
         &:not(:last-of-type) {
           margin-bottom: 65.80939rem;
+          @include for-tablet{
+            font-size:200rem;
+          }
         }
       }
     }
@@ -25,6 +35,10 @@
       .img-wrapper {
         width: 125.977975rem;
         height: 86.492341rem;
+        @include for-tablet{
+          width: 510rem;
+          height:340rem;
+        }
         img {
           @include fullSizeImg(cover);
         }
@@ -33,6 +47,18 @@
         font-size: 45.126439rem;
         font-weight: $bold;
         margin-left: 54.52778rem;
+        @include for-tablet{
+          margin-left: 120rem;
+          font-size:200rem;
+        }
+      }
+      @include for-tablet{
+        .btn-fancy-arrow{
+          font-size: 0;
+          i{
+            margin-left: 0;
+          }
+        }
       }
     }
   }
@@ -46,29 +72,50 @@
         padding: 45.126439rem 169.224145rem;
         &:not(:last-of-type) {
           border-bottom: 1px solid rgba(55, 165, 255, 0.2);
+          @include for-tablet{
+            border-bottom: none;
+          }
         }
         .label,
         .content {
           flex: 0 0 auto;
           width: 50%;
+          @include for-tablet{
+            width: 100%;
+          }
         }
         .label {
+          @include for-tablet{
+            margin-top: 100rem;
+            margin-bottom: 100rem;
+            border-bottom: 1px solid rgba(55, 165, 255, 0.2);
+          }
           p {
             font-weight: $bold;
             font-size: 45.126439rem;
             color: #202d5d;
+            @include for-tablet{
+              font-size: 160rem;
+            }
           }
         }
         .content {
           p {
             color: #000;
             font-size: 45.126439rem;
+            @include for-tablet{
+              font-size: 160rem;
+            }
           }
         }
         &:first-of-type {
           .content {
             p {
               font-weight: $bold;
+              @include for-tablet{
+
+                font-size: 200rem;
+              }
             }
           }
         }
@@ -76,20 +123,52 @@
           background: #f9faff;
           padding-top: 141.020121rem;
           padding-bottom: 141.020121rem;
+          @include for-tablet{
+            padding: 0;
+            background: transparent;
+          }
           .single-address {
             flex: 0 0 769.029725rem;
             width: 769.029725rem;
+            @include for-tablet{
+              flex: 0 0 100%;
+              width: 100%;
+              background:#F9FAFF;
+              padding: 280rem 200rem;
+              &:not(:last-of-type){
+                margin-bottom: 90rem;
+              }
+              &:first-of-type{
+                padding-bottom: 0;
+                padding-left: 0;
+                background: none;
+                p{
+                  padding-left: 200rem;
+                  padding-bottom: 160rem;
+                }
+              }
+              &:nth-of-type(2){
+                background: none;
+              }
+            }
             h5 {
               font-size: 45.126439rem;
               letter-spacing: -0.03em;
               font-weight: $bold;
               margin-bottom: 37.605366rem;
               line-height: 1.1;
+              @include for-tablet{
+                font-size: 180rem;
+                margin-bottom: 90rem;
+              }
             }
             p {
               font-size: 45.126439rem;
               line-height: 1.1;
               letter-spacing: -0.03em;
+              @include for-tablet{
+                font-size: 160rem;
+              }
               a {
                 font-weight: $bold;
                 color: $lblue;
@@ -107,6 +186,10 @@
         &.social {
           align-content: center;
           align-items: center;
+          @include for-tablet{
+            padding-left: 0;
+            padding-right: 0;
+          }
           .single-social {
             flex: 0 0 50%;
             width: 50%;
@@ -116,9 +199,30 @@
             align-items: center;
             flex-direction: row;
             flex-wrap: wrap;
+            @include for-tablet{
+              flex: 0 0 100%;
+              width: 100%;
+              justify-content: space-between;
+              margin-bottom: 100rem;
+              padding-left: 200rem;
+              padding-right: 200rem;
+              &:first-of-type{
+                border-bottom: 1px solid rgba(55, 165, 255, 0.2);
+              }
+              .label,a{
+                flex: 0 0 50%;
+                width: 50%;
+                border-bottom: none;
+              }
+            }
             a {
               font-weight: $bold;
               font-size: 41.365902rem;
+              color: #000;
+              @include for-tablet{
+                font-size: 160rem;
+                text-align: right;
+              }
             }
             .socials {
               li {

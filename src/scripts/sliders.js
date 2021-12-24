@@ -1,10 +1,14 @@
-import Swiper, { Pagination, Navigation } from "swiper";
+import Swiper, { Pagination, Navigation, Autoplay } from "swiper";
 
 jQuery(document).ready(function ($) {
   let heroSwiper = new Swiper(".hero-home ", {
-    modules: [Pagination],
+    modules: [Pagination, Autoplay],
     slidesPerView: 1,
     loop: true,
+    speed: 1000,
+    autoplay: {
+      delay: 3000,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

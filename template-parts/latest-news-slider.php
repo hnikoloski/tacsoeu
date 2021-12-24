@@ -4,7 +4,7 @@
             Latest News
         </h2>
         <p class="animated fadeInLeft" data-delay="400">Find out the latest on EU-related activities and events in the Western Balkans.</p>
-        <a href=" <?= get_post_type_archive_link('post'); ?>" class="btn d-block btn-arrow btn-lblue w-fit-content">VIEW MORE</a>
+        <a href="<?= get_post_type_archive_link('post'); ?>" class="btn d-block btn-arrow btn-lblue w-fit-content">VIEW MORE</a>
     </div>
     <div class="swiper latest-news-slider">
         <div class="swiper-wrapper">

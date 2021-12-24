@@ -1,6 +1,6 @@
 .btn {
   @include borderRadius(94.013414rem);
-  padding: 37.605366rem;
+  padding: 37.605366rem ;
   font-size: 33.844829rem;
   font-weight: $semiBold;
   @include for-tablet {
@@ -12,7 +12,7 @@
     background: $lblue;
   }
   &-arrow {
-    padding: 37.605366rem 165rem 37.605366rem 65.80939rem;
+    padding: 30.605366rem 165rem 30.605366rem 65.80939rem;
     position: relative;
     @include for-tablet {
       padding: 160rem 500rem 160rem 250rem;

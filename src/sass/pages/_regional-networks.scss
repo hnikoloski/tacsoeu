@@ -179,6 +179,11 @@
               color: #202d5d;
               font-weight: $bold;
               font-size: 45.126439rem;
+              a{
+                color: inherit;
+                font-weight: inherit;
+                font-size: inherit;
+              }
             }
             @include for-tablet{
               &::before{
@@ -262,6 +267,9 @@
     .container {
       border-top: 1px solid rgba(55, 165, 255, 0.2);
       border-bottom: 1px solid rgba(55, 165, 255, 0.2);
+      @include for-tablet{
+        border-bottom: none;
+      }
       .row {
         display: flex;
         flex-wrap: wrap;
@@ -285,22 +293,48 @@
           height: 5.640805rem;
           width: 30%;
           background: $lblue;
+          @include for-tablet{
+            display: none;
+          }
         }
         &:not(:last-of-type) {
           border-bottom: 1px solid rgba(55, 165, 255, 0.2);
+          @include for-tablet{
+            border-bottom: none;
+          }
         }
         .col {
           width: 70%;
-
+          @include for-tablet{
+            width: 100%;
+            padding-top:100rem;
+            padding-bottom:100rem;
+          }
           &-label {
             width: 30%;
             padding-left: 188.026828rem;
-
+            @include for-tablet{
+              width: 100%;
+              position: relative;
+              border-bottom: 1px solid rgba(55, 165, 255, 0.2);
+              &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 5.640805rem;
+                width: 50%;
+                background: $lblue;
+              }
+            } 
             h3 {
               color: #202d5d;
               font-size: 45.126439rem;
               font-weight: $bold;
               line-height: 1.45;
+              @include for-tablet{
+                font-size: 160rem;
+              }
             }
           }
           p {
@@ -308,6 +342,9 @@
             font-size: 45.126439rem;
             font-weight: $bold;
             color: #202d5d;
+            @include for-tablet{
+              font-size: 200rem;
+            }
           }
           &-description {
             width: 100%;
@@ -316,15 +353,25 @@
             p {
               font-weight: 400;
               font-size: 41.365902rem;
+              @include for-tablet{
+                font-size: 160rem;
+              }
             }
           }
           &-short {
             width: 35%;
             padding-left: 156.062267rem;
+            @include for-tablet{
+              width: 100%;
+              border-bottom: 1px solid rgba(55, 165, 255, 0.2);
+            }
             h5 {
               color: #000;
               font-size: 45.126439rem;
               line-height: 1.45;
+              @include for-tablet{
+                font-size: 160rem;
+              }
             }
             a,
             p {
@@ -333,6 +380,9 @@
               font-size: 45.126439rem;
               font-weight: $bold;
               padding-left: 0;
+              @include for-tablet{
+                font-size: 180rem;
+              }
               &:visited {
                 color: $lblue;
               }
