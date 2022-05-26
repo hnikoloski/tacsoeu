@@ -224,12 +224,19 @@
             width: 100%;
             &:not(:last-of-type) {
               margin-bottom: 37.605366rem;
+              margin-right: 0;
             }
             a {
               color: $dblue;
               font-weight: $regular;
               text-transform: capitalize;
               letter-spacing: -0.02em;
+              white-space: nowrap;
+              display: inline-block;
+              @include for-phone {
+                white-space: normal;
+                display: inline;
+              }
             }
           }
         }
@@ -259,7 +266,7 @@
                   &:not(:last-of-type) {
                     margin-bottom: 350rem;
                   }
-                  &:first-of-type{
+                  &:first-of-type {
                     margin-top: 2150rem;
                   }
                 }
