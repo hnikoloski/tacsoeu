@@ -46,7 +46,7 @@ $logoUrl = wp_get_attachment_image_src($custom_logo_id, 'full');
                     <img src="<?= $logoUrl[0]; ?>" alt="<?= get_bloginfo(); ?>" class="full-size-img full-size-img-contain">
                 </a>
             </div>
-            <div class="nav-bar d-flex flex-wrap justify-content-space-between align-items-center align-content-center">
+            <div class="nav-bar pos-r d-flex flex-wrap justify-content-space-between align-items-center align-content-center">
                 <a href="javascript:void(0);" aria-label="Burger Menu" id="menu-trigger">
                     <span></span>
                     <span></span>
@@ -60,6 +60,15 @@ $logoUrl = wp_get_attachment_image_src($custom_logo_id, 'full');
                     )
                 );
                 ?>
+                <a href="#" class="newsletter-trigger"><i class="fal fa-envelope-open-text"></i>Subscribe</a>
+                <div id="newsletter-modal">
+                    <a href="#" class="close-modal-btn"><i class="far fa-times"></i></a>
+                    <h4>Subscribe to our newsletter</h4>
+                    <p>Signup for our newsletter to get the latest news, updates directly in your inbox</p>
+                    <?php
+                    $formCode = get_field('newsletter_shortcode', 'option');
+                    echo do_shortcode($formCode); ?>
+                </div>
                 <form action="/" method="get">
                     <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="Search Here..." />
                     <input type="hidden" name="post_type" value="post" />
