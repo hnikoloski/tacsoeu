@@ -129,6 +129,26 @@
           }
         }
       }
+      ol {
+        list-style: decimal;
+        li {
+          padding-left: 47.006707rem;
+          font-size: 33.844829rem;
+          position: relative;
+          &:not(:last-of-type) {
+            margin-bottom: 28.204024rem;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            top: 9rem;
+            left: 0;
+            background: $lblue;
+            width: 33.844829rem;
+            height: 33.844829rem;
+          }
+        }
+      }
     }
     iframe {
       width: 100%;

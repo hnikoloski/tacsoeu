@@ -41,7 +41,7 @@ jQuery(document).ready(function ($) {
   // End Cookie Functions
 
   // Cookie notice
-  if (getCookie("daViPomozam") == "brojceOdOvaDanImate") {
+  if (getCookie("jaden-si-ili-ne-si") == "daj-edno-kolace") {
     $("#cookie-notice").remove();
   } else {
     $("body").append(
@@ -49,7 +49,7 @@ jQuery(document).ready(function ($) {
     );
     $("#cookie-notice .accept").on("click", function (e) {
       e.preventDefault();
-      setCookie("daViPomozam", "brojceOdOvaDanImate", 3);
+      setCookie("jaden-si-ili-ne-si", "daj-edno-kolace", 30);
       $("#cookie-notice").hide();
       setTimeout(function () {
         $("#cookie-notice").remove();
@@ -57,7 +57,7 @@ jQuery(document).ready(function ($) {
     });
     $("#cookie-notice .decline").on("click", function (e) {
       e.preventDefault();
-      setCookie("daViPomozam", "daPrasamSamo", 3);
+      setCookie("jaden-si-ili-ne-si", "na-dieta-sum", 30);
       $("#cookie-notice").hide();
       setTimeout(function () {
         $("#cookie-notice").remove();
